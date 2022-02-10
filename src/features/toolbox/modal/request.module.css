@@ -1,0 +1,67 @@
+.modal {
+    max-width: 1026px;
+    height:745px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    padding: 51px 69px;
+    background-color: white;
+}
+
+.modal > form {
+    width: 100%;
+    height: 100%;
+}
+
+
+.modal_input {
+    margin-bottom: 5px;
+}
+
+.modal_text_area,
+.modal_input {
+    height: 67px;
+    width: 100%;    
+    box-sizing: border-box;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 4px;
+    margin-top: 0px!important;
+    padding-left: 14.06px;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 27px;
+    color: rgba(43, 43, 43, 0.25);
+}
+
+
+.modal_text_area {
+    height: 253px;
+    margin-bottom: 35px;
+}
+
+
+.modal_text_area ~ button {
+    width: 156px;
+    height: 67px;
+    background-color: #171717;
+    color: #fff;
+    font-size: 14px;
+    line-height: 25px;
+}
+
+
+.hidden_absolute_modal {
+    position: fixed;
+    top: -1075px;
+    left:0px;
+    width: 100%;
+    background-color: #E5E5E5;
+    z-index: 999;
+    height: 100vh;
+
+    -webkit-transition: .5s ease;
+    -moz-transition: .5s ease;
+    -ms-transition: .5s ease;
+    -o-transition: .5s ease;
+        transition: .5s ease;
+}

@@ -1,0 +1,57 @@
+{
+    "Authors": [
+        "Developer Senior Developer Rahman | Niftaliyev",
+        "Designed by highly demanded skilled designer Sabina | Mammadova"
+    ],
+    "BIDSVersion": "1.1.0",
+    "Curators": [
+        "Sabina M."
+    ],
+    "Identifier": "MNI152NLin2009cAsym",
+    "License": "See LICENSE file",
+    "Name": "TWC non-commercial template",
+    "RRID": "SCR_008796",
+    "ReferencesAndLinks": [
+        "https://www.pexels.com/",
+        "https://unsplash.com/",
+        "https://www.npmjs.com/"
+    ],
+    "Species": "Management Constulting",
+    "TemplateFlowVersion": "1.0.0",
+    "res": {
+        "01": {
+            "origin": [
+                -96.0,
+                -132.0,
+                -78.0
+            ],
+            "shape": [
+                193,
+                229,
+                193
+            ],
+            "zooms": [
+                1.0,
+                1.0,
+                1.0
+            ]
+        },
+        "02": {
+            "origin": [
+                -96.5,
+                -132.5,
+                -78.5
+            ],
+            "shape": [
+                97,
+                115,
+                97
+            ],
+            "zooms": [
+                2.0,
+                2.0,
+                2.0
+            ]
+        }
+    }
+}

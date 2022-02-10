@@ -1,0 +1,66 @@
+/*
+ *   Copyright (c) 2022 
+ *   All rights reserved.
+ */
+
+.font_navigation_links {
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.vertical_middle {
+    vertical-align: middle;
+}
+
+.padding_right_icon {
+    margin-right: 15px;
+}
+
+.navigation_logo_margin_right {
+    margin-right: 79px;
+}
+
+.margin_right_button_enabled {
+    margin-right: 14px;
+}
+
+.margin_right_hamburger_enabled {
+    margin-right: 20px;
+}
+
+.navigation_padding_top {
+    padding-top: 9px;
+}
+
+.link_none {
+    text-decoration: none;
+    line-height: 25.6px;
+    color: rgba(255, 255, 255, 0.4);
+    position: relative;
+    white-space: nowrap;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.35em;
+    font-weight: 500;
+    line-height: 1.5em;
+    -webkit-transition: all 0.1s ease-in;
+    -moz-transition: all 0.1s ease-in;
+    -ms-transition: all 0.1s ease-in;
+    -o-transition: all 0.1s ease-in;
+    transition: all 0.1s ease-in;
+}
+
+.link_none:hover {
+    color: rgba(255, 255, 255, 1);
+}
+
+.link_height {
+    height: 25px;
+    line-height: 25.6px;
+}
+
+.ptAndPb {
+    padding-top: 11px;
+    padding-bottom: 11px;
+    box-sizing: content-box;
+}

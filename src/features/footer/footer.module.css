@@ -1,0 +1,127 @@
+/*
+ *   Copyright (c) 2022 
+ *   All rights reserved.
+ */
+
+.footer_input {
+    right: 125px;
+}
+
+.footer_height {
+    height: 562px;
+    background-color: #212121;
+    padding-top: 121px;
+}
+
+.footer_end {
+    height: 45px;
+    padding-left: 170px;
+    padding-right: 170px;
+    margin-top: 126px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    line-height: 18px;
+    color: #9c9c9c;
+}
+
+.upper_content {
+    height: calc(100% - 171px);
+    padding-left: 170px;
+    padding-right: 170px;
+}
+
+.footer_header {
+    font-size: 42px;
+    line-height: 52px;
+    color: white;
+    font-weight: 400;
+}
+
+.margin_bottom_paragraph {
+    margin-bottom: 12px;
+}
+
+.list_item_footer:nth-child(-n + 2) {
+    margin-bottom: 3px;
+}
+
+.list_item_footer {
+    font-size: 14px;
+    line-height: 26px;
+    color: white;
+}
+
+.list_item_header {
+    font-size: 11px;
+    line-height: 20px;
+    letter-spacing: 3.85px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.margin_top_content {
+    margin-top: 57px;
+}
+
+.width_footer_links {
+    padding-right: 125px;
+}
+
+.width_footer_links>input[type='email'] {
+    align-self: flex-end;
+    border: none;
+    display: inline-block;
+    width: 575px;
+    max-width: 575px;
+    background-color: transparent;
+    padding-bottom: 23.11px;
+    border-bottom: 1px solid #979797;
+    font-size: 15px;
+    line-height: 20px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+input[type='email']::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+@media screen and (max-width: 1330px) {
+    .upper_content {
+        height: calc(100% - 171px);
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .width_footer_links {
+        padding-right: 20px;
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+        width: 100%;
+    }
+    .footer_end {
+        margin-top: 26px;
+    }
+    .footer_height {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: auto;
+    }
+    .width_footer_links>input[type='email'] {
+        width: 100%;
+        max-width: 100%;
+        background-color: transparent;
+        padding-bottom: 23.11px;
+        border-bottom: 1px solid #979797;
+        font-size: 15px;
+        line-height: 20px;
+        color: rgba(255, 255, 255, 0.7);
+        display: block;
+        position: static;
+        margin-top: 20px;
+    }
+    .footer_end {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}

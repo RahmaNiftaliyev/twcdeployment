@@ -1,0 +1,226 @@
+/*
+ *   Copyright (c) 2022 
+ *   All rights reserved.
+ */
+
+.background_image {
+    background-image: url(./assets/img/careetheader.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat
+}
+
+.career_main {
+    padding: 170px 162px
+}
+
+.bg_container {
+    background-image: url(./assets/img/career-bg.png);
+    height: 303px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column
+}
+
+strong {
+    font-weight: 400!important
+}
+
+.bg_container h3,
+.bg_container h4 {
+    font-size: 30px;
+    line-height: 44px;
+    font-weight: 400!important
+}
+
+.bg_container h3 {
+    color: #878787
+}
+
+.bg_container h4 {
+    color: #171717
+}
+
+.bg_container:first-child {
+    margin-bottom: 162px
+}
+
+.bg_container,
+.img_w_ceo_100 {
+    width: 100%
+}
+
+.career_quotes {
+    margin-top: 42px;
+    margin-bottom: 42px;
+    text-align: justify
+}
+
+section._ready {
+    margin-bottom: 161px;
+    width: 100%
+}
+
+.content_img,
+.content_text {
+    height: 611px;
+    width: 50%
+}
+
+.content_text {
+    background: #f5f5f3;
+    padding-left: 101px;
+    padding-bottom: 50px;
+    display: flex;
+    align-items: flex-end
+}
+
+.content_img {
+    background: url(./assets/img/career_join.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover
+}
+
+.career_span {
+    font-size: 11px;
+    line-height: 20px;
+    letter-spacing: 3.85px;
+    text-transform: uppercase;
+    color: #8b8b8b;
+    display: inline-block;
+    margin-bottom: 5px
+}
+
+.content_text h4 {
+    font-size: 36px;
+    line-height: 44px;
+    color: #171717;
+    margin-bottom: 48px
+}
+
+.vacantion {
+    height: 1084px;
+    background-image: url(./assets/img/careeer_vacation.png);
+    background-position: center;
+    background-size: cover;
+    padding-top: 130px
+}
+
+section.vacantion span {
+    display: block;
+    text-align: center;
+    position: relative
+}
+
+section.vacantion>h4 {
+    height: 52px;
+    font-weight: 400;
+    font-size: 42px;
+    line-height: 52px;
+    text-align: center;
+    color: #171717;
+    margin-bottom: 116px
+}
+
+.join_vacation {
+    max-width: 1026px;
+    height: 253px;
+    border: 1px solid rgba(43, 43, 43, .25);
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, .25));
+    -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 4px;
+    position: relative;
+    padding: 38px 55px;
+}
+
+.join_vacation>h2 {}
+
+.join_vacation button {
+    position: absolute!important;
+    right: 55px!important;
+    top: 93px!important;
+    width: 156px!important;
+    height: 67px!important;
+    background-color: #171717;
+    color: #fff;
+    font-size: 14px;
+    line-height: 25px;
+    font-weight: 400;
+}
+
+.join_vacation>h2 {
+    margin-bottom: 25px;
+    font-size: 30px;
+    line-height: 44px;
+    font-weight: 400;
+    color: #171717
+}
+
+.join_vacation>p {
+    font-size: 18px;
+    line-height: 27px;
+    color: #878787;
+    width: 73%;
+}
+
+.join_vacation strong {
+    color: #171717
+}
+
+.join_vacation:last-child {
+    margin-top: 20px
+}
+
+.join_vacation>button>img {
+    margin-left: 5.5px
+}
+
+@media screen and (max-width: 940px) {
+    .bg_container {
+        height: 200px;
+    }
+    .career_main {
+        padding: 170px 20px;
+    }
+    .bg_container h3,
+    .bg_container h4 {
+        font-size: 1rem;
+        line-height: 22px;
+    }
+    .content_img,
+    .content_text {
+        width: 100%;
+    }
+    .join_vacation {
+        padding: 20px 15px;
+    }
+    .join_vacation>p {
+        font-size: 14px;
+        width: 56%;
+    }
+    .join_vacation>h2 {
+        margin-bottom: 15px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .join_vacation {
+        height: 350px;
+    }
+    .join_vacation p {
+        width: 50%;
+    }
+    .join_vacation button {
+        position: absolute!important;
+        top: 20px;
+    }
+    .join_vacation button {
+        right: 15px!important;
+        height: 90px!important;
+    }
+}
