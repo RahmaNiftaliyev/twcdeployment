@@ -19,8 +19,37 @@ const Request = ({classData,classRemover}) => {
 
 
     const handleErrorView = () => {
+
+        const isSaving =  [fullName,email,number,content.message].some(content => Boolean(content))
+               
+                    if(isSaving) {
+                          debugger;
+                          alertify.confirm(  'TWC.AZ','Şəxsi Məlumatlarınız Saxlanılsın ?', 
+                          function(){ 
+                             alertify.alert('TWC.AZ',`Hörmətli ${fullName} məlumatlarınız saxlanıldı`)  
+                         },
+                          function(){  
+                             alertify.alert('TWC.AZ',`Hörmətli ${fullName} məlumatlarınız silindi`)  
+                             setFullName('')
+                             setEmail('')
+                             setMNumber('')
+                             setContent('')
+                             setMessage('')
+                         }
+                          )
+                        }
+                              
+
+           
+              
+   
         classRemover()
-    }
+        
+
+
+}
+
+
  
 
 
@@ -104,7 +133,7 @@ const Request = ({classData,classRemover}) => {
                 </button>
                 &nbsp;
                 &nbsp;
-                <button type='button'  onClick={handleErrorView} >
+                <button type='button'  onClick={() => handleErrorView()}>
                     Geri qayıt 
                 </button>
             </form>
