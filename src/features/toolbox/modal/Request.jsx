@@ -42,7 +42,7 @@ const Request = ({classData,classRemover}) => {
                     name='fullname'
                     id='fullname'
                     placeholder='Ad və Soyad'
-                    // pattern='[(?=^.{0,40}$)^[a-zA-Z-]+\s[a-zA-Z-]+$]'
+                    pattern='[(?=^.{0,40}$)^[a-zA-Z-]+\s[a-zA-Z-]+$]'
                     className={`${styles.modal_input}`}
                     value={fullName}
                     onChange={(e) => setFullName(e.target.value)}
@@ -54,7 +54,7 @@ const Request = ({classData,classRemover}) => {
                     name='email'
                     id='email'
                     placeholder='Email'
-                    // pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$"
+                    pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$"
                     className={`${styles.modal_input}`}
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
@@ -66,7 +66,7 @@ const Request = ({classData,classRemover}) => {
                     name='number'
                     id='number'
                     placeholder='Telefon'
-                    // pattern="|(\+\d{1,3}\s?)?((\(\d{3}\)\s?)|(\d{3})(\s|-?))(\d{3}(\s|-?))(\d{4})(\s?(([E|e]xt[:|.|]?)|x|X)(\s?\d+))?|g"
+                    pattern="|(\+\d{1,3}\s?)?((\(\d{3}\)\s?)|(\d{3})(\s|-?))(\d{3}(\s|-?))(\d{4})(\s?(([E|e]xt[:|.|]?)|x|X)(\s?\d+))?|g"
                     className={`${styles.modal_input}`}
                     value={number}
                     onChange={(e) => setMNumber(e.target.value)}
@@ -79,7 +79,7 @@ const Request = ({classData,classRemover}) => {
                     name='content'
                     id='content'
                     placeholder='Mövzu başlığı' 
-                    // pattern="(?=^.{0,60}$)^[a-zA-Z-]+\s[a-zA-Z-]+$"
+                    pattern="(?=^.{0,60}$)^[a-zA-Z-]+\s[a-zA-Z-]+$"
                     className={`${styles.modal_input}`}
                     value={content}
                     onChange={(e) => setContent(e.target.value)}
