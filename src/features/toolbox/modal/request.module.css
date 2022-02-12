@@ -37,6 +37,7 @@
 .modal_text_area {
     height: 253px;
     margin-bottom: 35px;
+    padding-top: 14.06px;
 }
 
 
@@ -55,13 +56,11 @@
     top: -1075px;
     left:0px;
     width: 100%;
-    background-color: #rgba(229, 229, 229, .1)
-;
     z-index: 999;
     height: 100vh;
     -webkit-transition: .5s ease;
     -moz-transition: .5s ease;
     -ms-transition: .5s ease;
     -o-transition: .5s ease;
-        transition: .5s ease;
+     transition: .5s ease;
 }

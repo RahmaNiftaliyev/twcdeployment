@@ -16,16 +16,18 @@ const Request = ({classData,classRemover}) => {
     const isDisabled = [fullName,email,number,content].every(Boolean)
 
 
+    const handleErrorView = () => {
+      
+    }
  
 
 
     const handleSubmit = (e) => {
 
         if(isDisabled) {
-            alertify.alert('TWC.AZ', `${fullName} TWC ailəsinə xoş gəldiniz`, function(){ alertify.success('Ok'); });
+             alertify.alert('TWC.AZ', `${fullName} TWC ailəsinə xoş gəldiniz`);
              classRemover()
-        }
-
+        } 
 
         e.preventDefault();
     };
@@ -37,54 +39,55 @@ const Request = ({classData,classRemover}) => {
             <form onSubmit={handleSubmit}>
                 <input 
                     type='text'
-                    name='fullname' 
-                    className={`${styles.modal_input}`}
-                    id='fullname' 
-                    placeholder='Ad və Soyad' 
-                    required 
-                    value={fullName}      
+                    name='fullname'
+                    id='fullname'
+                    placeholder='Ad və Soyad'
                     // pattern='[(?=^.{0,40}$)^[a-zA-Z-]+\s[a-zA-Z-]+$]'
-                    onChange={(e) => setFullName(e.target.value)}           
+                    className={`${styles.modal_input}`}
+                    value={fullName}
+                    onChange={(e) => setFullName(e.target.value)}
+                    required
                  />
 
                 <input 
                     type='email'
-                    name='email' 
-                    className={`${styles.modal_input}`}
-                    id='email' 
+                    name='email'
+                    id='email'
                     placeholder='Email'
-                    required 
-                    value={email}  
                     // pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$"
-                   onChange={(e) => setEmail(e.target.value)}      
+                    className={`${styles.modal_input}`}
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    required
                 />
 
                 <input 
-                    type='text' 
-                    name='number' 
-                    className={`${styles.modal_input}`}
-                    id='number' 
-                    placeholder='Telefon' 
-                    required 
-                    value={number}        
+                    type='text'
+                    name='number'
+                    id='number'
+                    placeholder='Telefon'
                     // pattern="|(\+\d{1,3}\s?)?((\(\d{3}\)\s?)|(\d{3})(\s|-?))(\d{3}(\s|-?))(\d{4})(\s?(([E|e]xt[:|.|]?)|x|X)(\s?\d+))?|g"
-                    onChange={(e) => setMNumber(e.target.value)}      
+                    className={`${styles.modal_input}`}
+                    value={number}
+                    onChange={(e) => setMNumber(e.target.value)}
+                    required
                 />
 
 
                 <input 
                     type='text'
-                    name='content' 
-                    className={`${styles.modal_input}`}
-                    id='content' 
+                    name='content'
+                    id='content'
                     placeholder='Mövzu başlığı' 
-                    required 
-                    value={content}   
                     // pattern="(?=^.{0,60}$)^[a-zA-Z-]+\s[a-zA-Z-]+$"
-                    onChange={(e) => setContent(e.target.value)}      
+                    className={`${styles.modal_input}`}
+                    value={content}
+                    onChange={(e) => setContent(e.target.value)}
+                    required
+                    
                  />
                  <textarea className={`${styles.modal_text_area}`} name=""></textarea>
-                <button type='submit' disabled={!isDisabled}>
+                <button type='submit' onClick={handleErrorView} disabled={!isDisabled}>
                     Göndər <img src={arrow} alt="arrow svg button design" />
                 </button>
             </form>
