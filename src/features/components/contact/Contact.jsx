@@ -54,7 +54,7 @@ const Contact = () => {
             <section className={`${styles.pic_form}`}>
                 <div className={`${styles.pic}`}></div>
                 <div className={`${styles.form}`}>
-                    <form onSubmit={handleSubmit}>
+                    <form onSubmit={handleSubmit} netlify>
                         <AnimationOnScroll animateIn="animate__zoomInDown">
                             <span>ƏLAQƏ</span>
                             <h2>

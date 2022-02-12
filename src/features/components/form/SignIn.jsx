@@ -44,6 +44,7 @@ const SignUp = () => {
                         action=""
                         onSubmit={handleSubmit}
                         className={`${styles.form_input} d-flex direction-column`}
+                        netlify
                     >
                         <label
                             className={`${styles.input_label}`}

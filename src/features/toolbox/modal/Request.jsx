@@ -36,7 +36,7 @@ const Request = ({classData,classRemover}) => {
   return (
     <div className={`${styles.hidden_absolute_modal} ${classData}`}>
         <div className={`${styles.modal}`}>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} netlify>
                 <input 
                     type='text'
                     name='fullname'
