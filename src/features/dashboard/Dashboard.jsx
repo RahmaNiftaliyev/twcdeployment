@@ -41,7 +41,6 @@ import Privacy from './../components/privacy/Privacy';
 import SignUp from './../components/form/SignUp';
 import SignIn from './../components/form/SignIn';
 
-import Request from './../toolbox/modal/Request';
 
 const Dashboard = () =>
 {
@@ -51,9 +50,6 @@ const Dashboard = () =>
         <Route path="/" element={<HomeDashboard />} />
         <Route path="/contact" element={<ContactDashboard />} />
         <Route path="/career" element={<CareerDashboard />} />
-
-
-
 
         {/* !FIKIRLER */}
         <Route path="/ideas" element={<Articles />} />
@@ -129,8 +125,6 @@ const Dashboard = () =>
 
         <Route path="/login" element={< SignIn />} />
         <Route path="/register" element={< SignUp />} />
-        <Route path="/test" element={<Request />} />
-
       </Routes>
 
 

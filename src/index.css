@@ -24,6 +24,10 @@
 
 body {
     overflow-x: hidden;
+    background-image: url(./features/components/common/assets/png/background.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 button {
@@ -360,6 +364,11 @@ button {
 .opacity-1 {
     opacity: 1;
     left: -8px;
+}
+
+
+.modal_slider {
+    top:0px;
 }
 
 @keyframes arrow-animation-1 {

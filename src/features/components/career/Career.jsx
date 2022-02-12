@@ -8,27 +8,25 @@ import { AnimationOnScroll } from 'react-animation-on-scroll';
 import Footer from './../../footer/Footer';
 import Request from '../../toolbox/modal/Request';
 
+
 const Career = () => {
 
     const [demo_class,set_demo_class] = useState('');
-    const [toggler,setToggler] = useState(false);
+
 
     const handleStylesModal = () => {
-        if(!toggler) {
              set_demo_class('modal_slider');
-             setToggler(true);
-        }   else {
-            set_demo_class('');
-            setToggler(false);
-        }
-       
     };
+
+    const handleRemoveSlider = () => {
+        set_demo_class('')
+    }
 
     return (
         <div>
           
             <div className={`${styles.career_main}`}>
-              <Request classData={demo_class}  />
+              <Request classData={demo_class} classRemover={handleRemoveSlider}  />
                 <div className={`${styles.bg_container}`}>
                     <h3>
                         TWC-də məqsədimizin yeganə sütunu bizim insanlarımızdır.
