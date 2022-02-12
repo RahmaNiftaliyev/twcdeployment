@@ -23,7 +23,14 @@
 }
 
 html {
+
+
+    -webkit-scroll-behaviour:smooth;
+    -moz-scroll-behaviour:smooth;
+    -ms-scroll-behaviour:smooth;
+    o-scroll-behaviour:smooth;
     scroll-behavior: smooth;
+    
 }
 
 body {
