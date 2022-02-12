@@ -35,3 +35,18 @@ export const {
 } = footerAdapter.getSelectors((state) => state.footer.links)
 
 export default footerSlice.reducer
+
+
+/*
+    ids: string[];
+    entities: {
+        id1: {
+            id: string;
+            header: string;
+            headerItems: {
+                name: string;
+                linkedMethod: string;
+            }[];
+        };
+
+*/

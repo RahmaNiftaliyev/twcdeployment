@@ -124,6 +124,12 @@ button {
     position: relative;
 }
 
+
+.pointer {
+    cursor:pointer;
+}
+
+
 [class*="nav-header-"] {
     height: 41px;
 }
@@ -426,9 +432,13 @@ button {
     .navigation-container {
         flex-direction: column;
     }
-    .mobile-display-none {
-        display: none;
+    .mobile-display-block {
+        display: block;
     }
+
+
+    
+
     .sm-mb-4-padding {
         padding: 6px;
     }

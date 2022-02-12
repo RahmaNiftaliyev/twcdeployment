@@ -38,11 +38,6 @@ const Request = ({classData,classRemover}) => {
                          }
                           )
                         }
-                              
-
-           
-              
-   
         classRemover()
         
 

@@ -59,11 +59,17 @@ const Dashboard = () =>
         <Route path="/ideas/alcohol" element={<ArticlesAlcohol />} />
         <Route path="/ideas/logistics" element={<ArticlesLogistics />} />
         <Route path="/ideas/finance" element={<ArticlesFinance />} />
+
+
+        
         <Route path="/about" element={<About />} />
         <Route path="/about/team" element={<AboutOurTeam />} />
         <Route path="/about/testimonials" element={<AboutTestimonials />} />
         <Route path="/about/partneers" element={<AboutPartneers />} />
 
+
+
+           {/* !XİDMƏTLƏR */}
         <Route
           path="/services/marketing"
           element={<ServicesSalesAndMarketing />}

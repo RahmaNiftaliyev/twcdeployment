@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import styles from './contact.module.css';
 import arrow from './assets/img/arrow.png';
+import GoogleMapFancyLoader from './../../toolbox/googleMap/GoogleMapFancyLoader'
 import { AnimationOnScroll } from 'react-animation-on-scroll';
 
 const Contact = () => {
@@ -17,7 +18,9 @@ const Contact = () => {
     return (
         <main className="mobile-padding">
             <section className={`${styles.map_numbers}`}>
-                <div className={`${styles.map}`}></div>
+                <div className={`${styles.map}`}>
+                    <GoogleMapFancyLoader />
+                </div>
                 <div className={`${styles.number}`}>
                     <AnimationOnScroll animateIn="animate__zoomInDown">
                         <div>

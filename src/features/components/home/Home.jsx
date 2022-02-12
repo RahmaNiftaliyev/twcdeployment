@@ -1,7 +1,12 @@
 // @ts-nocheck
 import React, { useState,useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { ImFacebook, ImLinkedin2 } from 'react-icons/im';
 import { SiInstagram } from 'react-icons/si';
+import { AnimationOnScroll } from 'react-animation-on-scroll';
+import { useSelector } from 'react-redux';
+import RoundedButton from '../../toolbox/buttons/RoundedButton';
+import { selectAllIndustries } from '../industry/industriesSlice';
 import styles from './home.module.css';
 import team_mem1 from './assets/img/team-chingiz.png';
 import team_mem2 from './assets/img/team-aynur.png';
@@ -10,7 +15,6 @@ import team_mem4 from './assets/img/team-mehemmed.png';
 import team_mem5 from './assets/img/team-question.png';
 import team_mem6 from './assets/img/team-aynure.jpg';
 import doingbusiness from './assets/img/doingbusiness.jpg';
-import RoundedButton from '../../toolbox/buttons/RoundedButton';
 import career from './assets/img/career.jpg';
 import client1 from '../about/assets/img/customers/demirchi-tower.png';
 import client2 from '../about/assets/img/customers/Prestij-kimya.png';
@@ -19,12 +23,30 @@ import article1 from '../articles/assets/img/ntflx.png';
 import article2 from '../articles/assets/img/alcohol-cover.png';
 import article3 from '../articles/assets/img/cargo-cover.png';
 import article4 from '../articles/assets/img/startup.png';
-import { AnimationOnScroll } from 'react-animation-on-scroll';
-import { useNavigate } from 'react-router-dom';
+
+
 
 
 const Home = () => {
+
+
+    const industries = useSelector(selectAllIndustries) ; 
+
+    const renderedIndustries =   
+           
+                industries.map((ind,index) => {
+                    return (
+                         <span key={ind.id} className='size-font-mb-span pointer'>{ind.name}  {index % 3 === 0 && <span className={`${styles.mb_display_none}`}></span>}</span>
+                    )      
+                })    
+            
+   
+
+
     const navigate = useNavigate();
+
+
+
     const handleNavigation = (paramsPath) => {
         navigate(paramsPath);
     };
@@ -52,21 +74,10 @@ const Home = () => {
             <div className={`${styles.services_list_container}`}>
                 <h2>1. Sizin biznes istiqamətiniz?</h2>
                 <AnimationOnScroll animateIn='animate__backInRight'>
-                    <div>
-                        <span className='size-font-mb-span'>Daşınmaz Əmlak</span>
-                        <span className='size-font-mb-span'>Enerji</span>
-                        <span className='size-font-mb-span'>Maliyyə Servisləri</span>
-                        <span className='size-font-mb-span'>Sənaye Məhsulları</span>
-                        <span className='size-font-mb-span'>Texnologiya, Media və Əyləncə</span>
-                        <span className='size-font-mb-span'>Transporstasiya  və Logistika</span>
-                        <span className='size-font-mb-span'>İstehsal</span>
-                        <span className='size-font-mb-span'>Retail</span>
-                        <span className='size-font-mb-span'>Təchizat</span>
-                        <span className='size-font-mb-span'>Təhsil</span>
-                        <span className='size-font-mb-span'>FMCG</span>
-                        <span className='size-font-mb-span'>Tikinti</span>
-                        <span className='size-font-mb-span'>E-commerce</span>
-                    </div>
+                    
+                     <div>
+                           {renderedIndustries}
+                     </div>
                 </AnimationOnScroll>
             </div>
 

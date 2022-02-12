@@ -8,6 +8,11 @@ import RoundedButton from '../toolbox/buttons/RoundedButton'
 const Footer = () => {
   const allFooterData = useSelector(selectAllFooterLinks)
 
+  const handleNavigateFooter = (paramsLink) => {
+
+  }
+
+
   const renderedMenu = allFooterData.map((item) => {
     return (
       <div className='mt-mb-2 sm-mb-4-padding'>
@@ -20,10 +25,10 @@ const Footer = () => {
             </p>
             {
               <ul>
-                {item.headerItems.map((linkItem, index) => {
+                {item.headerItems.map(itemS => {
                   return (
-                    <li className={`${styles.list_item_footer}`} key={index}>
-                      {linkItem}
+                    <li className={`${styles.list_item_footer}`}  onClick={() => handleNavigateFooter(itemS)} >
+                      {itemS}
                     </li>
                   )
                 })}
@@ -62,7 +67,7 @@ const Footer = () => {
         <div
           className={`d-flex justify-between ${styles.margin_top_content} ${styles.width_footer_links}`}
         >
-          {renderedMenu}
+        {renderedMenu}
         </div>
       </div>
       <p className={styles.footer_end}>&copy; 2021 Think Wise Consulting MMC</p>
