@@ -2,7 +2,8 @@
 import React, {useState} from 'react';
 import styles from './request.module.css';
 import arrow from './assets/arrow.svg' ;
-import alertify from 'alertifyjs'
+import alertify from 'alertifyjs';
+import { useForm } from 'react-hook-form';
 
 const Request = ({classData,classRemover}) => {
 
@@ -11,9 +12,10 @@ const Request = ({classData,classRemover}) => {
     const [email,setEmail] = useState('');
     const [number,setMNumber] = useState('');
     const [content,setContent] = useState('');
+    const [message,setMessage] = useState('')
 
 
-    const isDisabled = [fullName,email,number,content].every(Boolean)
+    const isDisabled = [fullName,email,number,content,message].every(Boolean)
 
 
     const handleErrorView = () => {
@@ -62,11 +64,11 @@ const Request = ({classData,classRemover}) => {
                 />
 
                 <input 
-                    type='text'
+                    type='tel'
                     name='number'
                     id='number'
-                    placeholder='Telefon'
-                    pattern="|(\+\d{1,3}\s?)?((\(\d{3}\)\s?)|(\d{3})(\s|-?))(\d{3}(\s|-?))(\d{4})(\s?(([E|e]xt[:|.|]?)|x|X)(\s?\d+))?|g"
+                    placeholder='Telefon Nömrəsi'
+                    pattern="[(?=^.{0,40}$)^[0-9]+$]"
                     className={`${styles.modal_input}`}
                     value={number}
                     onChange={(e) => setMNumber(e.target.value)}
@@ -86,7 +88,17 @@ const Request = ({classData,classRemover}) => {
                     required
                     
                  />
-                 <textarea className={`${styles.modal_text_area}`} name=""></textarea>
+                 <textarea 
+                    name="message" 
+                    id='message' 
+                    placeholder='Müraciətiniz'
+                    className={`${styles.modal_text_area}`} 
+                    value={message}
+                    onChange={(e) => setMessage(e.target.value)}
+                    required
+                 >
+
+                 </textarea>
                 <button type='submit'disabled={!isDisabled}>
                     Göndər <img src={arrow} alt="arrow svg button design" />
                 </button>
