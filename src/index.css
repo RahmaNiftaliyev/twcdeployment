@@ -28,7 +28,6 @@ html {
     -ms-scroll-behaviour:smooth;
     o-scroll-behaviour:smooth;
     scroll-behavior: smooth;
-    
 }
 
 body {
@@ -42,6 +41,8 @@ body {
 button {
     cursor: pointer;
 }
+
+
 
 .d-flex {
     display: flex;

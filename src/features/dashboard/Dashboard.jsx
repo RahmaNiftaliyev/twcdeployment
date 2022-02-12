@@ -41,6 +41,7 @@ import Privacy from './../components/privacy/Privacy';
 import SignUp from './../components/form/SignUp';
 import SignIn from './../components/form/SignIn';
 import BackToTop from '../toolbox/buttons/BackToTop';
+import Cursor from '../cursor/Cursor';
 
 
 const Dashboard = () =>
@@ -48,6 +49,7 @@ const Dashboard = () =>
   return (
     <div>
       <BackToTop />
+      <Cursor />
       <Routes>
         <Route path="/" element={<HomeDashboard />} />
         <Route path="/contact" element={<ContactDashboard />} />
