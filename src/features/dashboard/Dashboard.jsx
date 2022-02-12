@@ -40,12 +40,14 @@ import Faq from './../components/privacy/Faq';
 import Privacy from './../components/privacy/Privacy';
 import SignUp from './../components/form/SignUp';
 import SignIn from './../components/form/SignIn';
+import BackToTop from '../toolbox/buttons/BackToTop';
 
 
 const Dashboard = () =>
 {
   return (
     <div>
+      <BackToTop />
       <Routes>
         <Route path="/" element={<HomeDashboard />} />
         <Route path="/contact" element={<ContactDashboard />} />

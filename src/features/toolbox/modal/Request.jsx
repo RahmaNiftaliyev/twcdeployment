@@ -17,7 +17,7 @@ const Request = ({classData,classRemover}) => {
 
 
     const handleErrorView = () => {
-      
+        classRemover()
     }
  
 
@@ -87,8 +87,13 @@ const Request = ({classData,classRemover}) => {
                     
                  />
                  <textarea className={`${styles.modal_text_area}`} name=""></textarea>
-                <button type='submit' onClick={handleErrorView} disabled={!isDisabled}>
+                <button type='submit'disabled={!isDisabled}>
                     Göndər <img src={arrow} alt="arrow svg button design" />
+                </button>
+                &nbsp;
+                &nbsp;
+                <button type='button'  onClick={handleErrorView} >
+                    Geri qayıt 
                 </button>
             </form>
         </div>
