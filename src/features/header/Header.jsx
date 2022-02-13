@@ -6,11 +6,9 @@ import { Typewriter } from 'typewriting-react';
 const Header = ({textColor,textData,newData}) => {
 
     
-
-
     return (
         <div className='mobile-padding normalize-padding header-height'>
-            <h1 className={`${textColor} ${styles.header_head_text}`}><Typewriter words={[`${textData}`,`${newData}`]} /></h1>
+            <h1 className={`${textColor} ${styles.header_head_text}`}><Typewriter words={(textData && newData) && [`${textData}`,`${newData}`]} /></h1>
             
         </div>
     )

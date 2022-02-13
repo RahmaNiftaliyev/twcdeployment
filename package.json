@@ -45,8 +45,10 @@
     "oidc-client": "^1.11.5",
     "react": "^17.0.2",
     "react-admin": "^3.19.8",
+    "react-alice-carousel": "^2.5.1",
     "react-animated-cursor": "^2.2.0",
     "react-animation-on-scroll": "^2.1.0",
+    "react-awesome-slider": "^4.1.0",
     "react-dom": "^17.0.2",
     "react-google-maps": "^9.4.5",
     "react-google-maps-loader": "^4.3.0",
@@ -73,7 +75,9 @@
     "workbox-range-requests": "^6.4.2",
     "workbox-routing": "^6.4.2",
     "workbox-strategies": "^6.4.2",
-    "workbox-streams": "^6.4.2"
+    "workbox-streams": "^6.4.2",
+    "socket.io-client": "^4.4.1",
+    "web-vitals": "^2.1.4"
   },
   "devDependencies": {
     "ajv": "^8.10.0",

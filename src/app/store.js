@@ -8,12 +8,14 @@ import navigationReducer from './../features/navigation/navigationSlice'
 import footerReducer from './../features/footer/footerSlice'
 import usersReducer from './../features/components/form/usersSlice'
 import industriesReducer from './../features/components/industry/industriesSlice'
+import careersReducer from './../features/components/career/careersSlice'
 
 export const store = configureStore({
   reducer: {
     navigation: navigationReducer,
     footer: footerReducer,
     users: usersReducer,
-    industries:industriesReducer
+    industries:industriesReducer,
+    careers:careersReducer
   },
 })

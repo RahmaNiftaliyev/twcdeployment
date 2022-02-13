@@ -38,7 +38,7 @@ const SignUp = () => {
                 </div>
                 <div className={`${styles.form_group}`}>
                     <p className={`${styles.form_title}`}>
-                        TWC-<Typewriter words={['yə xoş gəlmisiniz!','yə daxil ol']} />
+                        TWC-<Typewriter words={['yə xoş gəlmisiniz!','yə daxil ol!']} />
                     </p>
                     <form
                         action=""

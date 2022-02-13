@@ -1,8 +1,6 @@
 // @ts-nocheck
 import React, { useState,useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { ImFacebook, ImLinkedin2 } from 'react-icons/im';
-import { SiInstagram } from 'react-icons/si';
 import { AnimationOnScroll } from 'react-animation-on-scroll';
 import { useSelector } from 'react-redux';
 import RoundedButton from '../../toolbox/buttons/RoundedButton';
@@ -23,6 +21,8 @@ import article1 from '../articles/assets/img/ntflx.png';
 import article2 from '../articles/assets/img/alcohol-cover.png';
 import article3 from '../articles/assets/img/cargo-cover.png';
 import article4 from '../articles/assets/img/startup.png';
+import Gallery from '../../toolbox/gallery/Gallery';
+
 
 
 
@@ -31,6 +31,9 @@ const Home = () => {
 
 
     const industries = useSelector(selectAllIndustries) ; 
+    const teamImageData = [team_mem1,team_mem2,team_mem3,team_mem4,team_mem5,team_mem6]
+
+    
 
     const renderedIndustries =   
            
@@ -49,15 +52,7 @@ const Home = () => {
 
     const handleNavigation = (paramsPath) => {
         navigate(paramsPath);
-    };
-
-    const [slider,setSlider] = useState(false);
-
-
-
-    useEffect(() => {
-        setInterval(() => setSlider(!slider),3000);
-    },[slider]);
+    }
 
 
 
@@ -87,56 +82,13 @@ const Home = () => {
         <div className={`${styles.our_team}`}>
             <p>Professİonal komandamız</p>
             <h2>Ən son layihədə iştirak <br /> edən komanda üzvlərimiz </h2>
-            <div className={`${styles.slide_dot}`}>
+             <div className={`${styles.slide_dot}`}>
                 <div></div>
                 <div></div>
                 <div></div>
             </div>
-            <AnimationOnScroll animateIn='animate__backInLeft'>
-
-                <div className={`${styles.team_card_container}`}>
-
-                    <div className={`${styles.team_card}`}>
-                        <img src={team_mem2} alt="Think wise professional team member resume" />
-                        <h3>Aynur Nizamova</h3>
-                        <p>Biznes Konsultant <br /> Təhsil: Azərbaycan Dövlət İqtisad Universiteti, Dünya İqtisadiyyatı</p>
-                        <ul>
-                             <a href="https://www.linkedin.com/company/think-wise-business-consulting"><ImLinkedin2 className={`text-white nav-icon-margin-right`} /></a>
-                             <a href="https://www.facebook.com/thinkwiseazerbaijan/"><ImFacebook className={`text-white nav-icon-margin-right`} /></a>
-                             <a href="https://www.instagram.com/thinkwise.consulting/"><SiInstagram className="text-white" /></a> 
-                        </ul>
-                    </div>
-
-
-                    <div className={`${styles.team_card}`}>
-                        <img src={team_mem1} alt="Think wise professional team member resume" />
-                        <h3>Çingiz Novruzzadə</h3>
-                        <p>Təsisçi və Direktor <br /> Təhsil: İUBH International Management və Univeristy of East Anglia Investment and Financial Management </p>
-                        <ul>
-                                <a href="https://www.linkedin.com/company/think-wise-business-consulting"><ImLinkedin2  className={`text-white nav-icon-margin-right`} /></a>
-                                <a href="https://www.facebook.com/thinkwiseazerbaijan/"><ImFacebook className={`text-white nav-icon-margin-right`} /></a>
-                                <a href="https://www.instagram.com/thinkwise.consulting/"><SiInstagram className="text-white" /></a> 
-                        </ul>
-                    </div>
-
-
-                    <div className={`${styles.team_card}`}>
-                        <img src={team_mem3} alt="Think wise professional team member resume" />
-                        <h3>Ramazan Əliquliyev</h3>
-                        <p>Satış və Marketinq <br /> Təhsil: Saint Petersburg, Polytechnic University, Digital Marketing and E-Commerce.</p>
-                        <ul>
-                              <a href="https://www.linkedin.com/company/think-wise-business-consulting"><ImLinkedin2  className={`text-white nav-icon-margin-right`} /></a>
-                              <a href="https://www.facebook.com/thinkwiseazerbaijan/"><ImFacebook  className={`text-white nav-icon-margin-right`} /></a>
-                              <a href="https://www.instagram.com/thinkwise.consulting/"><SiInstagram className="text-white" /></a> 
-                        </ul>
-                    </div>
-
-
-                </div>
-            </AnimationOnScroll>
-
         </div>
-
+        <Gallery images={teamImageData} localClassData={`${styles.team_card}`} />
         <div className={`${styles.text_sec}`}>
 
             <p>Uğurlu biznes uğurlu biznes əlaqələri deməkdir.<br />Lakin bu əlaqələr müştərinin eşitmək istədiyini deməklə <br /> yox, doğru olanı deməklə yaradılmalıdır.</p>

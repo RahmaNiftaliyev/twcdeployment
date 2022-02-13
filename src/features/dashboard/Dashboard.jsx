@@ -41,14 +41,28 @@ import Privacy from './../components/privacy/Privacy';
 import SignUp from './../components/form/SignUp';
 import SignIn from './../components/form/SignIn';
 import BackToTop from '../toolbox/buttons/BackToTop';
-import Cursor from '../cursor/Cursor';
+import Cursor from './../toolbox/cursor/Cursor';
 
 
 const Dashboard = () =>
 {
+
+  const [isVisible,setIsVisible] = React.useState(false) ; 
+
+ const handleScroll = () => {
+   if(document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+    setIsVisible(true)
+   } else {
+     setIsVisible(false)
+   }
+ }
+
+ window.addEventListener("scroll",handleScroll) ; 
+
+
   return (
     <div>
-      <BackToTop />
+      <BackToTop showMe={isVisible} />
       <Cursor />
       <Routes>
         <Route path="/" element={<HomeDashboard />} />

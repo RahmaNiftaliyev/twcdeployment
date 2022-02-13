@@ -37,8 +37,10 @@
   padding-left: 208px;
   padding-right: 97px
 }
+
+
 .services_describtion h2 {
-  font-size: 53px;
+  font-size: clamp(32px,3.681vw,52px);
   font-weight: 400;
   line-height: 61.48px;
   margin-bottom: 1.75rem
@@ -60,17 +62,6 @@
   flex-wrap: wrap
 }
 .services_list_container div > a > span {
-  display: inline-block;
-  padding: .5rem;
-  margin-right: 1.25rem;
-  margin-bottom: 1.25rem;
-  border: 1px solid #171717;
-  background-color: transparent;
-  -webkit-border-radius: .375rem .25rem;
-  -moz-border-radius: .375rem .25rem;
-  -ms-border-radius: .375rem .25rem;
-  -o-border-radius: .375rem .25rem;
-  border-radius: .375rem .25rem;
   -webkit-transition:  0.8 ease-in!important;
   -moz-transition:  0.8 ease-in!important;
   -ms-transition:  0.8 ease-in!important;
@@ -84,21 +75,41 @@
 }
 
 
-.services_list_container div > a > span:hover {
-    background-color: #171717;
-    color: white;
-    -webkit-transition:  0.8 ease-in!important;
-    -moz-transition:  0.8 ease-in!important;
-    -ms-transition:  0.8 ease-in!important;
-    -o-transition:  0.8 ease-in!important;
-    transition:  0.8 ease-in!important;
-}
-
 
 .link_style_none {
+  border: 1px solid #171717;
+  background-color: white;
+  -webkit-border-radius: .375rem .25rem;
+  -moz-border-radius: .375rem .25rem;
+  -ms-border-radius: .375rem .25rem;
+  -o-border-radius: .375rem .25rem;
+  border-radius: .375rem .25rem;
   text-decoration: none;
+  padding: .5rem;
+  display: inline-block;
   color: #171717;
+  margin-right: 1.25rem;
+  margin-bottom: 1.25rem;
+  transition:  0.8 ease-in!important;
+
 }
+
+
+.link_style_none:hover {
+      background-color: #171717;
+      color: #fff;
+      -webkit-transition:  0.8 ease-in!important;
+      -moz-transition:  0.8 ease-in!important;
+      -ms-transition:  0.8 ease-in!important;
+      -o-transition:  0.8 ease-in!important;
+      transition:  0.8 ease-in!important;
+      transform:scale(1.1);
+      -webkit-transform:scale(1.1);
+      -moz-transform:scale(1.1);
+      -ms-transform:scale(1.1);
+      -o-transform:scale(1.1);
+}
+
 
 
 .services_describtion {
