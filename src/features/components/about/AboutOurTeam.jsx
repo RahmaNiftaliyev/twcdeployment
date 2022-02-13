@@ -22,7 +22,7 @@ import Footer from './../../footer/Footer';
 const AboutOurTeam = () => {
     return (
         <div>
-            <AboutHeaderDash img={teamJpg} />
+            <AboutHeaderDash  img={teamJpg} textStructure={'Peşəkar komandamızla biznesinizin uğura gedən yolu'} />
 
             <div
                 className={`${styles.our_team} d-flex direction-column justify-center align-center`}

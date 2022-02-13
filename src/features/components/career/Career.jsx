@@ -7,6 +7,7 @@ import arrow from './assets/img/arrow.png';
 import { AnimationOnScroll } from 'react-animation-on-scroll';
 import Footer from './../../footer/Footer';
 import Request from '../../toolbox/modal/Request';
+import { Link } from 'react-router-dom';
 
 
 const Career = () => {
@@ -78,7 +79,7 @@ const Career = () => {
                             hazırsan?
                         </h4>
 
-                        <RoundedButton positioned="" color="#000" />
+                       <Link to="/register"><RoundedButton positioned="" color="#000" /></Link>
                     </div>
                 </div>
             </section>

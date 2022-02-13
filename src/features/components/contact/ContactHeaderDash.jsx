@@ -19,7 +19,7 @@ const ContactHeaderDash = () => {
         bgColor="bg-white"
         isArticle={false}
       />
-      <Header />
+      <Header textColor={'text-white'} textData={'Siz də peşəkar komandamızla əlaqə saxlayın'} />
     </div>
   )
 }

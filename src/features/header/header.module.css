@@ -1,4 +1,8 @@
-/*
- *   Copyright (c) 2022 
- *   All rights reserved.
- */
+.header_head_text {
+    font-size: 53px;
+    line-height: 61px;
+    font-weight: 400;
+    max-width: 707px;
+    position: absolute;
+    top: 289px;
+}

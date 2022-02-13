@@ -9,10 +9,10 @@ const NavHeader = ({ textColor, borderBgColor }) => {
     >
       <div>
         <a
-          href="mailto:info@thinkwise.az"
+          href="mailto:info@twc.az"
           className={`text-decoration-none ${textColor} nav-header-links nav-link-padding-right`}
         >
-         {' info@thinkwise.az'}
+         {' info@twc.az'}
         </a>
         <a
           href="tel:+994 50 447 10 90"

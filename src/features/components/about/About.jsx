@@ -21,7 +21,7 @@ import Footer from './../../footer/Footer';
 const About = () => {
     return (
         <div>
-            <AboutHeaderDash img={aboutmain} />
+            <AboutHeaderDash isBlack={true} img={aboutmain} textStructure={'Biznes planlarınız və strategiyalarınız üçün ekspert məsləhətləri'} />
             <section
                 className={`${styles.services_header} d-flex direction-column justify-center align-center`}
             >

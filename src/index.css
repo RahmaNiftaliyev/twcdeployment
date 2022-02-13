@@ -32,10 +32,7 @@ html {
 
 body {
     overflow-x: hidden;
-    background-image: url(./features/components/common/assets/png/background.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    background-color:white;
 }
 
 button {
@@ -535,6 +532,38 @@ button {
     .size-font-mb-span {
         margin-right: 14px;
     }
+
+
+.hoverable-span {
+    -webkit-transition: all .8 ease!important;
+    -moz-transition: all .8 ease!important;
+    -ms-transition: all .8 ease!important;
+    -o-transition: all .8 ease!important;
+    transition: all .8 ease!important;
+    display: inline-block;
+}
+.hoverable-span:hover {
+    background-color: #171717;
+    color: white;
+    -webkit-transition: all .2 ease!important;
+    -moz-transition: all .2 ease!important;
+    -ms-transition: all .2 ease!important;
+    -o-transition: all .2 ease!important;
+    transition: all .2 ease!important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
     .w-mb-100 {
         width: 100%;
     }

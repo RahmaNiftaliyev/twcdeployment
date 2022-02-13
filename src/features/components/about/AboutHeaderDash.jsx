@@ -5,7 +5,8 @@ import NavHeader from '../../toolbox/navheader/NavHeader'
 import Header from './../../header/Header'
 import styles from './about.module.css'
 import whiteThinkWiseLogo from './../common/assets/svg/navigation-white-logo.svg'
-const AboutHeaderDash = ({ img }) => {
+import blackThinkwiseLogo from './../common/assets/svg/navigation-black-logo.svg'
+const AboutHeaderDash = ({ isBlack,img,textStructure }) => {
   const backgroundStyle = {
     backgroundImage: `url(${img})`,
     backgroundRepeat: 'no-repeat',
@@ -16,16 +17,16 @@ const AboutHeaderDash = ({ img }) => {
   return (
     <div style={backgroundStyle}>
       <NavHeader
-        textColor={'nav-header-text-white'}
-        borderBgColor={'nav-header-border-white'}
+        textColor={isBlack ? 'nav-header-text-dark' : 'nav-header-text-white'}
+        borderBgColor={isBlack ? 'nav-header-border-dark' : 'nav-header-border-white'}
       />
       <Navigation
-        logo={whiteThinkWiseLogo}
+        logo={isBlack ? blackThinkwiseLogo : whiteThinkWiseLogo}
         enable={false}
-        textColor="text-white"
-        bgColor="bg-white"
+        textColor={isBlack ? "text-dark" :"text-white"}
+        bgColor={isBlack ? "bg-dark" : "bg-white"}
       />
-      <Header />
+      <Header textColor={isBlack ? "text-dark" :"text-white"} textData={textStructure} />
     </div>
   )
 }

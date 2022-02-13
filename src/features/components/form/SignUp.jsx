@@ -44,7 +44,7 @@ const SignUp = () => {
                             required
                             value={fullName}
                             onChange={e => setFullName(e.target.value)}
-                            pattern="(?=^.{0,40}$)^[a-zA-Z-]+\s[a-zA-Z-]+$"
+                            pattern='[(?=^.{0,40}$)^[a-zA-Z-]+\s[a-zA-Z-]+$]'
                         />
                         <label
                             className={`${styles.input_label}`}
@@ -77,7 +77,7 @@ const SignUp = () => {
                             required
                             value={number}
                             onChange={e => setNumber(e.target.value)}
-                            pattern="/(\+\d{1,3}\s?)?((\(\d{3}\)\s?)|(\d{3})(\s|-?))(\d{3}(\s|-?))(\d{4})(\s?(([E|e]xt[:|.|]?)|x|X)(\s?\d+))?/g"
+                            pattern="[(?=^.{0,40}$)^[0-9]+$]"
 
                         />
                         <label

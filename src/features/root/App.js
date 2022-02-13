@@ -1,7 +1,4 @@
-/*
- *   Copyright (c) 2022
- *   All rights reserved.
- */
+
 import React from 'react'
 import Dashboard from '../dashboard/Dashboard'
 

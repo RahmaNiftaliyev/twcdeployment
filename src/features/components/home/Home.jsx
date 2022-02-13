@@ -1,6 +1,6 @@
 // @ts-nocheck
 import React, { useState,useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { ImFacebook, ImLinkedin2 } from 'react-icons/im';
 import { SiInstagram } from 'react-icons/si';
 import { AnimationOnScroll } from 'react-animation-on-scroll';
@@ -36,7 +36,7 @@ const Home = () => {
            
                 industries.map((ind,index) => {
                     return (
-                         <span key={ind.id} className='size-font-mb-span pointer'>{ind.name}  {index % 3 === 0 && <span className={`${styles.mb_display_none}`}></span>}</span>
+                         <Link to="/" className={`${styles.link_style_none }`}><span key={ind.id} className={`size-font-mb-span pointer hoverable-span ${index >= 8 &&  styles.margin_bottom_zero}`}>{ind.name}  {index % 3 === 0 && <span className={`${styles.mb_display_none}`}></span>}</span></Link>
                     )      
                 })    
             

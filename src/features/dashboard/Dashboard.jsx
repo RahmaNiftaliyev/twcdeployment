@@ -63,7 +63,7 @@ const Dashboard = () =>
         <Route path="/ideas/finance" element={<ArticlesFinance />} />
 
 
-        
+        {/* !HAQQIMIZDA */}
         <Route path="/about" element={<About />} />
         <Route path="/about/team" element={<AboutOurTeam />} />
         <Route path="/about/testimonials" element={<AboutTestimonials />} />
@@ -100,6 +100,9 @@ const Dashboard = () =>
           path="/services/marketresearch"
           element={<ServicesMarketResearch />}
         />
+
+
+        {/* !SENAYE */}
         <Route
           path="/industry/immovableproperty"
           element={<IndustryImmovableProperty />}
@@ -129,7 +132,7 @@ const Dashboard = () =>
         <Route path="/industry/ecommerce" element={<IndustryEcommerce />} />
         <Route path="/industry/energy" element={<IndustryEnergy />} />
 
-
+        {/* !FAQ PRIVACY LOGIN REGISTER */}
         <Route path="/faq" element={<Faq />} />
         <Route path="/privacy" element={<Privacy />} />
 
