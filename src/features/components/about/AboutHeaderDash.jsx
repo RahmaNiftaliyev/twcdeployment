@@ -6,7 +6,7 @@ import Header from './../../header/Header'
 import styles from './about.module.css'
 import whiteThinkWiseLogo from './../common/assets/svg/navigation-white-logo.svg'
 import blackThinkwiseLogo from './../common/assets/svg/navigation-black-logo.svg'
-const AboutHeaderDash = ({ isBlack,img,textStructure }) => {
+const AboutHeaderDash = ({ isBlack,img,textStructure,textStructureData }) => {
   const backgroundStyle = {
     backgroundImage: `url(${img})`,
     backgroundRepeat: 'no-repeat',
@@ -26,7 +26,7 @@ const AboutHeaderDash = ({ isBlack,img,textStructure }) => {
         textColor={isBlack ? "text-dark" :"text-white"}
         bgColor={isBlack ? "bg-dark" : "bg-white"}
       />
-      <Header textColor={isBlack ? "text-dark" :"text-white"} textData={textStructure} />
+      <Header textColor={isBlack ? "text-dark" :"text-white"} textData={textStructure} newData={textStructureData} />
     </div>
   )
 }

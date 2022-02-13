@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux';
 import { selectAllUsers } from './usersSlice';
 import blackThinkWiseLogo from './../common/assets/svg/navigation-black-logo.svg';
 import { Link } from 'react-router-dom';
-
+import { Typewriter } from 'typewriting-react';
 const SignUp = () => {
     const users = useSelector(selectAllUsers);
 
@@ -38,7 +38,7 @@ const SignUp = () => {
                 </div>
                 <div className={`${styles.form_group}`}>
                     <p className={`${styles.form_title}`}>
-                        TWC-yə xoş gəlmisiniz!
+                        TWC-<Typewriter words={['yə xoş gəlmisiniz!','yə daxil ol']} />
                     </p>
                     <form
                         action=""

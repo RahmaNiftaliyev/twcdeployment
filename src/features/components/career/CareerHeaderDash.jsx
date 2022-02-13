@@ -19,7 +19,10 @@ const CareerHeaderDash = () => {
         bgColor="bg-white"
         isArticle={false}
       />
-      <Header textColor={'text-white'} textData={'Sən də peşəkar komandamızın bir üzvü ol'} />
+      <Header 
+      textColor={'text-white'} 
+      textData={'Sən də peşəkar komandamızın bir üzvü ol'} 
+      newData={'Become a member of our professional team'}/>
     </div>
   )
 }

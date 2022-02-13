@@ -20,7 +20,10 @@ const HomeHeaderDash = () => {
         bgColor="bg-white"
         isArticle={false}
       />
-      <Header textColor={'text-white'} textData={'Azərbaycanda ilk yerli saf menecment konsaltinq servisləri'} />
+      <Header 
+        textColor={'text-white'} 
+        textData={'Azərbaycanda ilk yerli saf menecment konsaltinq servisləri'} 
+        newData={'The first pure local management consulting services in Azerbaijan'} />
     </div>
   )
 }
