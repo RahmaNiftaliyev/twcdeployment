@@ -1,9 +1,11 @@
+// @ts-nocheck
 import React from 'react'
 import { ImFacebook, ImLinkedin2 } from 'react-icons/im';
 import { SiInstagram } from 'react-icons/si';
+import dividerSvg from './assets/team-shape.svg'
 import AliceCarousel from 'react-alice-carousel'
 import 'react-alice-carousel/lib/alice-carousel.css'
-const Gallery = ({images,localClassData}) => {
+const Gallery = ({images}) => {
 
 
     const handleDragStart = (e) => e.preventDefault();
@@ -16,20 +18,46 @@ const Gallery = ({images,localClassData}) => {
                     1024:{ items: 3 },
                 };      
 
-    const renderedImages = images.map(image => {
-        return (
-          <div className={`${localClassData} block-center`}>
-                        <img src={image} onDragStart={handleDragStart} width="319"  alt="Think wise professional team member resume" />
-                        <h3>Çingiz Novruzzadə</h3>
-                        <p>Təsisçi və Direktor <br /> Təhsil: İUBH International Management və Univeristy of East Anglia Investment and Financial Management </p>
-                          <ul>
-                                <a href="https://www.linkedin.com/company/think-wise-business-consulting"><ImLinkedin2  className={`text-white nav-icon-margin-right`} /></a>
-                                <a href="https://www.facebook.com/thinkwiseazerbaijan/"><ImFacebook className={`text-white nav-icon-margin-right`} /></a>
-                                <a href="https://www.instagram.com/thinkwise.consulting/"><SiInstagram className="text-white" /></a> 
-                        </ul> 
+
+
+    const renderedImages2 = images.map(image => {
+      return (
+
+        <div className='container-team-data'>
+            <div>
+            <div className="img-section-team-data">
+             <img src={image} onDragStart={handleDragStart} width="319"  alt="Think wise professional team member resume" />
+             <div className='absolute social-section-team-data'>
+               <ImFacebook />
+                <br />
+               <ImLinkedin2 />
+               <br />
+               <SiInstagram />
+             </div>
           </div>
-        )
+          <div className='svg-section-team-data'>
+            <img src={dividerSvg} alt="" />
+          </div>
+          <div className='content-section-team-data'>
+              <h4>Çingiz Novruzzadə</h4>
+              <span>Təsisçi və Direktor </span>
+              <p>Təhsil: İUBH International 
+              anagement və Univeristy of East 
+              Anglia Investment and Financial Management </p>
+          </div>
+            </div>
+        </div>
+            
+                 
+             
+
+            
+           
+      )
     })
+
+    
+    
 
 
   return (
@@ -42,9 +70,9 @@ const Gallery = ({images,localClassData}) => {
         infinite={true}
         autoPlayStrategy={'none'}
         responsive={responsive} 
-        items={renderedImages}  
-        autoPlayInterval={1200} 
-        animationDuration={1200}
+        items={renderedImages2}  
+        autoPlayInterval={2400} 
+        animationDuration={2400}
     />
 
   )

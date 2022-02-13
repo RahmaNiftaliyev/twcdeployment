@@ -88,7 +88,9 @@ const Home = () => {
                 <div></div>
             </div>
         </div>
-        <Gallery images={teamImageData} localClassData={`${styles.team_card}`} />
+        <div className='galler-container'>
+              <Gallery images={teamImageData} localClassData={`${styles.team_card}`} />
+        </div>
         <div className={`${styles.text_sec}`}>
 
             <p>Uğurlu biznes uğurlu biznes əlaqələri deməkdir.<br />Lakin bu əlaqələr müştərinin eşitmək istədiyini deməklə <br /> yox, doğru olanı deməklə yaradılmalıdır.</p>
