@@ -245,6 +245,34 @@ section.vacantion>h4 {
 }
 
 
+.vacancy_container > h3 {
+  color: #171717;
+}
+
+
+
+
+.vacancy_container > p,
+.vacancy_container > ul > li {
+  color: #878787;
+}
+
+
+.vacancy_container > ul,
+.vacancy_container > h3,
+.vacancy_container > p {
+      margin-bottom: 29px;
+}
+
+.vacancy_container > h3,
+.vacancy_container > p,
+.vacancy_container > ul > li {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+}
+
+
 
 
 @media screen and (max-width: 940px) {

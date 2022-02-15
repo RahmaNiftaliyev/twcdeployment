@@ -2,12 +2,22 @@
 * {
   font-family: Poppins,sans-serif;
   box-sizing: border-box;
-  list-style-type: none;
   border: none;
   outline: 0;
   margin: 0;
   padding: 0
 }
+
+
+ul:not(ul.non-cleared) {
+  list-style-type: none;
+}
+
+ul.non-cleared {
+  list-style-type: disc!important;
+}
+
+
 :root {
   --font-normal: 400;
   --color-white: #fff;

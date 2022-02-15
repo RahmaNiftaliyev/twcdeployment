@@ -26,28 +26,6 @@ const Vacantions = () => {
     const isDisabled = [fullName,email,number,content,message].every(Boolean)
 
 
-    const handleErrorView = () => {
-
-        const isSaving =  [fullName,email,number,content.message].some(content => Boolean(content))
-               
-                    if(isSaving) {
-                          debugger;
-                          alertify.confirm(  'TWC.AZ','Şəxsi Məlumatlarınız Saxlanılsın ?', 
-                          function(){ 
-                             alertify.alert('TWC.AZ',`Hörmətli ${fullName} məlumatlarınız saxlanıldı`)  
-                         },
-                          function(){  
-                             alertify.alert('TWC.AZ',`Hörmətli ${fullName} məlumatlarınız silindi`)  
-                             setFullName('')
-                             setEmail('')
-                             setMNumber('')
-                             setContent('')
-                             setMessage('')
-                         }
-                          )
-                        }
-   
-}
 
   
 const handleSubmit = () => {
@@ -63,6 +41,55 @@ const handleSubmit = () => {
              <div className={`${styles.vacancy_section_main_container}`}>
                 <h1 className={`${styles.vacancy_header}`}>{selectedVacancy.name} <br /> pozisiyasına vakansiya</h1>
               <div className={`${styles.vacancy_container}`}>
+              <h3>Biz kimik?</h3>
+              <p>Cənub-Şərqi Avropanın ilk erkən mərhələdə olan saf menecement konsaltinq şirkəti olan TWC gənc, 
+              dinamik və istedadlı komandası ilə hər çətinliyin üstəsindən gəlməyə hazırdır.</p>
+              <h3>İş haqqında</h3>
+              <p>Biz müştərilərimizə bizneslərini transformasiya etmək üçün intuitiv tövsiyələr verəcək &nbsp;
+               {selectedVacancy.name} axtarırıq.</p>
+               <p>Uğurlu {selectedVacancy.name} ilk növbədə, biznesin bir çox aspektləri barədə geniş biliklərə malik 
+               olmalıdır. İdeal namizəd həmçinin müştərilərin şirkət dəyərini artıracaq həllər və tövsiyələr təklif 
+               etmək üçün mükəmməl bacarıqlara malik olmalıdır.</p>
+               <p>TWC-də məqsəd müştərilərin uzunmüddətli müvəffəqiyyətinə dəstək olmaqdır.</p>
+              <h3>Vəzifələri</h3>
+              <ul type="disc" className='non-cleared'>
+                {
+                  selectedVacancy.orders.map((order,index) => {
+                    return (
+                      <li key={index}>{order}</li>
+                    )
+                  })
+                }
+              </ul>
+              <h3>Üstünlük kvalifikasiyaları</h3>
+              <ul type="disc" className='non-cleared'>
+                {
+                  selectedVacancy.qualifications.map((qualification,index) => {
+                    return(
+                      <li key={index}>{qualification}</li>
+                    )
+                  })
+                }
+              </ul>
+              <h3>Şəxsi keyfiyyət və sosial bacarıqları</h3>
+              <ul type="disc" className='non-cleared'>
+                {
+                  selectedVacancy.personalQuality.map((quality,index) => {
+                    return (
+                      <li key={index}>{quality}</li>
+                    )
+                  })
+                }
+              </ul>
+
+                {/* vezife ustunluk wexsi muraciet */}
+              <h3>Haqqımızda</h3>
+              <p>Biz komandamızın müxtəlifliyinə inanırıq, buna görə də biz bərabər imkanlara malik işəgötürənik. Biz 
+              yaş, irq, din, etnik mənsubiyyət, milli mənşə, cinsi, cinsi orientasiya, ailə vəziyyəti, əlillik və 
+              qanunvericiliklə qorunan digər əsaslar da daxil olmaqla, lakin bununla məhdudlaşmayan, hər hansı 
+              bir əlamətə görə diskriminasiyaya yol vermirik.</p>
+
+              {/*MURACIET ET FORM*/}
                   <form onSubmit={handleSubmit} netlify>
                 <input 
                     type='text'
