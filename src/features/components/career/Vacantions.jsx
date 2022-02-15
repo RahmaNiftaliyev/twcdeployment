@@ -1,13 +1,21 @@
 // @ts-nocheck
-import React, {useState} from 'react';
-import styles from './request.module.css';
-import arrow from './assets/arrow.svg' ;
+import React, {useState} from 'react'
+import { useSelector } from 'react-redux';
+import { useParams } from 'react-router-dom';
+import { selectVacantionById } from './careersSlice'
+import Footer from '../../footer/Footer';
+import styles from './career.module.css';
+import arrow from './assets/img/arrow.png' ;
 import alertify from 'alertifyjs';
+import VacantionHeaderDash from './VacantionHeaderDash';
 
 
-const Request = ({ classData,classRemover}) => {
 
-    
+const Vacantions = () => {
+  const {vacanciesId} = useParams() ; 
+  const selectedVacancy = useSelector(state => selectVacantionById(state,vacanciesId))
+
+   
     const [fullName,setFullName] = useState('');
     const [email,setEmail] = useState('');
     const [number,setMNumber] = useState('');
@@ -38,27 +46,24 @@ const Request = ({ classData,classRemover}) => {
                          }
                           )
                         }
-        classRemover()
-        
+   
+}
 
+  
+const handleSubmit = () => {
 
 }
 
-    const handleSubmit = (e) => {
-
-        if(isDisabled) {
-             alertify.alert('TWC.AZ', `${fullName} TWC ailəsinə xoş gəldiniz`);
-             classRemover()
-        } 
-
-        e.preventDefault();
-    };
 
 
   return (
-    <div className={`${styles.hidden_absolute_modal} ${classData}`}>
-        <div className={`${styles.modal}`}>
-            <form onSubmit={handleSubmit} netlify>
+    <div>
+
+      <VacantionHeaderDash />
+             <div className={`${styles.vacancy_section_main_container}`}>
+                <h1 className={`${styles.vacancy_header}`}>{selectedVacancy.name} <br /> pozisiyasına vakansiya</h1>
+              <div className={`${styles.vacancy_container}`}>
+                  <form onSubmit={handleSubmit} netlify>
                 <input 
                     type='text'
                     name='fullname'
@@ -122,15 +127,12 @@ const Request = ({ classData,classRemover}) => {
                 <button type='submit'disabled={!isDisabled}>
                     Göndər <img src={arrow} alt="arrow svg button design" />
                 </button>
-                &nbsp;
-                &nbsp;
-                <button type='button'  onClick={() => handleErrorView()}>
-                    Geri qayıt 
-                </button>
             </form>
-        </div>
+              </div>
+             </div>
+      <Footer />
     </div>
   )
 }
 
-export default Request
+export default Vacantions

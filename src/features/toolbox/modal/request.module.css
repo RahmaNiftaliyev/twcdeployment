@@ -1,3 +1,5 @@
+
+
 .modal {
     max-width: 1026px;
     height:745px;
@@ -7,6 +9,7 @@
     padding: 51px 69px;
     background-color: white;
 }
+
 
 .modal > form {
     width: 100%;

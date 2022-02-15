@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React from 'react';
 import PrivacyHeaderDash from './PrivacyHeaderDash';
 import styles from './privacy.module.css';

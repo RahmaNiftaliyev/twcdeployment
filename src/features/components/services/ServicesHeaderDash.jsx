@@ -4,7 +4,8 @@ import NavHeader from '../../toolbox/navheader/NavHeader'
 import Navigation from '../../navigation/Navigation'
 import Header from '../../header/Header'
 import whiteThinkWiseLogo from './../common/assets/svg/navigation-white-logo.svg'
-const ServicesHeaderDash = ({ img }) => {
+import blackThinkWiseLogo from './../common/assets/svg/navigation-black-logo.svg'
+const ServicesHeaderDash = ({ img, isBlack, textStructure, textStructureData }) => {
   return (
     <div
       style={{
@@ -15,17 +16,17 @@ const ServicesHeaderDash = ({ img }) => {
       }}
     >
       <NavHeader
-        textColor={'nav-header-text-white'}
-        borderBgColor={'nav-header-border-white'}
+        textColor={isBlack ? 'nav-header-text-dark' : 'nav-header-text-white'}
+        borderBgColor={isBlack ? 'nav-header-border-dark' : 'nav-header-border-white'}
       />
       <Navigation
-        logo={whiteThinkWiseLogo}
+        logo={isBlack ? blackThinkWiseLogo : whiteThinkWiseLogo}
         enable={true}
-        textColor="text-white"
-        bgColor="bg-white"
+        textColor={isBlack ? "text-dark" : "text-white"}
+        bgColor={isBlack ? "bg-dark" : "bg-white"}
         isArticle={false}
       />
-      <Header />
+      <Header textColor={isBlack ? "text-dark" :"text-white"} textData={textStructure} newData={textStructureData} />
     </div>
   )
 }

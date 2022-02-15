@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React from 'react';
 import styles from './about.module.css';
 import AboutHeaderDash from './AboutHeaderDash';
@@ -10,7 +11,7 @@ import Footer from './../../footer/Footer';
 const AboutPartneers = () => {
     return (
         <div>
-            <AboutHeaderDash img={partneersPng} />
+            <AboutHeaderDash isBlack={false} img={partneersPng} textStructure={'Partnyorlarımız'} textStructureData={'Partners'} />
             <section
                 className={`${styles.partners_container} d-flex align-center justify-center`}
             >

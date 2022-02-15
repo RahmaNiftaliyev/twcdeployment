@@ -22,7 +22,7 @@ const AboutHeaderDash = ({ isBlack,img,textStructure,textStructureData }) => {
       />
       <Navigation
         logo={isBlack ? blackThinkwiseLogo : whiteThinkWiseLogo}
-        enable={false}
+        enable={true}
         textColor={isBlack ? "text-dark" :"text-white"}
         bgColor={isBlack ? "bg-dark" : "bg-white"}
       />

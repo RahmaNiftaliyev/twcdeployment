@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React from 'react'
 import styles from './privacy.module.css'
 import Navigation from '../../navigation/Navigation'

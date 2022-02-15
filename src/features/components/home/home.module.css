@@ -39,6 +39,11 @@
 }
 
 
+.line_home_divider {
+  display:inline-block!important;
+}
+
+
 .services_describtion h2 {
   font-size: clamp(32px,3.681vw,52px);
   font-weight: 400;
@@ -123,7 +128,7 @@
   justify-content: space-between;
 }
 .our_team {
-  margin-top: 21rem
+  margin-top: 60px;
 }
 .our_team > p {
   font-size: 11px;
@@ -140,6 +145,12 @@
   letter-spacing: 0;
   text-align: center
 }
+
+
+.line_home_divider{
+  display: block!important;
+}
+
 .team_card_container {
   display: flex;
   justify-content: space-between;
@@ -200,7 +211,7 @@
 .text_sec > p:first-child {
   font-style: normal;
   font-weight: 400;
-  font-size: 36px;
+  font-size: clamp(1.25rem,2.500vw,2.5rem);
   line-height: 44px;
   text-align: center;
   color: #171717
@@ -256,12 +267,15 @@
   display: flex;
   margin-top: 162px
 }
+
+.carier > img {
+  width: 50%;
+}
+
 .carier_side2 {
   padding: 268px 52px 50px
 }
-.carier > img {
-  max-width: 50%
-}
+
 .carier_side2 p:first-child {
   font-size: 11px;
   font-style: normal;
@@ -433,15 +447,16 @@
   margin-top: 53px;
   padding: 0 70px
 }
-.projects_container > span {
+.span_img_container {
   width: 378px;
   height: 237px;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 2.6px solid #8b8b8b
+  border: 2.6px solid #8b8b8b;
+  background-color:white;
 }
-.projects_container > span > img {
+.span_img_container > img {
   max-width: 50%
 }
 @media screen and (max-width:530px) {
@@ -480,8 +495,8 @@
     align-items: center
   }
   .doing_business_box {
-    width: 340px;
-    height: 240px
+    height: 210px;
+    padding-top:31px;
   }
   .carier {
     width: 100%;
@@ -492,13 +507,15 @@
     margin: 40px 0
   }
   .carier > img {
-    width: 350px;
+    width: 100%;
     object-fit: cover;
     margin: 0
   }
   .carier_side2 {
     width: 100%;
-    padding-top: 60px
+    padding-top: 60px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
   .articles {
     width: 100%;

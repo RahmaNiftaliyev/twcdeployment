@@ -7,11 +7,12 @@ import RoundedButton from '../toolbox/buttons/RoundedButton'
 
 const Footer = () => {
   const allFooterData = useSelector(selectAllFooterLinks)
+  const [email,setEmail] = React.useState() ; 
+  const [error,setError] = React.useState();
 
   const handleNavigateFooter = (paramsLink) => {
 
   }
-
 
   const renderedMenu = allFooterData.map((item) => {
     return (
@@ -44,7 +45,7 @@ const Footer = () => {
     <div className={`${styles.footer_height} display-mb-flex flex-mb-column`}>
       <div className={styles.upper_content}>
         <div
-          className={`d-flex justify-between ${styles.width_footer_links} relative`}
+          className={`d-flex justify-between ${styles.width_footer_links} flex-mb-column relative`}
         >
           <h2 className={styles.footer_header}>
             Uğura gedən <br />
@@ -58,7 +59,11 @@ const Footer = () => {
             name="email"
             id="email"
             placeholder="Email"
+            pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$"
             className={`absolute ${styles.footer_input}`}
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+
 
           />
       

@@ -478,6 +478,14 @@ van minit .nav-header-border-white {
 .alice-carousel {
   background-image: url("./features/components/common/assets/png/background.png")
 }
+
+.testimonials-container {
+
+  margin-top: 53px;
+}
+
+
+
 @media screen and (max-width:767px) {
   .navigation-container {
     flex-direction: column
@@ -502,12 +510,22 @@ van minit .nav-header-border-white {
   .mb-top-padding {
     padding-top: 40px
   }
+
+  .mb-padding-right-home {
+    padding-right: 20px;
+  }
+
   .display-mb-flex {
     display: flex
   }
   .flex-mb-column {
-    flex-direction: column
+    flex-direction: column;
   }
+
+  .justify-mb-end {
+    justify-content: flex-end;
+  }
+
   .slider-mb-visible {
     right: 0!important
   }
@@ -583,6 +601,13 @@ van minit .nav-header-border-white {
   .size-font-mb-span {
     margin-right: 14px
   }
+
+
+.mb-text-justify {
+  text-align: justify;
+}
+
+
   .hoverable-span {
     -webkit-transition: all .8 ease!important;
     -moz-transition: all .8 ease!important;

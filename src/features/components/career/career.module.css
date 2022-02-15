@@ -180,6 +180,73 @@ section.vacantion>h4 {
     margin-left: 5.5px
 }
 
+.vacancy_section_main_container {
+      margin-bottom: 162px;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 1093px;
+      margin-top: 180px;
+}
+
+.vacancy_container {
+  width: 100%;
+  background: rgba(242, 242, 242, 0.5);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  padding: 49px 146px 20px 49px;
+  margin-top: 147px;
+}
+
+.vacancy_header {
+  font-size: 52px;
+  line-height: 61px;
+  font-weight: 400;
+}
+
+
+
+.modal_input {
+    margin-bottom: 5px;
+}
+
+.modal_text_area,
+.modal_input {
+    height: 67px;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 4px;
+    margin-top: 0px!important;
+    padding-left: 14.06px;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 27px;
+    color: rgba(43, 43, 43, 0.25);
+    background: none;
+    border: 1px solid rgba(43, 43, 43, 0.25);
+    box-sizing: border-box;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 4px;
+}
+
+
+.modal_text_area {
+    height: 253px;
+    margin-bottom: 35px;
+    padding-top: 14.06px;
+}
+
+
+.modal_text_area ~ button {
+    width: 156px;
+    height: 67px;
+    background-color: #171717;
+    color: #fff;
+    font-size: 14px;
+    line-height: 25px;
+}
+
+
+
+
 @media screen and (max-width: 940px) {
     .bg_container {
         height: 200px;

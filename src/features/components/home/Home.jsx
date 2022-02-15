@@ -17,11 +17,22 @@ import career from './assets/img/career.jpg';
 import client1 from '../about/assets/img/customers/demirchi-tower.png';
 import client2 from '../about/assets/img/customers/Prestij-kimya.png';
 import client3 from '../about/assets/img/customers/absheron-sherab.png';
+import client4 from '../about/assets/img/customers/antaris.png';
+import client5 from '../about/assets/img/customers/baki-abadliq.png';
+import client6 from '../about/assets/img/customers/az-minerals.png';
+import client7 from '../about/assets/img/customers/Elbor.png';
+import client8 from '../about/assets/img/customers/ima-energy.png';
+import client9 from '../about/assets/img/customers/mansard.png';
+import client10 from '../about/assets/img/customers/Oil-Supply.png';
+import client11 from '../about/assets/img/customers/Prestij-kimya.png';
+import client12 from '../about/assets/img/customers/tuv-austria.png';
+import client13 from '../about/assets/img/customers/vipex-az.png';
 import article1 from '../articles/assets/img/ntflx.png';
 import article2 from '../articles/assets/img/alcohol-cover.png';
 import article3 from '../articles/assets/img/cargo-cover.png';
 import article4 from '../articles/assets/img/startup.png';
 import Gallery from '../../toolbox/gallery/Gallery';
+import GalleryTestimonials from '../../toolbox/gallery/GalleryTestimonials';
 
 
 
@@ -32,10 +43,12 @@ const Home = () => {
 
     const industries = useSelector(selectAllIndustries) ; 
     const teamImageData = [team_mem1,team_mem2,team_mem3,team_mem4,team_mem5,team_mem6]
+    const portfolioData = [client1,client2,client3,client4,client5,client6,client7,client8,client9,client10,client11,client12,client13]
 
-    
 
-    const renderedIndustries =   
+
+
+    const renderedIndustries =
            
                 industries.map((ind,index) => {
                     return (
@@ -57,7 +70,7 @@ const Home = () => {
 
 
     return (
-        <main className={`mobile-padding  mb-top-padding ${styles.main_padding}`}>
+        <main className={`mb-top-padding ${styles.main_padding}`}>
         <div className={`${styles.services}`}>
             <div className={`${styles.services_describtion}`}>
                 <AnimationOnScroll animateIn="animate__backInLeft">
@@ -92,8 +105,7 @@ const Home = () => {
               <Gallery images={teamImageData} localClassData={`${styles.team_card}`} />
         </div>
         <div className={`${styles.text_sec}`}>
-
-            <p>Uğurlu biznes uğurlu biznes əlaqələri deməkdir.<br />Lakin bu əlaqələr müştərinin eşitmək istədiyini deməklə <br /> yox, doğru olanı deməklə yaradılmalıdır.</p>
+            <p>Uğurlu biznes uğurlu biznes əlaqələri deməkdir. <span className={`${styles.line_home_divider}`}></span> Lakin bu əlaqələr müştərinin eşitmək istədiyini deməklə <span className={`${styles.line_home_divider}`}></span> yox, doğru olanı deməklə yaradılmalıdır.</p>
             <p>Aynur Nizamova, Biznes Konsultant</p>
         </div>
 
@@ -102,12 +114,12 @@ const Home = () => {
             <div className={`${styles.doing_business_box}`}>
                 <p>Daha çox</p>
                 <p>Doing Business in Azerbaijan</p>
+
                 <div className='d-flex justify-end' 
                 onClick={()=> handleNavigation("/services/businessazerbaijan")}>
                     <RoundedButton  className={`${styles.doing_business_button}`} />
                 </div>
-            </div >
-
+                </div>
         </div>
 
         <div className={`${styles.carier}`}>
@@ -116,12 +128,12 @@ const Home = () => {
                 <AnimationOnScroll animateIn='animate__backInRight'>
                     <p>Karyera</p>
                     <h3>Karyeranıza bizimlə başlayın</h3>
-                    <p>TWC-də məqsədimizin yeganə sütunu bizim
+                    <p className='mb-text-justify'>TWC-də məqsədimizin yeganə sütunu bizim
                         insanlarımızdır. Bizim dinamik mühitdə siz komanda
                         tərəfindən ilk gündən dəstək görməyinizə baxmayaraq,
                         siz öz yolunuzu müəyyən edəcəksiniz.</p>
                 </AnimationOnScroll>
-        <div onClick={()=> handleNavigation("/career")}>
+        <div onClick={()=> handleNavigation("/career")} className='display-mb-flex justify-mb-end mt-mb-2 mb-padding-right-home'>
 
                 <RoundedButton  color="#17171766" className={`${styles.doing_business_button}`} />
         </div>
@@ -181,7 +193,6 @@ const Home = () => {
                             <p>7 Sentyabr, 2021</p>
                         </div>
                     </div>
-
                 </div>
 
             </div>
@@ -198,21 +209,11 @@ const Home = () => {
                 <div></div>
                 <div></div>
             </div>
-            <AnimationOnScroll animateIn='animate__backInLeft'>
-                <div className={`${styles.projects_container}`}>
-                    <span>
-                        <img src={client1} alt="Home content description testimonials" />
-                    </span>
 
-                    <span>
-                        <img src={client2} alt="Home content description testimonials" />
-                    </span>
+               <div className="testimonials-container">
+                    <GalleryTestimonials testimonialsData={portfolioData} localeClassData={`${styles.span_img_container}`} />
+               </div>
 
-                    <span>
-                        <img src={client3} alt="Home content description testimonials" />
-                    </span>
-                </div>
-            </AnimationOnScroll>
         </div>
 
     </main>

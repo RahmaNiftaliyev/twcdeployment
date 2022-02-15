@@ -41,6 +41,7 @@ import Privacy from './../components/privacy/Privacy';
 import SignUp from './../components/form/SignUp';
 import SignIn from './../components/form/SignIn';
 import BackToTop from '../toolbox/buttons/BackToTop';
+import Vacantions from '../components/career/Vacantions';
 import Cursor from './../toolbox/cursor/Cursor';
 
 
@@ -68,6 +69,8 @@ const Dashboard = () =>
         <Route path="/" element={<HomeDashboard />} />
         <Route path="/contact" element={<ContactDashboard />} />
         <Route path="/career" element={<CareerDashboard />} />
+        <Route path="/career/vacancies/:vacanciesId" element={<Vacantions />} />
+
 
         {/* !FIKIRLER */}
         <Route path="/ideas" element={<Articles />} />

@@ -1,18 +1,24 @@
 // @ts-nocheck
 import React,{useState} from 'react';
-import styles from './career.module.css';
-import ceo from './assets/img/carrer-ceo.png';
-import RoundedButton from '../../toolbox/buttons/RoundedButton';
-import arrow from './assets/img/arrow.png';
+import { useSelector } from 'react-redux';
+import { selectAllVacancies } from './careersSlice'
+import { Link } from 'react-router-dom';
 import { AnimationOnScroll } from 'react-animation-on-scroll';
 import Footer from './../../footer/Footer';
 import Request from '../../toolbox/modal/Request';
-import { Link } from 'react-router-dom';
+import RoundedButton from '../../toolbox/buttons/RoundedButton';
+import styles from './career.module.css';
+import ceo from './assets/img/carrer-ceo.png';
+import arrow from './assets/img/arrow.png';
+
+
 
 
 const Career = () => {
 
     const [demo_class,set_demo_class] = useState('');
+
+    const allVacancies = useSelector(selectAllVacancies)
 
 
     const handleStylesModal = () => {
@@ -79,16 +85,20 @@ const Career = () => {
                             hazırsan?
                         </h4>
 
-                       <Link to="/register"><RoundedButton positioned="" color="#000" /></Link>
+                      <RoundedButton positioned="" color="#000" ismodalCaller={true} modalMethod={handleStylesModal} />
                     </div>
                 </div>
             </section>
             <section className={`${styles.vacantion}`}>
                 <span className={`${styles.career_span}`}>Karyera</span>
                 <h4>Vakansiyalar</h4>
+
                 {/* !VACATION CONTAINER 1 */}
-                <div className={`${styles.join_vacation}`}>
-                    <h2>Associate</h2>
+                {
+                    allVacancies.map(vacantion => {
+                        return (
+                    <div className={`${styles.join_vacation} animated_controller`}>
+                    <h2>{vacantion.name}</h2>
                     <p>
                         <strong>Biz kimik?</strong> <br />
                         Cənub-Şərqi Avropanın ilk erkən mərhələdə olan saf
@@ -97,33 +107,20 @@ const Career = () => {
                         komandası ilə hər <br />
                         çətinliyin üstəsindən gəlməyə hazırdır.
                     </p>
+                    <Link to={`${vacantion.forwarding}${vacantion.id}`}>
+                        <button >
+                            <AnimationOnScroll animateIn="animate__fadeInLeftBig animate__slow">
+                                <span>Müraciət et</span>
+                                <img src={arrow} alt="button icon arrow right" />
+                            </AnimationOnScroll>
+                        </button>
+                    </Link>
 
-                    <button onClick={handleStylesModal}>
-                        <AnimationOnScroll animateIn="animate__fadeInLeftBig animate__slow">
-                            <span>Müraciət et</span>
-                            <img src={arrow} alt="button icon arrow right" />
-                        </AnimationOnScroll>
-                    </button>
                 </div>
-                {/* !VACATION CONTAINER 2 */}
-                <div className={`${styles.join_vacation} animated_controller`}>
-                    <h2>Biznes konsultant</h2>
-                    <p>
-                        <strong>Biz kimik?</strong> <br />
-                        Cənub-Şərqi Avropanın ilk erkən mərhələdə olan saf
-                        menecement <br />
-                        konsaltinq şirkəti olan TWC gənc, dinamik və istedadlı
-                        komandası ilə hər <br />
-                        çətinliyin üstəsindən gəlməyə hazırdır.
-                    </p>
-
-                    <button onClick={handleStylesModal}>
-                        <AnimationOnScroll animateIn="animate__fadeInLeftBig animate__slow">
-                            <span>Müraciət et</span>
-                            <img src={arrow} alt="button icon arrow right" />
-                        </AnimationOnScroll>
-                    </button>
-                </div>
+                        )
+                    })
+                }
+               
             </section>
             <Footer />
         </div>

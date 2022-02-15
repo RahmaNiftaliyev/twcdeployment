@@ -62,7 +62,7 @@ const Gallery = ({images}) => {
 
   return (
 
-         <AliceCarousel 
+        <AliceCarousel 
         mouseTracking 
         disableDotsControls
         disableButtonsControls

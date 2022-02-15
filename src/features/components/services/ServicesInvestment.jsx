@@ -12,7 +12,7 @@ import Footer from './../../footer/Footer';
 const ServicesInvestment = () => {
     return (
         <div>
-            <ServicesHeaderDash img={investmentJpg} />
+            <ServicesHeaderDash img={investmentJpg} isBlack={false} textStructure={'Kapitallaşma'} textStructureData={'Capitalization'} />
             <div className={`${styles.container}`}>
                 <section className={`${styles.header_section} d-flex`}>
                     <div

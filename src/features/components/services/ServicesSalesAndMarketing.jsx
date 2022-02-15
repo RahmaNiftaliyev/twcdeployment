@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React from 'react';
 import ServicesHeaderDash from './ServicesHeaderDash';
 import styles from './services.module.css';
@@ -14,7 +15,7 @@ import Footer from './../../footer/Footer';
 const ServicesSalesAndMarketing = () => {
     return (
         <div>
-            <ServicesHeaderDash img={salesImg} />
+            <ServicesHeaderDash img={salesImg} isBlack={true}  textStructure={'Satış və marketing'} textStructureData={'Sales and marketing'} />
             <div className={`${styles.container}`}>
                 <section className={`${styles.header_section} d-flex`}>
                     <div

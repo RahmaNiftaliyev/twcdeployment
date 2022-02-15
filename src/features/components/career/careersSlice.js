@@ -1,7 +1,7 @@
 import { createSlice, createEntityAdapter } from "@reduxjs/toolkit";
 
 const careersAdapter = createEntityAdapter({
-    selectId: (id) => id ,
+    selectId: (vacancy) => vacancy.id ,
     sortComparer:(preVacancy,nextVacancy) => preVacancy.id.localeCompare(nextVacancy.id)
 })
 
@@ -10,9 +10,14 @@ const initialState = {
     error:null,
     activeVacation:{},
     vacantions:{
-        ids:[],
+        ids:['ids1','ids2'],
         entities:{
-
+            ids1:{
+                id:'ids1',name:"Associate",forwarding:"/career/vacancies/"
+            },
+            ids2:{
+                id:"ids2",name:"Biznes konsultant",forwarding:"/career/vacancies/"
+            }    
         }
     }
 }
@@ -36,4 +41,6 @@ export const {
     selectIds:selectVacationIds
 
 } = careersAdapter.getSelectors(state => state.careers.vacantions)
+
+
 export default careersSlice.reducer
