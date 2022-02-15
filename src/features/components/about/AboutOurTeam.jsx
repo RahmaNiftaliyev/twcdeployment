@@ -1,13 +1,11 @@
 // @ts-nocheck
 import React from 'react';
 import AboutHeaderDash from './AboutHeaderDash';
+import GalleryServices from './../../toolbox/gallery/GalleryServices'
 import teamJpg from './assets/img/team.jpg';
 import styles from './about.module.css';
-import marketresearchLogo from './assets/img/about-us/market-research.png';
-import businessPlanLogo from './assets/img/about-us/business-plan.png';
-import capitalismusLogo from './assets/img/about-us/capitallismus.png';
-import saleMarketingLogo from './assets/img/about-us/sales-marketing.png';
-import RoundedButton from '../../toolbox/buttons/RoundedButton';
+import { useSelector } from 'react-redux';
+import {selectAllServices} from './../services/servicesSlice'
 import sectionImage from './assets/img/team/section.png';
 import blackArrow from '../../toolbox/buttons/svg/arrow-black.svg';
 import teamMem1 from './assets/img/team/member-1.png';
@@ -16,11 +14,6 @@ import teamMem3 from './assets/img/team/member-3.png';
 import teamMem4 from './assets/img/team/team-mehemmed.png';
 import teamMem5 from './assets/img/team/team-question.png';
 import teamMem6 from './assets/img/team/team-aynure.jpg';
-import {
-    FaInstagramSquare,
-    FaFacebookSquare,
-    FaLinkedin,
-} from 'react-icons/fa';
 import Footer from './../../footer/Footer';
 import Gallery from './../../toolbox/gallery/Gallery'
 
@@ -31,7 +24,7 @@ const AboutOurTeam = () => {
 
     const teamImageData = [teamMem1,teamMem2,teamMem3,teamMem4,teamMem5,teamMem6]
 
-
+    const allServices = useSelector(selectAllServices);
 
 
     return (
@@ -118,62 +111,13 @@ const AboutOurTeam = () => {
                     <div className={`${styles.circle} `}></div>
                     <div className={`${styles.circle} `}></div>
                 </div>
-                <div
-                    className={`${styles.service_logo_group} d-flex justify-between`}
-                >
-                    <div
-                        className={`${styles.service_logo_box} d-flex direction-column align-center justify-center `}
-                    >
-                        <img
-                            src={marketresearchLogo}
-                            alt=""
-                            className={`${styles.service_logo}`}
-                        />
-                        <span className={`${styles.service_logo_sub_title}`}>
-                            Bazar Araşdırması
-                        </span>
-                        <RoundedButton top="10px" color="#17171766" />
-                    </div>
-                    <div
-                        className={`${styles.service_logo_box} d-flex direction-column align-center justify-center `}
-                    >
-                        <img
-                            src={businessPlanLogo}
-                            alt=""
-                            className={`${styles.service_logo}`}
-                        />
-                        <span className={`${styles.service_logo_sub_title}`}>
-                            Biznes Plan və TİƏ{' '}
-                        </span>
-                        <RoundedButton top="10px" color="#17171766" />
-                    </div>
-                    <div
-                        className={`${styles.service_logo_box} d-flex direction-column align-center justify-center `}
-                    >
-                        <img
-                            src={capitalismusLogo}
-                            alt=""
-                            className={`${styles.service_logo}`}
-                        />
-                        <span className={`${styles.service_logo_sub_title}`}>
-                            Kapitallaşma
-                        </span>
-                        <RoundedButton top="10px" color="#17171766" />
-                    </div>
-                    <div
-                        className={`${styles.service_logo_box} d-flex direction-column align-center justify-center `}
-                    >
-                        <img
-                            src={saleMarketingLogo}
-                            alt=""
-                            className={`${styles.service_logo}`}
-                        />
-                        <span className={`${styles.service_logo_sub_title}`}>
-                            Satış və Marketinq
-                        </span>
-                        <RoundedButton top="10px" color="#17171766" />
-                    </div>
-                </div>
+                   <GalleryServices
+                    data={allServices} 
+                    boxContainerClass={`${styles.service_logo_group} d-flex  justify-between`}
+                    boxClass={`${styles.service_logo_box} d-flex direction-column align-center justify-center `} 
+                    imgClass={`${styles.service_logo}`}
+                    spanClass={`${styles.service_logo_sub_title}`}
+                />
             </section>
             <Footer />
         </div>

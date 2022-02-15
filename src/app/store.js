@@ -9,6 +9,7 @@ import footerReducer from './../features/footer/footerSlice'
 import usersReducer from './../features/components/form/usersSlice'
 import industriesReducer from './../features/components/industry/industriesSlice'
 import careersReducer from './../features/components/career/careersSlice'
+import servicesReducer from './../features/components/services/servicesSlice'
 
 export const store = configureStore({
   reducer: {
@@ -16,6 +17,7 @@ export const store = configureStore({
     footer: footerReducer,
     users: usersReducer,
     industries:industriesReducer,
-    careers:careersReducer
+    careers:careersReducer,
+    services:servicesReducer
   },
 })

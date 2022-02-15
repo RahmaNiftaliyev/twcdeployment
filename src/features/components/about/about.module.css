@@ -29,10 +29,10 @@
   width: 324px
 }
 .customers_row > .customer_firm_img_box:not(:last-child) {
-  border-right: 1px solid #2b2b2b40
+  border-right: 1px solid #2b2b2b40;
 }
 .customers_row:not(:first-child) {
-  border-top: 1px solid #2b2b2b40
+  border-top: 1px solid #2b2b2b40;
 }
 .services_header {
   background-image: url(../articles/assets/img/article-header.png);

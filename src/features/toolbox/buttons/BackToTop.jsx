@@ -1,6 +1,5 @@
 // @ts-nocheck
 import React from 'react'
-import { AiOutlineArrowUp } from 'react-icons/ai'
 import svgButtonView from './svg/button.svg'
 import styles from './button.module.css'
 const BackToTop = ({showMe}) => {
