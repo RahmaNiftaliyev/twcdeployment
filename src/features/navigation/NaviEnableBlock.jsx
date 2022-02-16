@@ -2,26 +2,17 @@ import React from 'react'
 import DefaultButton from './../toolbox/buttons/DefaultButton'
 import { useNavigate } from 'react-router-dom';
 
-
-
-
 const NaviEnableBlock = ({mr_nv_btn,mr_nv_nv}) => {
 
-
   const navigate = useNavigate() ; 
-
 
   const handleSignIn = () => {
       navigate('/login')
   }
 
-
-
   const handleSignUp = () => {
     navigate('/register')
   }
-
-
 
   return (
     <div className='d-flex'>

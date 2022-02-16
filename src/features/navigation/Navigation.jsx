@@ -1,14 +1,15 @@
 // @ts-nocheck
 import React, { useState } from 'react'
+import NaviEnableBlock from './NaviEnableBlock'
+import Hamburger from './../toolbox/hamburger/Hamburger'
+import Slider from '../toolbox/hamburger/Slider'
 import { useSelector } from 'react-redux'
 import { selectAllLinks } from './navigationSlice'
 import { GoTriangleRight } from 'react-icons/go'
 import { Link } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
 import styles from './navigation.module.css'
-import NaviEnableBlock from './NaviEnableBlock'
-import Hamburger from './../toolbox/hamburger/Hamburger'
-import Slider from '../toolbox/hamburger/Slider'
+
 const Navigation = ({
   logo,
   enable,

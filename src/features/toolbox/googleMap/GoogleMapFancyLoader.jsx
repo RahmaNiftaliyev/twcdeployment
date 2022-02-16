@@ -1,25 +1,25 @@
-import React, {PureComponent} from 'react'
-import GoogleMapLoader from './GoogleMapLoader'
+import React, { PureComponent } from "react";
+import GoogleMapLoader from "./GoogleMapLoader";
 
 class GoogleMapFancyLoader extends PureComponent {
   state = {
     isMarkerShown: false,
-  }
+  };
 
   componentDidMount() {
-    this.delayedShowMarker()
+    this.delayedShowMarker();
   }
 
   delayedShowMarker = () => {
     setTimeout(() => {
-      this.setState({ isMarkerShown: true })
-    }, 3000)
-  }
+      this.setState({ isMarkerShown: true });
+    }, 3000);
+  };
 
   handleMarkerClick = () => {
-    this.setState({ isMarkerShown: false })
-    this.delayedShowMarker()
-  }
+    this.setState({ isMarkerShown: false });
+    this.delayedShowMarker();
+  };
 
   render() {
     return (
@@ -27,8 +27,8 @@ class GoogleMapFancyLoader extends PureComponent {
         isMarkerShown={this.state.isMarkerShown}
         onMarkerClick={this.handleMarkerClick}
       />
-    )
+    );
   }
 }
 
-export default GoogleMapFancyLoader
+export default GoogleMapFancyLoader;
