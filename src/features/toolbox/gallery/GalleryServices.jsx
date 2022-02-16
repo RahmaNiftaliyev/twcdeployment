@@ -12,6 +12,7 @@ const GalleryServices = ({data,boxContainerClass,boxClass,imgClass,spanClass}) =
                     0:{ items:1 },
                     568:{ items: 2 },
                     1024:{ items: 3 },
+                    1440: { items: 4 }
             };  
 
             const renderedServices = data.map(item => {
@@ -21,6 +22,7 @@ const GalleryServices = ({data,boxContainerClass,boxClass,imgClass,spanClass}) =
                 >
                     <div
                         className={boxClass}
+                        key={item.id}
                     >
                         <img
                             src={item.img}

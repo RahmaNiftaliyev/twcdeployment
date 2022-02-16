@@ -40,13 +40,15 @@ const About = () => {
                     <div className={`${styles.circle} `}></div>
                     <div className={`${styles.circle} `}></div>
                 </div>
-                <GalleryServices
-                    data={allServices} 
-                    boxContainerClass={`${styles.service_logo_group} d-flex  justify-between`}
-                    boxClass={`${styles.service_logo_box} d-flex direction-column align-center justify-center `} 
-                    imgClass={`${styles.service_logo}`}
-                    spanClass={`${styles.service_logo_sub_title}`}
-                />
+                   <GalleryServices
+                        className="alice-without-image"
+                        data={allServices} 
+                        boxContainerClass={`${styles.service_logo_group} d-flex  justify-between`}
+                        boxClass={`${styles.service_logo_box} d-flex direction-column align-center justify-center `} 
+                        imgClass={`${styles.service_logo}`}
+                        spanClass={`${styles.service_logo_sub_title}`}
+                    />
+      
 
             </section>
 

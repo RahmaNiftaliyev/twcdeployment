@@ -43,6 +43,7 @@ import SignIn from './../components/form/SignIn';
 import BackToTop from '../toolbox/buttons/BackToTop';
 import Vacantions from '../components/career/Vacantions';
 import Cursor from './../toolbox/cursor/Cursor';
+import ChatApp from '../toolbox/chat/ChatApp';
 
 
 const Dashboard = () =>
@@ -155,6 +156,7 @@ const Dashboard = () =>
 
         <Route path="/login" element={< SignIn />} />
         <Route path="/register" element={< SignUp />} />
+        <Route path="/chat" element={< ChatApp />} />
       </Routes>
 
 

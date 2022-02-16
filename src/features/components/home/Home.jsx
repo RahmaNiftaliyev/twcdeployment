@@ -33,7 +33,8 @@ import article3 from '../articles/assets/img/cargo-cover.png';
 import article4 from '../articles/assets/img/startup.png';
 import Gallery from '../../toolbox/gallery/Gallery';
 import GalleryTestimonials from '../../toolbox/gallery/GalleryTestimonials';
-
+import ChatBox from './../../toolbox/chat/ChatBox';
+import ChatApp from './../../toolbox/chat/ChatApp';
 
 
 
@@ -44,8 +45,19 @@ const Home = () => {
     const industries = useSelector(selectAllIndustries) ; 
     const teamImageData = [team_mem1,team_mem2,team_mem3,team_mem4,team_mem5,team_mem6]
     const portfolioData = [client1,client2,client3,client4,client5,client6,client7,client8,client9,client10,client11,client12,client13]
+    const [chatBoxView,setChatBoxView] = useState(true) ; 
+    const [chatAppView,setChatAppView] = useState(false)
 
 
+    const handleBoxView = () => {
+        setChatBoxView(false);
+        setChatAppView(true)
+    }
+
+    const handleAppView = () => {
+        setChatBoxView(true);
+        setChatAppView(false);
+    }
 
 
     const renderedIndustries =
@@ -89,6 +101,11 @@ const Home = () => {
                 </AnimationOnScroll>
             </div>
 
+        </div>
+
+        <div className='d-flex justify-end'>
+           {chatBoxView && <ChatBox clickViewController={handleBoxView} />} 
+           {chatAppView && <ChatApp clickViewController={handleAppView} />}
         </div>
 
         {/*Our team*/}
