@@ -112,6 +112,9 @@ button {
 .absolute {
   position: absolute
 }
+.z-index-100{
+z-index: 100;
+}
 .relative {
   position: relative
 }

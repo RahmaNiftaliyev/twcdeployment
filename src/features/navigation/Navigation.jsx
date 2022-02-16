@@ -50,7 +50,7 @@ const Navigation = ({
             <GoTriangleRight className={`${styles.vertical_middle} `} />
           </span>
           {link.hasSubmenu && (
-            <div className="absolute">
+            <div className="absolute z-index-100">
               <div
                 style={{
                   width: '200px',
