@@ -5,13 +5,8 @@ import { AnimationOnScroll } from 'react-animation-on-scroll';
 import { useSelector } from 'react-redux';
 import RoundedButton from '../../toolbox/buttons/RoundedButton';
 import { selectAllIndustries } from '../industry/industriesSlice';
+import { selectAllMembers }from '../about/aboutSlice'
 import styles from './home.module.css';
-import team_mem1 from './assets/img/team-chingiz.png';
-import team_mem2 from './assets/img/team-aynur.png';
-import team_mem3 from './assets/img/team-ramazan.png';
-import team_mem4 from './assets/img/team-mehemmed.png';
-import team_mem5 from './assets/img/team-question.png';
-import team_mem6 from './assets/img/team-aynure.jpg';
 import doingbusiness from './assets/img/doingbusiness.jpg';
 import career from './assets/img/career.jpg';
 import client1 from '../about/assets/img/customers/demirchi-tower.png';
@@ -43,11 +38,13 @@ const Home = () => {
 
 
     const industries = useSelector(selectAllIndustries) ; 
-    const teamImageData = [team_mem1,team_mem2,team_mem3,team_mem4,team_mem5,team_mem6]
+    const allMembers = useSelector(selectAllMembers)
     const portfolioData = [client1,client2,client3,client4,client5,client6,client7,client8,client9,client10,client11,client12,client13]
     const [chatBoxView,setChatBoxView] = useState(true) ; 
     const [chatAppView,setChatAppView] = useState(false)
 
+
+    console.log(allMembers)
 
     const handleBoxView = () => {
         setChatBoxView(false);
@@ -119,7 +116,7 @@ const Home = () => {
             </div>
         </div>
         <div className='galler-container'>
-              <Gallery images={teamImageData} localClassData={`${styles.team_card}`} />
+              <Gallery images={allMembers} localClassData={`${styles.team_card}`} />
         </div>
         <div className={`${styles.text_sec}`}>
             <p>Uğurlu biznes uğurlu biznes əlaqələri deməkdir. <span className={`${styles.line_home_divider}`}></span> Lakin bu əlaqələr müştərinin eşitmək istədiyini deməklə <span className={`${styles.line_home_divider}`}></span> yox, doğru olanı deməklə yaradılmalıdır.</p>

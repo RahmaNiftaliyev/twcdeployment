@@ -10,6 +10,7 @@ import usersReducer from './../features/components/form/usersSlice'
 import industriesReducer from './../features/components/industry/industriesSlice'
 import careersReducer from './../features/components/career/careersSlice'
 import servicesReducer from './../features/components/services/servicesSlice'
+import aboutReducer from './../features/components/about/aboutSlice'
 
 export const store = configureStore({
   reducer: {
@@ -18,6 +19,7 @@ export const store = configureStore({
     users: usersReducer,
     industries:industriesReducer,
     careers:careersReducer,
-    services:servicesReducer
+    services:servicesReducer,
+    about:aboutReducer
   },
 })

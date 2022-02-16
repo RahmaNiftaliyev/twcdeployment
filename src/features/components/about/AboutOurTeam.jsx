@@ -8,12 +8,7 @@ import { useSelector } from 'react-redux';
 import {selectAllServices} from './../services/servicesSlice'
 import sectionImage from './assets/img/team/section.png';
 import blackArrow from '../../toolbox/buttons/svg/arrow-black.svg';
-import teamMem1 from './assets/img/team/member-1.png';
-import teamMem2 from './assets/img/team/member-2.png';
-import teamMem3 from './assets/img/team/member-3.png';
-import teamMem4 from './assets/img/team/team-mehemmed.png';
-import teamMem5 from './assets/img/team/team-question.png';
-import teamMem6 from './assets/img/team/team-aynure.jpg';
+import { selectAllMembers } from './aboutSlice'
 import Footer from './../../footer/Footer';
 import Gallery from './../../toolbox/gallery/Gallery'
 
@@ -22,9 +17,9 @@ import Gallery from './../../toolbox/gallery/Gallery'
 const AboutOurTeam = () => {
 
 
-    const teamImageData = [teamMem1,teamMem2,teamMem3,teamMem4,teamMem5,teamMem6]
 
     const allServices = useSelector(selectAllServices);
+    const allMembers = useSelector(selectAllMembers)
 
 
     return (
@@ -50,7 +45,7 @@ const AboutOurTeam = () => {
                     <div className={`${styles.circle} `}></div>
                 </div>
                 </div>
-                  <Gallery images={teamImageData} localClassData={`${styles.team_card}`} />
+                  {/* <Gallery images={allMembers} localClassData={`${styles.team_card}`} /> */}
             <div
                 className={`${styles.our_team} d-flex direction-column justify-center align-center`}
             >

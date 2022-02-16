@@ -23,10 +23,10 @@ const Gallery = ({images}) => {
     const renderedImages2 = images.map(image => {
       return (
 
-        <div className='container-team-data'>
+        <div className='container-team-data' key={image.id}>
             <div>
             <div className="img-section-team-data">
-             <img src={image} onDragStart={handleDragStart} width="319"  alt="Think wise professional team member resume" />
+             <img src={image.img} onDragStart={handleDragStart} width="319"  alt="Think wise professional team member resume" />
              <div className='absolute social-section-team-data'>
                <ImFacebook />
                 <br />
@@ -39,11 +39,9 @@ const Gallery = ({images}) => {
             <img src={dividerSvg} alt="" />
           </div>
           <div className='content-section-team-data'>
-              <h4>Çingiz Novruzzadə</h4>
-              <span>Təsisçi və Direktor </span>
-              <p>Təhsil: İUBH International 
-              anagement və Univeristy of East 
-              Anglia Investment and Financial Management </p>
+              <h4>{image.name}</h4>
+              <span>{image.position}</span>
+              <p>{image.education}</p>
           </div>
             </div>
         </div>
