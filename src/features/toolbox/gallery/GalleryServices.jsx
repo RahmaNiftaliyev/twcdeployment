@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import AliceCarousel from 'react-alice-carousel'
 import RoundedButton from './../buttons/RoundedButton'
 import 'react-alice-carousel/lib/alice-carousel.css'
@@ -33,7 +34,7 @@ const GalleryServices = ({data,boxContainerClass,boxClass,imgClass,spanClass}) =
                         <span className={spanClass}>
                             {item.name}
                         </span>
-                        <RoundedButton top="10px" color="#17171766" />
+                       <Link to={item.to}><RoundedButton top="10px" color="#17171766" /></Link>
                     </div>
                 </div> 
                 )

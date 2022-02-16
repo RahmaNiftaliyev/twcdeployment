@@ -46,7 +46,9 @@
   text-align: center;
   letter-spacing: 3.85px;
   text-transform: uppercase;
-  color: #8b8b8b
+  color: #8b8b8b;
+  display: inline-block;
+  margin-top: 130px;
 }
 .service_title {
   font-size: 42px;
@@ -57,7 +59,7 @@
 }
 .service_logo_group {
   width: 1100px;
-  margin: 91px auto 0
+  margin: 0 auto ;
 }
 .service_logo {
   width: 64px;

@@ -5,8 +5,10 @@ import { AnimationOnScroll } from 'react-animation-on-scroll';
 import { useSelector } from 'react-redux';
 import RoundedButton from '../../toolbox/buttons/RoundedButton';
 import { selectAllIndustries } from '../industry/industriesSlice';
-import { selectAllMembers }from '../about/aboutSlice'
+import { selectAllMembers }from '../about/aboutSlice';
+import { selectAllServices } from './../services/servicesSlice'
 import styles from './home.module.css';
+import styles2 from './../about/about.module.css'
 import doingbusiness from './assets/img/doingbusiness.jpg';
 import career from './assets/img/career.jpg';
 import client1 from '../about/assets/img/customers/demirchi-tower.png';
@@ -28,6 +30,7 @@ import article3 from '../articles/assets/img/cargo-cover.png';
 import article4 from '../articles/assets/img/startup.png';
 import Gallery from '../../toolbox/gallery/Gallery';
 import GalleryTestimonials from '../../toolbox/gallery/GalleryTestimonials';
+import GalleryServices from '../../toolbox/gallery/GalleryServices';
 import ChatBox from './../../toolbox/chat/ChatBox';
 import ChatApp from './../../toolbox/chat/ChatApp';
 
@@ -38,7 +41,8 @@ const Home = () => {
 
 
     const industries = useSelector(selectAllIndustries) ; 
-    const allMembers = useSelector(selectAllMembers)
+    const allMembers = useSelector(selectAllMembers) ; 
+    const allServices = useSelector(selectAllServices)
     const portfolioData = [client1,client2,client3,client4,client5,client6,client7,client8,client9,client10,client11,client12,client13]
     const [chatBoxView,setChatBoxView] = useState(true) ; 
     const [chatAppView,setChatAppView] = useState(false)
@@ -99,13 +103,24 @@ const Home = () => {
             </div>
 
             <div className={`${styles.services_list_container}`}>
-                <h2>1. Sizin biznes istiqamətiniz?</h2>
+                 <h2 className={`${styles.services_slider_header}`}>Servislərimiz</h2>
+                 <GalleryServices
+                        className="alice-without-image"
+                        data={allServices} 
+                        boxContainerClass={`${styles2.service_logo_group} d-flex  justify-between`}
+                        boxClass={`${styles2.service_logo_box} d-flex direction-column align-center justify-center `} 
+                        imgClass={`${styles2.service_logo}`}
+                        spanClass={`${styles2.service_logo_sub_title}`}
+                    />
+      
+
+                {/*
                 <AnimationOnScroll animateIn='animate__backInRight'>
                     
                      <div>
                            {renderedIndustries}
                      </div>
-                </AnimationOnScroll>
+                </AnimationOnScroll> */}
             </div>
 
         </div>
