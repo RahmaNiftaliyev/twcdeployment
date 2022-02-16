@@ -36,7 +36,7 @@ const Faq = () => {
                     edirik. TWC-nin sizin məqalənizi paylaşmaqda maraqlı
                     olduğunu öyrənmək üçün info@thinkwise.az ünvanına e-poçt
                     göndərin və lazım olduğu halda, biz məzmunu müzakirə etmək
-                    üçün əlaqə salayacağıq.
+                    üçün əlaqə saxlayacağıq.
                 </p>
             </div>
             <Footer />

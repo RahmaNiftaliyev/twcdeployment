@@ -7,6 +7,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: #fff;
 }
 .chat_box_span {
   font-size: 18px;
@@ -23,6 +24,7 @@
     border-top: 1px solid #D6D6D6;
     border-bottom: 1px solid #D6D6D6;
     border-left: 1px solid #D6D6D6;
+    background-color: #fff;
 }
 
 .container_upper {

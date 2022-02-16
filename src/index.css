@@ -44,7 +44,7 @@ button {
 
 .chat-box-container-keeper {
   position: fixed;
-  top: 600px;
+  top: calc(100vh - 503px);
   right: 0;
   width: 100%;
   z-index: 100000000;
