@@ -4,8 +4,11 @@ import Navigation from '../../navigation/Navigation'
 import NavHeader from '../../toolbox/navheader/NavHeader'
 import Header from './../../header/Header'
 import styles from './about.module.css'
+// !----------------------------------------------------------
 import whiteThinkWiseLogo from './../common/assets/svg/navigation-white-logo.svg'
 import blackThinkwiseLogo from './../common/assets/svg/navigation-black-logo.svg'
+
+
 const AboutHeaderDash = ({ isBlack,img,textStructure,textStructureData }) => {
   const backgroundStyle = {
     backgroundImage: `url(${img})`,

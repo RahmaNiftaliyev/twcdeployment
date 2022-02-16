@@ -1,7 +1,9 @@
 // @ts-nocheck
 import React from 'react';
 import ServicesHeaderDash from './ServicesHeaderDash';
+import Footer from './../../footer/Footer';
 import styles from './services.module.css';
+// !----------------------------------------------------------
 import headerImage from './assets/img/bazararastirmasi/header.png';
 import sectionImage from './assets/img/bazararastirmasi/section.png';
 import topicImage1 from './assets/img/bazararastirmasi/topic-1.png';
@@ -12,7 +14,7 @@ import topicImage5 from './assets/img/bazararastirmasi/topic-5.png';
 import topicImage6 from './assets/img/bazararastirmasi/topic-6.png';
 import topicImage7 from './assets/img/bazararastirmasi/topic-7.png';
 import topicImage8 from './assets/img/bazararastirmasi/topic-8.png';
-import Footer from './../../footer/Footer';
+
 
 const ServicesMarketResearch = () => {
     return (

@@ -1,17 +1,26 @@
+// @ts-nocheck
 import React from 'react';
 import ArticleHeaderDash from './ArticleHeaderDash';
-import styles from './articles.module.css';
-import coverImgPng from './assets/img/finance-cover.png';
-import whiteArrow from '../../toolbox/buttons/svg/arrow-white.svg';
+import Footer from './../../footer/Footer';
+import { useNavigate } from 'react-router-dom';
 import { SiInstagram } from 'react-icons/si';
 import { ImLinkedin2, ImFacebook } from 'react-icons/im';
 import { AiOutlineSearch } from 'react-icons/ai';
+import styles from './articles.module.css';
+// !----------------------------------------------------------
+import coverImgPng from './assets/img/finance-cover.png';
+import whiteArrow from '../../toolbox/buttons/svg/arrow-white.svg';
 import articleImgPng1 from './assets/img/startup-small.png';
 import articleImgPng2 from './assets/img/alcohol-small.png';
 import articleImgPng3 from './assets/img/cargo-small.png';
 import relatedArticleImgPng from './assets/img/ntflx.png';
-import Footer from './../../footer/Footer';
-import { useNavigate } from 'react-router-dom';
+
+
+
+
+
+
+
 const ArticlesFinance = () => {
      const navigate = useNavigate();
     const handleNavigation = (paramsPath) => {

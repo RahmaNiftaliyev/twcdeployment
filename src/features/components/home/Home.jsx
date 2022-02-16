@@ -1,15 +1,20 @@
 // @ts-nocheck
 import React, { useState,useEffect } from 'react';
+import Gallery from '../../toolbox/gallery/Gallery';
+import GalleryTestimonials from '../../toolbox/gallery/GalleryTestimonials';
+import GalleryServices from '../../toolbox/gallery/GalleryServices';
+import ChatBox from './../../toolbox/chat/ChatBox';
+import ChatApp from './../../toolbox/chat/ChatApp';
+import RoundedButton from '../../toolbox/buttons/RoundedButton';
 import { Link, useNavigate } from 'react-router-dom';
 import { AnimationOnScroll } from 'react-animation-on-scroll';
 import { useSelector } from 'react-redux';
-import RoundedButton from '../../toolbox/buttons/RoundedButton';
 import { selectAllIndustries } from '../industry/industriesSlice';
 import { selectAllMembers }from '../about/aboutSlice';
 import { selectAllServices } from './../services/servicesSlice'
 import styles from './home.module.css';
 import styles2 from './../about/about.module.css'
-import doingbusiness from './assets/img/doingbusiness.jpg';
+// !----------------------------------------------------------
 import career from './assets/img/career.jpg';
 import client1 from '../about/assets/img/customers/demirchi-tower.png';
 import client2 from '../about/assets/img/customers/Prestij-kimya.png';
@@ -28,11 +33,7 @@ import article1 from '../articles/assets/img/ntflx.png';
 import article2 from '../articles/assets/img/alcohol-cover.png';
 import article3 from '../articles/assets/img/cargo-cover.png';
 import article4 from '../articles/assets/img/startup.png';
-import Gallery from '../../toolbox/gallery/Gallery';
-import GalleryTestimonials from '../../toolbox/gallery/GalleryTestimonials';
-import GalleryServices from '../../toolbox/gallery/GalleryServices';
-import ChatBox from './../../toolbox/chat/ChatBox';
-import ChatApp from './../../toolbox/chat/ChatApp';
+
 
 
 
@@ -47,7 +48,7 @@ const Home = () => {
     const [chatBoxView,setChatBoxView] = useState(true) ; 
     const [chatAppView,setChatAppView] = useState(false)
 
-    const [isVisible,setIsVisible] = React.useState(false) ; 
+    const [isVisible,setIsVisible] = useState(false) ; 
 
  const handleScroll = () => {
    if(document.body.scrollTop > 140 || document.documentElement.scrollTop > 140) {
@@ -112,15 +113,6 @@ const Home = () => {
                         imgClass={`${styles2.service_logo}`}
                         spanClass={`${styles2.service_logo_sub_title}`}
                     />
-      
-
-                {/*
-                <AnimationOnScroll animateIn='animate__backInRight'>
-                    
-                     <div>
-                           {renderedIndustries}
-                     </div>
-                </AnimationOnScroll> */}
             </div>
 
         </div>
@@ -250,7 +242,7 @@ const Home = () => {
             </div>
 
                <div className="galler-container">
-                    <GalleryTestimonials testimonialsData={portfolioData} localeClassData={`${styles.span_img_container}`} />
+                  <GalleryTestimonials testimonialsData={portfolioData} localeClassData={`${styles.span_img_container}`} />
                </div>
 
         </div>

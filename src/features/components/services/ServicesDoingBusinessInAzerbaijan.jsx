@@ -1,14 +1,16 @@
 // @ts-nocheck
 import React from 'react';
 import ServicesHeaderDash from './ServicesHeaderDash';
+import Footer from './../../footer/Footer';
 import styles from './services.module.css';
+// !----------------------------------------------------------
 import blackArrow from '../../toolbox/buttons/svg/arrow-black.svg';
 import doingImg from './assets/img/doingbusinessazerbaijan.jpg';
 import sectionImage from './assets/img/doingbusinessazerbaijan/section.png';
 import topicImage1 from './assets/img/doingbusinessazerbaijan/topic-1.png';
 import topicImage2 from './assets/img/doingbusinessazerbaijan/topic-2.png';
 import topicImage3 from './assets/img/doingbusinessazerbaijan/topic-3.png';
-import Footer from './../../footer/Footer';
+
 
 const ServicesDoingBusinessInAzerbaijan = () => {
     return (

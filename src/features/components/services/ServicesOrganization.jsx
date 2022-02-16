@@ -1,7 +1,9 @@
 // @ts-nocheck
 import React from 'react';
 import ServicesHeaderDash from './ServicesHeaderDash';
+import Footer from './../../footer/Footer';
 import styles from './services.module.css';
+// !----------------------------------------------------------
 import organizationImg from './assets/img/teshkilati.jpg';
 import topicImage1 from './assets/img/teshkilati/topic-1.png';
 import topicImage2 from './assets/img/teshkilati/topic-2.png';
@@ -10,7 +12,7 @@ import topicImage4 from './assets/img/teshkilati/topic-4.png';
 import topicImage5 from './assets/img/teshkilati/topic-5.png';
 import topicImage6 from './assets/img/teshkilati/topic-6.png';
 import topicImage7 from './assets/img/teshkilati/topic-7.png';
-import Footer from './../../footer/Footer';
+
 const ServicesOrganization = () => {
     return (
         <div>

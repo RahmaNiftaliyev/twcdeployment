@@ -1,13 +1,15 @@
 // @ts-nocheck
 import React from 'react';
-import styles from './industry.module.css';
 import IndustryHeaderDash from './IndustryHeaderDash';
+import Footer from './../../footer/Footer';
+import styles from './industry.module.css';
+// !----------------------------------------------------------
 import headerImagePng from './assets/img/tme-header.png';
 import sectionImagePng from './assets/img/tme-section.png';
 import groupItemImagePng1 from './assets/img/tme-group-item-1.png';
 import groupItemImagePng2 from './assets/img/tme-group-item-2.png';
 import groupItemImagePng3 from './assets/img/tme-group-item-3.png';
-import Footer from './../../footer/Footer';
+
 
 const IndustryTechMediaAndFun = () => {
     return (

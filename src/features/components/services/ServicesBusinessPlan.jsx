@@ -1,7 +1,9 @@
 // @ts-nocheck
 import React from 'react';
 import ServicesHeaderDash from './ServicesHeaderDash';
+import Footer from './../../footer/Footer';
 import styles from './services.module.css';
+// !----------------------------------------------------------
 import headerImage from './assets/img/biznesplanvetie/header.png';
 import sectionImage from './assets/img/biznesplanvetie/section.png';
 import topicImage1 from './assets/img/biznesplanvetie/topic-1.png';
@@ -10,7 +12,7 @@ import topicImage3 from './assets/img/biznesplanvetie/topic-3.png';
 import topicImage4 from './assets/img/biznesplanvetie/topic-4.png';
 import topicImage5 from './assets/img/biznesplanvetie/topic-5.png';
 import topicImage6 from './assets/img/biznesplanvetie/topic-6.png';
-import Footer from './../../footer/Footer';
+
 const ServicesBusinessPlan = () => {
     return (
         <div>

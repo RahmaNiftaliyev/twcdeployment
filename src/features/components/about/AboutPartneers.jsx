@@ -1,13 +1,15 @@
 // @ts-nocheck
 import React from 'react';
-import styles from './about.module.css';
 import AboutHeaderDash from './AboutHeaderDash';
+import Footer from './../../footer/Footer';
+import styles from './about.module.css';
+// !----------------------------------------------------------
 import partneersPng from './assets/img/partneer.png';
 import abbLogo from './assets/img/partners/abb-logo.png';
 import arsolLogo from './assets/img/partners/arsol-logo.png';
 import unibankLogo from './assets/img/partners/unibank-logo.png';
 import askLogo from './assets/img/partners/ask-logo.png';
-import Footer from './../../footer/Footer';
+
 const AboutPartneers = () => {
     return (
         <div>

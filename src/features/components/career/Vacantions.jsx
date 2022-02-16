@@ -1,13 +1,15 @@
 // @ts-nocheck
 import React, {useState} from 'react'
+import VacantionHeaderDash from './VacantionHeaderDash';
+import Footer from '../../footer/Footer';
 import { useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import { selectVacantionById } from './careersSlice'
-import Footer from '../../footer/Footer';
 import styles from './career.module.css';
+// !----------------------------------------------------------
 import arrow from './assets/img/arrow.png' ;
-import alertify from 'alertifyjs';
-import VacantionHeaderDash from './VacantionHeaderDash';
+
+
 
 
 
@@ -25,18 +27,12 @@ const Vacantions = () => {
 
     const isDisabled = [fullName,email,number,content,message].every(Boolean)
 
-
-
-  
 const handleSubmit = () => {
 
 }
 
-
-
   return (
     <div>
-
       <VacantionHeaderDash />
              <div className={`${styles.vacancy_section_main_container}`}>
                 <h1 className={`${styles.vacancy_header}`}>{selectedVacancy.name} <br /> pozisiyasına vakansiya</h1>

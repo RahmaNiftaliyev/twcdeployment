@@ -1,13 +1,15 @@
 /* eslint-disable no-unused-vars */
 // @ts-nocheck
 import React from 'react';
-import styles from './industry.module.css';
 import IndustryHeaderDash from './IndustryHeaderDash';
+import Footer from './../../footer/Footer';
+import styles from './industry.module.css';
+// !----------------------------------------------------------
 import headerImagePng from './assets/img/maliyyeservisleri-header.png';
 import sectionImagePng from './assets/img/maliyyeservisleri-section.png';
 import groupItemImagePng1 from './assets/img/maliyyeservisleri-group-item-1.png';
 import groupItemImagePng2 from './assets/img/maliyyeservisleri-group-item-2.png';
-import Footer from './../../footer/Footer';
+
 const IndustryFinancialService = () => {
     return (
         <div>

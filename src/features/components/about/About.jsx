@@ -2,9 +2,12 @@
 // @ts-nocheck
 import React from 'react';
 import GalleryServices from './../../toolbox/gallery/GalleryServices'
-import styles from './about.module.css';
+import Footer from './../../footer/Footer';
+import AboutHeaderDash from './AboutHeaderDash';
 import { useSelector } from 'react-redux';
 import {selectAllServices} from './../services/servicesSlice'
+import styles from './about.module.css';
+// !----------------------------------------------------------
 import topicImage1 from './assets/img/about-us/topic-1.png';
 import topicImage2 from './assets/img/about-us/topic-2.png';
 import topicImage3 from './assets/img/about-us/topic-3.png';
@@ -12,9 +15,8 @@ import topicImage4 from './assets/img/about-us/topic-4.png';
 import valuesImage1 from './assets/img/about-us/values-1.png';
 import valuesImage2 from './assets/img/about-us/values-2.png';
 import valuesImage3 from './assets/img/about-us/values-3.png';
-import AboutHeaderDash from './AboutHeaderDash';
 import aboutmain from './assets/img/aboutheader.png';
-import Footer from './../../footer/Footer';
+
 const About = () => {
 
     const allServices = useSelector(selectAllServices);

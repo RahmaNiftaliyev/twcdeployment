@@ -3,9 +3,9 @@
 import React from 'react'
 import Navigation from '../../navigation/Navigation'
 import IndustryHeader from './IndustryHeader'
-import blackThinkWiseLogo from './../common/assets/svg/navigation-black-logo.svg'
 import styles from './industry.module.css'
-
+// !----------------------------------------------------------
+import blackThinkWiseLogo from './../common/assets/svg/navigation-black-logo.svg'
 
 const IndustryHeaderDash = ({ headerText, isHeader }) => {
   return (

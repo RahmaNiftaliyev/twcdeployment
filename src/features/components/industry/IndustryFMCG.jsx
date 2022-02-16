@@ -1,10 +1,12 @@
 // @ts-nocheck
 import React from 'react';
-import styles from './industry.module.css';
 import IndustryHeaderDash from './IndustryHeaderDash';
+import Footer from './../../footer/Footer';
+import styles from './industry.module.css';
+// !----------------------------------------------------------
 import headerImagePng from './assets/img/FMCG-header.png';
 import sectionImagePng from './assets/img/FMCG-section.png';
-import Footer from './../../footer/Footer';
+
 const IndustryFMCG = () => {
     return (
         <div>

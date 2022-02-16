@@ -1,5 +1,6 @@
 // @ts-nocheck
 import React from 'react'
+// !----------------------------------------------------------
 import styles from './industry.module.css'
 
 const IndustryHeader = ({ text }) => {

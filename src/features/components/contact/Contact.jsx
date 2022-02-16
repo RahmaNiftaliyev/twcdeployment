@@ -1,8 +1,11 @@
+// @ts-nocheck
 import React, { useState } from 'react';
-import styles from './contact.module.css';
-import arrow from './assets/img/arrow.png';
 import GoogleMapFancyLoader from './../../toolbox/googleMap/GoogleMapFancyLoader'
 import { AnimationOnScroll } from 'react-animation-on-scroll';
+import styles from './contact.module.css';
+// !----------------------------------------------------------
+import arrow from './assets/img/arrow.png';
+
 
 const Contact = () => {
     const [fullName, setFullName] = useState('');

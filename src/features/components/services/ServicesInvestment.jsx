@@ -1,13 +1,15 @@
 // @ts-nocheck
 import React from 'react';
 import ServicesHeaderDash from './ServicesHeaderDash';
+import Footer from './../../footer/Footer';
 import styles from './services.module.css';
+// !----------------------------------------------------------
 import investmentJpg from './assets/img/kapitallashma.jpg';
 import topicImage1 from './assets/img/kapitallashma/topic-1.png';
 import topicImage2 from './assets/img/kapitallashma/topic-2.png';
 import topicImage3 from './assets/img/kapitallashma/topic-3.png';
 import topicImage4 from './assets/img/kapitallashma/topic-4.png';
-import Footer from './../../footer/Footer';
+
 
 const ServicesInvestment = () => {
     return (

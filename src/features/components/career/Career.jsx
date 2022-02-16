@@ -1,14 +1,14 @@
 // @ts-nocheck
 import React,{useState} from 'react';
-import { useSelector } from 'react-redux';
-import { selectAllVacancies } from './careersSlice'
-import { Link } from 'react-router-dom';
-import { AnimationOnScroll } from 'react-animation-on-scroll';
-import { useNavigate } from 'react-router-dom';
 import Footer from './../../footer/Footer';
 import Request from '../../toolbox/modal/Request';
 import RoundedButton from '../../toolbox/buttons/RoundedButton';
+import { useSelector } from 'react-redux';
+import { selectAllVacancies } from './careersSlice'
+import { AnimationOnScroll } from 'react-animation-on-scroll';
+import { useNavigate } from 'react-router-dom';
 import styles from './career.module.css';
+// !----------------------------------------------------------
 import ceo from './assets/img/carrer-ceo.png';
 import arrow from './assets/img/arrow.png';
 

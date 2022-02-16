@@ -1,16 +1,19 @@
 // @ts-nocheck
 import React from 'react';
 import AboutHeaderDash from './AboutHeaderDash';
-import GalleryServices from './../../toolbox/gallery/GalleryServices'
-import teamJpg from './assets/img/team.jpg';
-import styles from './about.module.css';
-import { useSelector } from 'react-redux';
-import {selectAllServices} from './../services/servicesSlice'
-import sectionImage from './assets/img/team/section.png';
-import blackArrow from '../../toolbox/buttons/svg/arrow-black.svg';
-import { selectAllMembers } from './aboutSlice'
 import Footer from './../../footer/Footer';
 import Gallery from './../../toolbox/gallery/Gallery'
+import GalleryServices from './../../toolbox/gallery/GalleryServices'
+import { useSelector } from 'react-redux';
+import { selectAllMembers } from './aboutSlice'
+import {selectAllServices} from './../services/servicesSlice'
+import styles from './about.module.css';
+// !----------------------------------------------------------
+import teamJpg from './assets/img/team.jpg';
+import sectionImage from './assets/img/team/section.png';
+import blackArrow from '../../toolbox/buttons/svg/arrow-black.svg';
+
+
 
 
 

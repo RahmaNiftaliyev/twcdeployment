@@ -1,7 +1,8 @@
+// @ts-nocheck
 import React from 'react';
 import PrivacyHeaderDash from './PrivacyHeaderDash';
-import styles from './privacy.module.css';
 import Footer from './../../footer/Footer';
+import styles from './privacy.module.css';
 const Privacy = () => {
     return (
         <div>

@@ -1,10 +1,14 @@
 // @ts-nocheck
 import React from "react";
-import styles from "./industry.module.css";
+import Footer from './../../footer/Footer'
 import IndustryHeaderDash from "./IndustryHeaderDash";
+import styles from "./industry.module.css";
+// !----------------------------------------------------------
 import headerImagePng from "./assets/img/tikinti-header.png";
 import sectionImagePng from "./assets/img/tikinti-section.png";
-import Footer from './../../footer/Footer'
+
+
+
 const IndustryArchitect = () => {
   return (
     <div>

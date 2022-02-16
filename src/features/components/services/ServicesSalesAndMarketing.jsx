@@ -1,7 +1,9 @@
 // @ts-nocheck
 import React from 'react';
 import ServicesHeaderDash from './ServicesHeaderDash';
+import Footer from './../../footer/Footer';
 import styles from './services.module.css';
+// !----------------------------------------------------------
 import salesImg from './assets/img/satisvemarketing.png';
 import topicImage1 from './assets/img/satisvemarketing/topic-1.png';
 import topicImage2 from './assets/img/satisvemarketing/topic-2.png';
@@ -9,7 +11,7 @@ import topicImage3 from './assets/img/satisvemarketing/topic-3.png';
 import topicImage4 from './assets/img/satisvemarketing/topic-4.png';
 import topicImage5 from './assets/img/satisvemarketing/topic-5.png';
 import topicImage6 from './assets/img/satisvemarketing/topic-6.png';
-import Footer from './../../footer/Footer';
+
 
 
 const ServicesSalesAndMarketing = () => {

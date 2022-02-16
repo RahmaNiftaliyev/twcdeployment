@@ -1,9 +1,8 @@
 // @ts-nocheck
 import React from 'react'
-import styles from './privacy.module.css'
 import Navigation from '../../navigation/Navigation'
 import NavHeader from '../../toolbox/navheader/NavHeader'
-import PrivacyHeader from './PrivacyHeader'
+// !----------------------------------------------------------
 import blackThinkWiseLogo from './../common/assets/svg/navigation-black-logo.svg'
 
 const PrivacyHeaderDash = ({ headerText, isPrivacy }) => {

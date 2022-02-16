@@ -1,9 +1,10 @@
 // @ts-nocheck
 import React from 'react'
-import styles from './home.module.css'
 import NavHeader from '../../toolbox/navheader/NavHeader'
 import Navigation from '../../navigation/Navigation'
 import Header from './../../header/Header'
+// !----------------------------------------------------------
+import styles from './home.module.css'
 import whiteThinkWiseLogo from './../common/assets/svg/navigation-white-logo.svg'
 
 const HomeHeaderDash = () => {

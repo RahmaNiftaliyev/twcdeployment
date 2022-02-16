@@ -1,7 +1,9 @@
 // @ts-nocheck
 import React from 'react';
-import styles from './about.module.css';
 import AboutHeaderDash from './AboutHeaderDash';
+import Footer from './../../footer/Footer';
+import styles from './about.module.css';
+// !----------------------------------------------------------
 import testimonialsPng from './assets/img/testimonials.png';
 import logo1 from './assets/img/customers/demirchi-tower.png';
 import logo2 from './assets/img/customers/Prestij-kimya.png';
@@ -17,7 +19,7 @@ import logo9 from './assets/img/customers/antaris.png';
 import logo10 from './assets/img/customers/tuv-austria.png';
 import logo11 from './assets/img/customers/az-minerals.png';
 import logo12 from './assets/img/customers/Oil-Supply.png';
-import Footer from './../../footer/Footer';
+
 const AboutTestimonials = () => {
     return (
         <div>

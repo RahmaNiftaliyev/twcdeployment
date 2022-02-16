@@ -1,10 +1,13 @@
 // @ts-nocheck
 import React, { useState } from 'react';
-import styles from './form.module.css';
-import imageLogo from './assets/img/logo.png';
-import blackThinkWiseLogo from './../common/assets/svg/navigation-black-logo.svg';
 import { Link } from 'react-router-dom';
 import { Typewriter } from 'typewriting-react';
+import styles from './form.module.css';
+// !----------------------------------------------------------
+import imageLogo from './assets/img/logo.png';
+import blackThinkWiseLogo from './../common/assets/svg/navigation-black-logo.svg';
+
+
 const SignUp = () => {
     const [fullName, setFullName] = useState('');
     const [email, setEmail] = useState('');
