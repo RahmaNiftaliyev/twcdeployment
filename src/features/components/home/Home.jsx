@@ -43,8 +43,18 @@ const Home = () => {
     const [chatBoxView,setChatBoxView] = useState(true) ; 
     const [chatAppView,setChatAppView] = useState(false)
 
+    const [isVisible,setIsVisible] = React.useState(false) ; 
 
-    console.log(allMembers)
+ const handleScroll = () => {
+   if(document.body.scrollTop > 140 || document.documentElement.scrollTop > 140) {
+    setIsVisible(true)
+   } else {
+     setIsVisible(false)
+   }
+ }
+
+ window.addEventListener("scroll",handleScroll) ; 
+
 
     const handleBoxView = () => {
         setChatBoxView(false);
@@ -100,9 +110,9 @@ const Home = () => {
 
         </div>
 
-        <div className='d-flex justify-end'>
-           {chatBoxView && <ChatBox clickViewController={handleBoxView} />} 
-           {chatAppView && <ChatApp clickViewController={handleAppView} />}
+        <div className='d-flex justify-end chat-box-container-keeper'>
+           {chatBoxView && isVisible && <ChatBox clickViewController={handleBoxView} />} 
+           {chatAppView && isVisible && <ChatApp clickViewController={handleAppView} />}
         </div>
 
         {/*Our team*/}
@@ -224,7 +234,7 @@ const Home = () => {
                 <div></div>
             </div>
 
-               <div className="testimonials-container">
+               <div className="galler-container">
                     <GalleryTestimonials testimonialsData={portfolioData} localeClassData={`${styles.span_img_container}`} />
                </div>
 

@@ -40,6 +40,16 @@ body {
 button {
   cursor: pointer
 }
+
+
+.chat-box-container-keeper {
+  position: fixed;
+  top: 600px;
+  right: 0;
+  width: 100%;
+  z-index: 100000000;
+}
+
 .block-center {
   margin-left: auto;
   margin-right: auto
@@ -408,6 +418,12 @@ van minit .nav-header-border-white {
 }
 
 
+.container-testimonials-data {
+  width: max-content;
+  margin-left: auto;
+  margin-right: auto;
+} 
+
 
 
 .img-section-team-data {
@@ -494,9 +510,6 @@ van minit .nav-header-border-white {
   margin-right: auto;
 }
 
-.testimonials-container {
-  margin-top: 53px;
-}
 
 
 

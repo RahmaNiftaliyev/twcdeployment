@@ -327,7 +327,7 @@
   text-align: left
 }
 .articles_card1 {
-  width: 358px;
+  max-width: 520px;
   margin-right: 20px;
   background-color: #fff
 }

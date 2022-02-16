@@ -263,6 +263,9 @@
     height: 234px;
     padding: 10px 15px;
     position: relative;
+    background: #F5F5F3;
+    border: 1px solid #F5F5F3;
+    resize: none;
 }
 
 .input_for_comment::placeholder {
@@ -310,6 +313,8 @@
 .social_media_icon {
     font-size: 12px;
     cursor: pointer;
+    text-decoration: none;
+    color: #171717;
 }
 
 .list_group {

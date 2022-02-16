@@ -97,7 +97,8 @@ section._ready {
     font-size: 36px;
     line-height: 44px;
     color: #171717;
-    margin-bottom: 48px
+    margin-bottom: 48px;
+    font-weight: 400;
 }
 
 .vacantion {

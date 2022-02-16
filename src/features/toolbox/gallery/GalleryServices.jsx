@@ -18,7 +18,7 @@ const GalleryServices = ({data,boxContainerClass,boxClass,imgClass,spanClass}) =
             const renderedServices = data.map(item => {
                 return (
                     <div
-                    className={boxContainerClass}
+                    className={`${boxContainerClass} container-testimonials-data`}
                 >
                     <div
                         className={boxClass}

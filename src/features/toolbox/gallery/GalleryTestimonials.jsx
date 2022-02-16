@@ -18,9 +18,11 @@ const GalleryTestimonials = ({testimonialsData,localeClassData}) => {
 
     const renderedItems = testimonialsData.map((testimonial,index) => {
             return (
-                <span className={localeClassData} key={index}>
+              <div className='container-testimonials-data'>
+                  <span className={localeClassData} key={index}>
                     <img src={testimonial} onDragStart={handleDragStart} alt="TWC company testimonials" />
                 </span>
+              </div>
             )
     })
 

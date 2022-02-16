@@ -8,23 +8,23 @@ export const footerLinks = {
     id1: {
       id: 'id1',
       header: 'ÜNVAN',
-      headerItems: ['Nobel prospekti 15','Azure Biznes Mərkəzi','Mərtəbə 17, Otaq 118']
+      headerItems: [['Nobel prospekti 15',"/contact"],['Azure Biznes Mərkəzi',"/contact"],['Mərtəbə 17, Otaq 118',"/contact"]]
     },
     id2: {
       id: 'id2',
       header: 'ŞİRKƏT',
-       headerItems: ['Haqqımızda','Məxfilik siyasəti','FAQ']
+      headerItems: [['Haqqımızda','/about'],['Məxfilik siyasəti','/privacy'],['FAQ','/faq']]
      
     },
     id3: {
       id: 'id3',
       header: 'SOSİAL ŞƏBƏKƏ',
-      headerItems: ['Linkedin','Facebook','Instagram']
+      headerItems: [['Linkedin',"/contact"],['Facebook',"/contact"],['Instagram',"/contact"]]
     },
     id4: {
       id: 'id4',
       header:"Əlaqə",
-      headerItems: ['info@thinkwise.az','tel+994 50 447 10 90','+994 12 488 68 19']
+      headerItems: [['info@thinkwise.az',"/contact"],['tel+994 50 447 10 90',"/contact"],['+994 12 488 68 19',"/contact"]]
     },
   },
 }

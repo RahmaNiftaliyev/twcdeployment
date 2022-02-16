@@ -1,5 +1,6 @@
 // @ts-nocheck
 import React from 'react'
+import { Link } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 import { selectAllFooterLinks } from './footerSlice'
 import styles from './footer.module.css'
@@ -26,10 +27,10 @@ const Footer = () => {
             </p>
             {
               <ul>
-                {item.headerItems.map(itemS => {
+                {item.headerItems.map(items => {
                   return (
-                    <li className={`${styles.list_item_footer}`}  onClick={() => handleNavigateFooter(itemS)} >
-                      {itemS}
+                    <li className={`${styles.list_item_footer}`}>
+                      <Link to={items[1]} className="text-decoration-none text-white">{items[0]}</Link>
                     </li>
                   )
                 })}

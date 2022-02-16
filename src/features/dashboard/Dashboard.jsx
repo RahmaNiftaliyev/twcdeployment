@@ -42,8 +42,8 @@ import SignUp from './../components/form/SignUp';
 import SignIn from './../components/form/SignIn';
 import BackToTop from '../toolbox/buttons/BackToTop';
 import Vacantions from '../components/career/Vacantions';
-import Cursor from './../toolbox/cursor/Cursor';
-import ChatApp from '../toolbox/chat/ChatApp';
+// import Cursor from './../toolbox/cursor/Cursor';
+
 
 
 const Dashboard = () =>
@@ -65,7 +65,7 @@ const Dashboard = () =>
   return (
     <div>
       <BackToTop showMe={isVisible} />
-      <Cursor />
+      {/* <Cursor /> */}
       <Routes>
         <Route path="/" element={<HomeDashboard />} />
         <Route path="/contact" element={<ContactDashboard />} />
@@ -156,7 +156,6 @@ const Dashboard = () =>
 
         <Route path="/login" element={< SignIn />} />
         <Route path="/register" element={< SignUp />} />
-        <Route path="/chat" element={< ChatApp />} />
       </Routes>
 
 
