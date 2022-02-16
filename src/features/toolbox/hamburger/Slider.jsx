@@ -1,13 +1,13 @@
 // @ts-nocheck
 import React, { useState } from 'react'
-import styles from './hamburger.module.css'
+import RoundedButton from './../buttons/RoundedButton'
+import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux'
 import { selectAllLinks } from './../../navigation/navigationSlice'
 import { selectFooterLinkById } from './../../footer/footerSlice'
+import styles from './hamburger.module.css'
 import icon from './assets/img/menu-x-icon.svg'
 import sliderTwc from './../../components/common/assets/svg/navigation-slider.svg'
-import RoundedButton from './../buttons/RoundedButton'
-import { Link } from 'react-router-dom';
 
 const Slider = ({ classData, handleSliderClick, conditionView }) => {
   const contactData = useSelector((state) => selectFooterLinkById(state, 'id4'))
