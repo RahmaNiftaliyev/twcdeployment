@@ -18,7 +18,7 @@
 
 
 .chat_app_container {
-    width:454px;
+    max-width:454px;
     height:503px;  
     border-top: 1px solid #D6D6D6;
     border-bottom: 1px solid #D6D6D6;
@@ -74,7 +74,7 @@
 
 
 .controllers > input {
-  width: 268px;
+  width: 65.6%;
   border-bottom: 1px solid #D6D6D6;
   align-self: flex-end;
   padding-left: 13px;
@@ -90,7 +90,7 @@
 }
 
 .controllers > button {
-  width: 110px;
+  width: 26.9%;
   height: 40px;
   background: #171717;
   line-height: 25px;
