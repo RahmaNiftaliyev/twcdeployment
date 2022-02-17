@@ -47,7 +47,6 @@ const Home = () => {
     const portfolioData = [client1,client2,client3,client4,client5,client6,client7,client8,client9,client10,client11,client12,client13]
     const [chatBoxView,setChatBoxView] = useState(true) ; 
     const [chatAppView,setChatAppView] = useState(false)
-
     const [isVisible,setIsVisible] = useState(false) ; 
 
  const handleScroll = () => {
@@ -80,12 +79,7 @@ const Home = () => {
                     )      
                 })    
             
-   
-
-
     const navigate = useNavigate();
-
-
 
     const handleNavigation = (paramsPath) => {
         navigate(paramsPath);

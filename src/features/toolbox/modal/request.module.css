@@ -72,3 +72,19 @@
     -o-transition: .5s ease;
      transition: .5s ease;
 }
+
+
+@media screen and (max-width:767px) { 
+    .modal {
+       margin-top: 0px;
+       padding:50px 5px 5px;
+       height: 100vh;
+    }
+
+    .modal_text_area ~ button {
+        width: 126px;
+        height: 47px;
+        font-size: 12px;
+        line-height: 20px;
+    }
+}

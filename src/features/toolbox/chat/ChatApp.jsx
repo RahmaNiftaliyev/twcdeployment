@@ -10,6 +10,10 @@ import additionIcon from './assets/addition.png'
 
 const ChatApp = ({clickViewController}) => {
 
+
+  const [message,setMessage] =  React.useState('') ; 
+
+
   return (
     <div className={`${styles.chat_app_container}`}>
 
@@ -26,7 +30,14 @@ const ChatApp = ({clickViewController}) => {
         </div>
           <div className={`${styles.controllers}`}>
             <img src={additionIcon} alt="think wice chat app icons" />
-            <input type="text" name="mesaj" id="mesaj" placeholder='Mesajınız' />
+            <input 
+              type="text" 
+              name="mesaj" 
+              id="mesaj" 
+              placeholder='Mesajınız' 
+              value={message} 
+              onChange={(e) => setMessage(e.target.value)}
+             />
             <button>Göndər</button>
         </div>
     </div>

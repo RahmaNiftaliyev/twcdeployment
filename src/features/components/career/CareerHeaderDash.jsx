@@ -14,7 +14,7 @@ const CareerHeaderDash = () => {
       />
       <Navigation
         logo={whiteThinkWiseLogo}
-        enable={false}
+        enable={true}
         textColor="text-white"
         bgColor="bg-white"
         isArticle={false}
