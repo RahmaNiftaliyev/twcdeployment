@@ -1,189 +1,163 @@
 .background_image {
-    background-image: url(./assets/img/contactheader.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+  background-image: url(./assets/img/contactheader.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat
 }
-
 .map_numbers {
-    display: flex;
-    flex-direction: row;
-    margin-top: 165px;
+  display: flex;
+  flex-direction: row;
+  margin-top: 165px
 }
-
-.map_numbers>div {
-    height: 801px;
-    width: 50%;
+.map_numbers > div {
+  height: 801px;
+  width: 50%
 }
-
-/* .map {
-    background-image: url(./assets/img/demo-map.png);
-} */
-
 .number {
-    background-color: #f5f5f3;
-    padding-left: 96px;
+  background-color: #f5f5f3;
+  padding-left: 96px
 }
-
-.number>div {
-    margin-top: 308px;
+.number > div {
+  margin-top: 308px
 }
-
-.number>div span,
+.number > div span,
 form span {
-    font-size: 11px;
-    line-height: 20px;
-    letter-spacing: 3.85px;
-    text-transform: uppercase;
-    color: #8b8b8b;
+  font-size: 11px;
+  line-height: 20px;
+  letter-spacing: 3.85px;
+  text-transform: uppercase;
+  color: #8b8b8b
 }
-
 .number div h2,
 form h2 {
-    font-size: 36px;
-    line-height: 44px;
-    font-weight: 400;
-    color: #171717;
+  font-size: 36px;
+  line-height: 44px;
+  font-weight: 400;
+  color: #171717
 }
-
 form h2 {
-    padding-bottom: 30px;
+  padding-bottom: 30px
 }
-
 .pic_form {
-    margin-top: 158px;
-    display: flex;
+  margin-top: 158px;
+  display: flex
 }
-
 .contact_informations {
-    display: flex;
-    margin-top: 20px;
+  display: flex;
+  margin-top: 20px
 }
-
-.contact_informations a,
-.contact_informations>p {
-    color: #878787;
-}
-
+.contact_informations > p,
 .contact_informations a {
-    text-decoration: none;
+  color: #878787
 }
-
-.contact_informations>p {
-    margin-left: 75px;
+.contact_informations a {
+  text-decoration: none
 }
-
+.contact_informations > p {
+  margin-left: 75px
+}
 .form,
 .pic {
-    width: 50%;
-    height: 800px;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+  width: 50%;
+  height: 800px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat
 }
-
 .pic {
-    background-image: url(./assets/img/contact-common.png);
+  background-image: url(./assets/img/contact-common.png)
 }
-
 .form {
-    background-image: url(./assets/img/contactbg.png);
-    padding-left: 96px;
-    padding-top: 133px;
+  background-image: url(./assets/img/contactbg.png);
+  padding-left: 96px;
+  padding-top: 133px
 }
-
 .form button {
-    width: 156px;
-    height: 67px;
-    background-color: #171717;
-    color: #fff;
-    font-size: 14px;
-    line-height: 25px;
-    font-weight: 400;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 35px;
+  width: 156px;
+  height: 67px;
+  background-color: #171717;
+  color: #fff;
+  font-size: 14px;
+  line-height: 25px;
+  font-weight: 400;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 35px
 }
-
-.form input[type='email'],
-.form input[type='text'] {
-    width: 499px;
-    height: 26px;
-    background: #fff;
-    border: 1px solid #f5f5f3;
-    padding-left: 15px;
-    padding-top: 13px;
-    padding-bottom: 13px;
-    box-sizing: content-box;
+.form input[type=email],
+.form input[type=text] {
+  width: 499px;
+  height: 26px;
+  background: #fff;
+  border: 1px solid #f5f5f3;
+  padding-left: 15px;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  box-sizing: content-box
 }
-
-form>input[type='email']::placeholder,
-form>input[type='text']::placeholder {
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 26px;
-    color: #878787;
+form > input[type=email]::placeholder,
+form > input[type=text]::placeholder {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 26px;
+  color: #878787
 }
-
-form>textarea {
-    height: 204px;
-    width: 516px;
-    background: #fff;
-    border: 1px solid #f5f5f3;
-    resize: none;
+form > textarea {
+  height: 204px;
+  width: 516px;
+  background: #fff;
+  border: 1px solid #f5f5f3;
+  resize: none
 }
-
-form>input[type='email'],
-form>textarea {
-    margin-top: 10px;
+form > input[type=email],
+form > textarea {
+  margin-top: 10px
 }
-
-@media screen and (max-width: 767px) {
-    .map_numbers,
-    .pic_form {
-        flex-direction: column;
-    }
-    .map_numbers>div {
-        width: 100%;
-        height: auto;
-    }
-    .number {
-        padding: 20px 10px;
-    }
-    .number>div {
-        margin-top: 50px;
-    }
-    .form,
-    .pic {
-        width: 100%;
-    }
-    .form {
-        padding: 20px;
-    }
-    .form input[type='email'],
-    .form input[type='text'] {
-        padding-left: 0;
-    }
-    .form input[type='email'],
-    .form input[type='text'],
-    form>textarea {
-        width: 100%;
-    }
+@media screen and (max-width:767px) {
+  .map_numbers,
+  .pic_form {
+    flex-direction: column
+  }
+  .map_numbers > div {
+    width: 100%;
+    height: auto
+  }
+  .number {
+    padding: 20px 10px
+  }
+  .number > div {
+    margin-top: 50px
+  }
+  .form,
+  .pic {
+    width: 100%
+  }
+  .form {
+    padding: 20px
+  }
+  .form input[type=email],
+  .form input[type=text] {
+    padding-left: 0
+  }
+  .form input[type=email],
+  .form input[type=text],
+  form > textarea {
+    width: 100%
+  }
 }
-
 @media screen and (max-width:1130px) {
-    .pic_form {
-        flex-direction: column;
-    }
-    .map_numbers {
-        flex-direction: column;
-    }
-    .map_numbers>div {
-        width: 100%;
-    }
-    .form,
-    .pic {
-        width: 100%;
-    }
+  .pic_form {
+    flex-direction: column
+  }
+  .map_numbers {
+    flex-direction: column
+  }
+  .map_numbers > div {
+    width: 100%
+  }
+  .form,
+  .pic {
+    width: 100%
+  }
 }

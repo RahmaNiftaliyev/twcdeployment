@@ -1,8 +1,8 @@
 .header_head_text {
-    font-size: clamp(32px,3.681vw,53px);
-    line-height: 61px;
-    font-weight: 400;
-    max-width: 707px;
-    position: absolute;
-    top: 289px;
+  font-size: clamp(32px,3.681vw,53px);
+  line-height: 61px;
+  font-weight: 400;
+  max-width: 707px;
+  position: absolute;
+  top: 289px
 }

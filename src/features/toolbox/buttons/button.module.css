@@ -1,18 +1,17 @@
 .back_to_top {
-    text-decoration: none;
-    color: white;
-    position: fixed;
-    z-index:20;
-    bottom:20px;
-    right:20px;
-    border-radius: 20px;
-    border: 1px solid transparent;
-    font-size: 1rem;
-    line-height: 1.5;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  text-decoration: none;
+  color: #fff;
+  position: fixed;
+  z-index: 20;
+  bottom: 20px;
+  right: 20px;
+  border-radius: 20px;
+  border: 1px solid transparent;
+  font-size: 1rem;
+  line-height: 1.5;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out
 }
-

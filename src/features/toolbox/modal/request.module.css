@@ -1,90 +1,74 @@
-
-
 .modal {
-    max-width: 1026px;
-    height:745px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 100px;
-    padding: 51px 69px;
-    background-color: white;
+  max-width: 1026px;
+  height: 745px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+  padding: 51px 69px;
+  background-color: #fff
 }
-
-
 .modal > form {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%
 }
-
-
 .modal_input {
-    margin-bottom: 5px;
+  margin-bottom: 5px
 }
-
-.modal_text_area,
-.modal_input {
-    height: 67px;
-    width: 100%;
-    box-sizing: border-box;
-    border-radius: 4px;
-    margin-top: 0px!important;
-    padding-left: 14.06px;
-    font-weight: 300;
-    font-size: 18px;
-    line-height: 27px;
-    color: rgba(43, 43, 43, 0.25);
-    border: 1px solid rgba(43, 43, 43, 0.2);
-    -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-    -moz-filter:drop-shadow(0px 4px 4px rgba(0,0,0,0.25));
-    -ms-filter:drop-shadow(0px 4px 4px rgba(0,0,0,0.25));
-    -o-filter:drop-shadow(0px 4px 4px rgba(0,0,0,0.25));
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-}
-
-
+.modal_input,
 .modal_text_area {
-    height: 253px;
-    margin-bottom: 35px;
-    padding-top: 14.06px;
+  height: 67px;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 4px;
+  margin-top: 0!important;
+  padding-left: 14.06px;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 27px;
+  color: rgba(43,43,43,.25);
+  border: 1px solid rgba(43,43,43,.2);
+  -webkit-filter: drop-shadow(0px 4px 4px rgba(0,0,0,0.25));
+  -moz-filter: drop-shadow(0px 4px 4px rgba(0,0,0,0.25));
+  -ms-filter: drop-shadow(0px 4px 4px rgba(0,0,0,0.25));
+  -o-filter: drop-shadow(0px 4px 4px rgba(0,0,0,0.25));
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, .25))
 }
-
-
+.modal_text_area {
+  height: 253px;
+  margin-bottom: 35px;
+  padding-top: 14.06px
+}
 .modal_text_area ~ button {
-    width: 156px;
-    height: 67px;
-    background-color: #171717;
-    color: #fff;
-    font-size: 14px;
-    line-height: 25px;
+  width: 156px;
+  height: 67px;
+  background-color: #171717;
+  color: #fff;
+  font-size: 14px;
+  line-height: 25px
 }
-
-
 .hidden_absolute_modal {
-    position: fixed;
-    top: -1075px;
-    left:0px;
-    width: 100%;
-    z-index: 999;
-    height: 100vh;
-    -webkit-transition: .5s ease;
-    -moz-transition: .5s ease;
-    -ms-transition: .5s ease;
-    -o-transition: .5s ease;
-     transition: .5s ease;
+  position: fixed;
+  top: -1075px;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  height: 100vh;
+  -webkit-transition: .5s ease;
+  -moz-transition: .5s ease;
+  -ms-transition: .5s ease;
+  -o-transition: .5s ease;
+  transition: .5s ease
 }
-
-
-@media screen and (max-width:767px) { 
-    .modal {
-       margin-top: 0px;
-       padding:50px 5px 5px;
-       height: 100vh;
-    }
-
-    .modal_text_area ~ button {
-        width: 126px;
-        height: 47px;
-        font-size: 12px;
-        line-height: 20px;
-    }
+@media screen and (max-width:767px) {
+  .modal {
+    margin-top: 0;
+    padding: 50px 5px 5px;
+    height: 100vh
+  }
+  .modal_text_area ~ button {
+    width: 126px;
+    height: 47px;
+    font-size: 12px;
+    line-height: 20px
+  }
 }

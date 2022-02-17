@@ -29,10 +29,10 @@
   width: 324px
 }
 .customers_row > .customer_firm_img_box:not(:last-child) {
-  border-right: 1px solid #2b2b2b40;
+  border-right: 1px solid #2b2b2b40
 }
 .customers_row:not(:first-child) {
-  border-top: 1px solid #2b2b2b40;
+  border-top: 1px solid #2b2b2b40
 }
 .services_header {
   background-image: url(../articles/assets/img/article-header.png);
@@ -48,7 +48,7 @@
   text-transform: uppercase;
   color: #8b8b8b;
   display: inline-block;
-  margin-top: 130px;
+  margin-top: 130px
 }
 .service_title {
   font-size: 42px;
@@ -59,7 +59,7 @@
 }
 .service_logo_group {
   width: 1100px;
-  margin: 0 auto ;
+  margin: 0 auto
 }
 .service_logo {
   width: 64px;
@@ -175,13 +175,11 @@
   width: 1440px;
   margin: 100px auto
 }
-
 .team_card {
   max-width: 1920px;
   width: 1920px;
   margin-top: 3.3125rem
 }
-
 .our_team > p {
   font-size: 11px;
   font-weight: 400;
@@ -425,11 +423,11 @@
     padding-left: 0
   }
   .topic_desc {
-    width: 350px;
-    font-size: 20px;
-    line-height: 44px;
+    width: 100%;
     color: #171717;
-    text-align: center
+    text-align: center;
+    font-size: 19px;
+    line-height: 39px
   }
   .image_section img {
     width: 350px
@@ -441,9 +439,15 @@
     width: 100%
   }
   .service_details_title {
-    width: 100%
+    width: 100%;
+    font-size: 40px
   }
   .team_desc {
     width: 100%
   }
-}@media screen and (max-width: 1023px) {}
+}
+@media screen and (max-width:340px) {
+  .about_image_item_group {
+    justify-content: center
+  }
+}
