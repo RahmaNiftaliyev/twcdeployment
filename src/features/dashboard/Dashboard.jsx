@@ -89,7 +89,6 @@ const Dashboard = () =>
   return (
     <div>
     <BackToTop showMe={isVisible} />
-      {/* <Cursor /> */}
       <Routes>
         <Route path="/" element={<HomeDashboard homeProps={homeProps} />} />
         <Route path="/contact" element={<ContactDashboard />} />

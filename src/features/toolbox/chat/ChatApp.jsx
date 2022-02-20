@@ -12,14 +12,22 @@ const ChatApp = ({clickViewController}) => {
 
   const [message,setMessage] =  React.useState('') ; 
   const [error,setError] = React.useState('') ; 
-
-  const isDisabled = message.length > 0 ? true : false
+  const [textClass,setTextClass] = React.useState('');
+  const isDisabled = message.length > 0 ? true : false;
 
 
 
 
   const formValidationController = (e) => {
 
+    if(!isDisabled) {
+      setError('Mesaj mətni vacibdir!');
+      setTextClass('text-area-placeholder-changer')
+      setTimeout(() => {
+        setError('')
+        setTextClass('')
+      },2500)
+    }
 
 
     e.preventDefault() ; 
@@ -54,7 +62,8 @@ const ChatApp = ({clickViewController}) => {
                 <textarea 
                   name="message" 
                   id="message" 
-                  value={message} 
+                  value={message}
+                  className={`${textClass}`} 
                   placeholder={error.length > 0 ? error : 'Mesajınızı daxil edin...'}
                   onChange={(e) => setMessage(e.target.value)}
                 >

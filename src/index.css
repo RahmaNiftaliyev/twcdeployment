@@ -122,11 +122,9 @@ button {
 [class*=nav-header-] {
   height: 41px
 }
-
 .mt-15 {
-  margin-top: 15px;
+  margin-top: 15px
 }
-
 .nav-header-border-white {
   border-bottom: 1px solid var(--border-color-white)
 }
@@ -401,7 +399,7 @@ button {
   margin-right: auto
 }
 .container-team-data > div {
-  box-shadow: 0px 4px 4px rgba(135, 135, 135, 0.2);
+  box-shadow: 0 4px 4px rgba(135,135,135,.2);
   -webkit-border-radius:  ;
   border-radius: 4px;
   overflow-x: hidden;
@@ -492,70 +490,61 @@ button {
   margin-left: auto;
   margin-right: auto
 }
-
-/*******************************************!CHAT APP CSS!*******************************************/
-
 .main {
   max-width: 372px;
   height: 652px;
-  box-shadow: rgb(0 18 46 / 16%) 0px 8px 36px 0px;
+  box-shadow: rgb(0 18 46 / 16%) 0 8px 36px 0;
   pointer-events: auto;
   position: relative;
   margin-right: 20px;
-  margin-left: 20px;
+  margin-left: 20px
 }
-
 .send-button {
   width: 60px;
   height: 60px;
-  -webkit-border-radius:100% ;
-  -moz-border-radius:100% ;
-  -ms-border-radius:100% ;
-  -o-border-radius:100% ;
-  border-radius:100% ;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -o-border-radius: 100%;
+  border-radius: 100%;
   z-index: 100;
   position: absolute;
   bottom: 20px;
-  right:-20px;
-  background: linear-gradient(135deg, rgb(41, 50, 60), rgb(72, 85, 99));
-  box-shadow: rgb(41 50 60 / 50%) 0px 4px 24px;
+  right: -20px;
+  background: linear-gradient(135deg,#29323c,#485563);
+  box-shadow: rgb(41 50 60 / 50%) 0 4px 24px;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center
 }
-
 .send-button > * {
   width: 32px;
   height: 32px;
-  color: #ccc;
+  color: #ccc
 }
-
 .send-button:hover > * {
-  color:#0275d8;
+  color: #0275d8;
   -webkit-transition: .3s ease-in;
   -moz-transition: .3s ease-in;
   -ms-transition: .3s ease-in;
   -o-transition: .3s ease-in;
-  transition: .3s ease-in;
+  transition: .3s ease-in
 }
-
 .chat-header {
-  color: rgb(255, 255, 255);
-  background: linear-gradient(135deg, rgb(41, 50, 60) 0%, rgb(72, 85, 99) 100%);
-  padding:24px 28px;
+  color: #fff;
+  background: linear-gradient(135deg,#29323c 0,#485563 100%);
+  padding: 24px 28px;
   pointer-events: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
   border-top-left-radius: 16px;
-  border-top-right-radius: 16px;
+  border-top-right-radius: 16px
 }
-
 .profile-container {
   display: flex;
-  align-items: center;
+  align-items: center
 }
-
 .profile {
   width: 52px;
   height: 52px;
@@ -567,102 +556,90 @@ button {
   background-image: url("./features/toolbox/chat/assets/profile.png");
   background-position: center;
   background-size: cover;
-  background-repeat:no-repeat;
+  background-repeat: no-repeat
 }
-
 .profile-container > h2 {
   font-size: 22px;
   font-weight: 600;
-  margin-left: 8px;
+  margin-left: 8px
 }
-
-
 .icon-font-size-lg {
-  font-size: 36px;
+  font-size: 36px
 }
-
-
-
-
 .betweener {
   height: 100px;
-  background: linear-gradient(45deg, rgb(41, 50, 60) 0%, rgb(72, 85, 99) 100%);
+  background: linear-gradient(45deg,#29323c 0,#485563 100%);
   padding-left: 28px;
   padding-right: 28px;
   padding-bottom: 20px;
   display: flex;
-  align-items: center;
+  align-items: center
 }
-
 .betweener > p {
-  color: white;
+  color: #fff
 }
-
 .conversation-group {
   height: 300px;
-  padding: 0  28px 24px 28px;
+  padding: 0 28px 24px 28px;
   position: relative;
-  background-color: white;
+  background-color: #fff
 }
-
 .conversation-group > img {
   position: absolute;
   left: 0;
   top: -8px;
-  z-index: 20;
+  z-index: 20
 }
-
 .message-operator {
-      background: rgb(240, 242, 247);
+  background: #f0f2f7
 }
-
 .message-user {
-  background-color: rgb(120,121,123);
+  background-color: #78797b;
 }
-
 .message-operator,
 .message-user {
-    padding: 10px 16px;
-    position: relative;
-    z-index: 30;
-    color: rgb(6, 19, 43);
-    border-radius: 20px;
-    margin:10px 0 2px 0px;
-    font-size: 15px;
-    line-height: 20px;
-    overflow-wrap: break-word;
-    display: inline-block;
-    transition: margin 0.28s ease-in-out 0s;
-    -webkit-transition: margin 0.28s ease-in-out 0s;
-    -moz-transition: margin 0.28s ease-in-out 0s;
-    -ms-transition: margin 0.28s ease-in-out 0s;
-    -o-transition: margin 0.28s ease-in-out 0s;
+  padding: 10px 16px;
+  position: relative;
+  z-index: 30;
+  color: #06132b;
+  border-radius: 20px;
+  margin: 10px 0 2px 0;
+  font-size: 15px;
+  line-height: 20px;
+  overflow-wrap: break-word;
+  display: inline-block;
+  transition: margin .28s ease-in-out 0s;
+  -webkit-transition: margin .28s ease-in-out 0s;
+  -moz-transition: margin .28s ease-in-out 0s;
+  -ms-transition: margin .28s ease-in-out 0s;
+  -o-transition: margin .28s ease-in-out 0s
 }
-
 .input-group {
   padding-left: 28px;
   padding-right: 28px;
-  background-color: white;
+  background-color: #fff
 }
-
 .input-group > hr {
-    margin: 0px;
-    border-width:1px;
-    border-bottom-style: solid;
-    border-bottom-color: rgb(219, 223, 230);
-
+  margin: 0;
+  border-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #dbdfe6
+}
+.input-group > form > textarea {
+  border: 0;
+  width: 100%;
+  height: 150px;
+  font-size: 17px;
+  padding: 20px 0 14px;
+  resize: none;
+  line-height: 24px;
+  overflow-x: hidden;
+  color: #171717
 }
 
-.input-group > form > textarea {
-    border: 0px;
-    width: 100%;
-    height: 150px;
-    font-size: 17px;
-    padding: 20px 0px 14px;
-    resize: none;
-    line-height: 24px;
-    overflow-x: hidden;
-    color: #171717;
+.text-area-placeholder-changer::placeholder {
+  color: #d9534f
+;
 }
 
 .input-group img {
@@ -673,27 +650,22 @@ button {
   -ms-border-radius: 100%;
   -o-border-radius: 100%;
   border-radius: 100%;
-  -moz-transition: 0.28s ease-in-out ;
-  -ms-transition: 0.28s ease-in-out ;
-  -o-transition: 0.28s ease-in-out ;
-  -webkit-transition: 0.28s ease-in-out ;
-   transition: 0.28s ease-in-out ;
-   position: relative;
+  -moz-transition: .28s ease-in-out;
+  -ms-transition: .28s ease-in-out;
+  -o-transition: .28s ease-in-out;
+  -webkit-transition: .28s ease-in-out;
+  transition: .28s ease-in-out;
+  position: relative
 }
-
 .input-group img:hover {
-  box-shadow: 0 0 0 0.2rem rgba(2,117,216,.25);
-  -webkit-transition: 0.28s ease-in-out ;
-  -moz-transition: 0.28s ease-in-out ;
-  -ms-transition: 0.28s ease-in-out ;
-  -o-transition: 0.28s ease-in-out ;
-  transition: 0.28s ease-in-out ;
-  background-color: rgba(2,117,216,.25);
+  box-shadow: 0 0 0 .2rem rgba(2,117,216,.25);
+  -webkit-transition: .28s ease-in-out;
+  -moz-transition: .28s ease-in-out;
+  -ms-transition: .28s ease-in-out;
+  -o-transition: .28s ease-in-out;
+  transition: .28s ease-in-out;
+  background-color: rgba(2,117,216,.25)
 }
-
-
-/*******************************************!RESPONSIVE!*******************************************/
-
 @media screen and (max-width:767px) {
   .navigation-container {
     flex-direction: column
@@ -838,9 +810,3 @@ button {
     align-self: center
   }
 }
-
-@media screen and (min-width: 1024px) {}
-
-
-
-

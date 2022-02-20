@@ -13,7 +13,6 @@ import { selectAllIndustries } from '../industry/industriesSlice';
 import { selectAllMembers }from '../about/aboutSlice';
 import { selectAllTestimonials }from './../testimonials/testimonialsSlice';
 import styles from './home.module.css';
-import styles2 from './../about/about.module.css';
 // !----------------------------------------------------------
 import career from './assets/img/career.jpg';
 import article1 from '../articles/assets/img/ntflx.png';
