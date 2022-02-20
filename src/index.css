@@ -535,11 +535,23 @@ button {
   -o-transition: 0.3s ease-in;
   transition: 0.3s ease-in;
 }
+
 .send-button:hover {
   background: #fff !important;
   transform: scale(1.1);
   box-shadow: rgba(2, 117, 216, 50%) 0 4px 24px;
 }
+
+.emoji-mart {
+  height: 200px;
+  overflow: hidden;
+  width: 316px !important;
+  border: none;
+}
+.emoji-mart-scroll {
+  margin-top: 5px;
+}
+
 .chat-header {
   color: #fff;
   background: linear-gradient(135deg, #29323c 0, #485563 100%);
