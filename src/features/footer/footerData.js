@@ -24,7 +24,7 @@ export const footerLinks = {
     id4: {
       id: 'id4',
       header:"Əlaqə",
-      headerItems: [['info@thinkwise.az',"/contact"],['tel+994 50 447 10 90',"/contact"],['+994 12 488 68 19',"/contact"]]
+      headerItems: [['info@twc.az',"/contact"],['tel+994 50 447 10 90',"/contact"],['+994 12 488 68 19',"/contact"]]
     },
   },
 }

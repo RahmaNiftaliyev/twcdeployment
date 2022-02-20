@@ -2,58 +2,41 @@
 import React, { useState,useEffect } from 'react';
 import Gallery from '../../toolbox/gallery/Gallery';
 import GalleryTestimonials from '../../toolbox/gallery/GalleryTestimonials';
-import GalleryServices from '../../toolbox/gallery/GalleryServices';
 import ChatBox from './../../toolbox/chat/ChatBox';
 import ChatApp from './../../toolbox/chat/ChatApp';
 import RoundedButton from '../../toolbox/buttons/RoundedButton';
+import DefaultButton from '../../toolbox/buttons/DefaultButton';
 import { Link, useNavigate } from 'react-router-dom';
 import { AnimationOnScroll } from 'react-animation-on-scroll';
 import { useSelector } from 'react-redux';
 import { selectAllIndustries } from '../industry/industriesSlice';
 import { selectAllMembers }from '../about/aboutSlice';
-import { selectAllServices } from './../services/servicesSlice'
+import { selectAllTestimonials }from './../testimonials/testimonialsSlice';
 import styles from './home.module.css';
-import styles2 from './../about/about.module.css'
+import styles2 from './../about/about.module.css';
 // !----------------------------------------------------------
 import career from './assets/img/career.jpg';
-import client1 from '../about/assets/img/customers/demirchi-tower.png';
-import client2 from '../about/assets/img/customers/Prestij-kimya.png';
-import client3 from '../about/assets/img/customers/absheron-sherab.png';
-import client4 from '../about/assets/img/customers/antaris.png';
-import client5 from '../about/assets/img/customers/baki-abadliq.png';
-import client6 from '../about/assets/img/customers/az-minerals.png';
-import client7 from '../about/assets/img/customers/Elbor.png';
-import client8 from '../about/assets/img/customers/ima-energy.png';
-import client9 from '../about/assets/img/customers/mansard.png';
-import client10 from '../about/assets/img/customers/Oil-Supply.png';
-import client11 from '../about/assets/img/customers/Prestij-kimya.png';
-import client12 from '../about/assets/img/customers/tuv-austria.png';
-import client13 from '../about/assets/img/customers/vipex-az.png';
 import article1 from '../articles/assets/img/ntflx.png';
 import article2 from '../articles/assets/img/alcohol-cover.png';
 import article3 from '../articles/assets/img/cargo-cover.png';
 import article4 from '../articles/assets/img/startup.png';
 
-
-
-
-
 const Home = () => {
-
 
     const industries = useSelector(selectAllIndustries) ; 
     const allMembers = useSelector(selectAllMembers) ; 
-    const allServices = useSelector(selectAllServices)
-    const portfolioData = [client1,client2,client3,client4,client5,client6,client7,client8,client9,client10,client11,client12,client13]
+    const testimonialsData = useSelector(selectAllTestimonials).map(testimonial => {
+        return testimonial.img
+    })
     const [chatBoxView,setChatBoxView] = useState(true) ; 
-    const [chatAppView,setChatAppView] = useState(false)
+    const [chatAppView,setChatAppView] = useState(false);
     const [isVisible,setIsVisible] = useState(false) ; 
 
  const handleScroll = () => {
    if(document.body.scrollTop > 140 || document.documentElement.scrollTop > 140) {
-    setIsVisible(true)
+     setIsVisible(true);
    } else {
-     setIsVisible(false)
+     setIsVisible(false);
    }
  }
 
@@ -62,7 +45,7 @@ const Home = () => {
 
     const handleBoxView = () => {
         setChatBoxView(false);
-        setChatAppView(true)
+        setChatAppView(true);
     }
 
     const handleAppView = () => {
@@ -85,6 +68,10 @@ const Home = () => {
         navigate(paramsPath);
     }
 
+   const handleNavigateArticle = () => {
+       navigate('/ideas')
+   }
+
 
 
     return (
@@ -98,17 +85,13 @@ const Home = () => {
             </div>
 
             <div className={`${styles.services_list_container}`}>
-                 <h2 className={`${styles.services_slider_header}`}>Servislərimiz</h2>
-                 <GalleryServices
-                        className="alice-without-image"
-                        data={allServices} 
-                        boxContainerClass={`${styles2.service_logo_group} d-flex  justify-between`}
-                        boxClass={`${styles2.service_logo_box} d-flex direction-column align-center justify-center `} 
-                        imgClass={`${styles2.service_logo}`}
-                        spanClass={`${styles2.service_logo_sub_title}`}
-                    />
+                <h2>Sizin biznes istiqamətiniz?</h2>
+           <AnimationOnScroll animateIn='animate__backInRight'>
+                <div>
+                        {renderedIndustries}
+                </div>
+            </AnimationOnScroll>
             </div>
-
         </div>
 
         <div className='d-flex justify-end chat-box-container-keeper'>
@@ -118,7 +101,7 @@ const Home = () => {
 
         {/*Our team*/}
         <div className={`${styles.our_team}`}>
-            <p>Professİonal komandamız</p>
+            <p>Peşəkar komandamız</p>
             <h2>Ən son layihədə iştirak <br /> edən komanda üzvlərimiz </h2>
              <div className={`${styles.slide_dot}`}>
                 <div></div>
@@ -153,12 +136,12 @@ const Home = () => {
                 <AnimationOnScroll animateIn='animate__backInRight'>
                     <p>Karyera</p>
                     <h3>Karyeranıza bizimlə başlayın</h3>
-                    <p className='mb-text-justify'>TWC-də məqsədimizin yeganə sütunu bizim
-                        insanlarımızdır. Bizim dinamik mühitdə siz komanda
-                        tərəfindən ilk gündən dəstək görməyinizə baxmayaraq,
+                    <p className='mb-text-justify mt-15'>TWC-də məqsədimizin yeganə sütunu bizim <br />
+                        insanlarımızdır. Bizim dinamik mühitdə siz komanda <br />
+                        tərəfindən ilk gündən dəstək görməyinizə baxmayaraq, <br />
                         siz öz yolunuzu müəyyən edəcəksiniz.</p>
                 </AnimationOnScroll>
-        <div onClick={()=> handleNavigation("/career")} className='display-mb-flex justify-mb-end mt-mb-2 mb-padding-right-home'>
+        <div onClick={()=> handleNavigation("/career")} className={`display-mb-flex justify-mb-end mt-mb-2 mb-padding-right-home ${styles.mt_40_1}`}>
 
                 <RoundedButton  color="#17171766" className={`${styles.doing_business_button}`} />
         </div>
@@ -169,11 +152,15 @@ const Home = () => {
         <div className={`${styles.articles}`}>
             <AnimationOnScroll animateIn='animate__backInLeft'>
                 <div className={`${styles.articles_A}`}>
-                    <p>Lorem ipsum </p>
                     <h3>Məqalələr</h3>
                     <p>
                         Saytımızdan qeydiyyatdan keçərək sən <br /> də bizim məqalə yazarı ola bilərsən
                     </p>
+                    <DefaultButton 
+                        contentData={'Ətraflı'} 
+                        handleNavigation={handleNavigateArticle} 
+                        classData={`button-detailed-dark ${styles.default_button_margin_top}`}
+                    />
                 </div>
             </AnimationOnScroll>
 
@@ -184,9 +171,11 @@ const Home = () => {
                         <h1>NETFLIX | MƏQALƏ</h1>
                         <h2>Netflix biznes modelini <br /> necə dəyişdi...</h2>
                         <p>1997-ci ildə bir DVD kirayə mağaza kimi işə başlayan Netflix, 2020-ci ilin sonundan etibarən, 190-dan çox ölkədə fəaliyyət göstərərkən 204 milyon istifadəçisi və 25 milyard ABŞ dolları gəliri olan ən böyük subscription-əsaslı kontent izləmə oyunçusudur.</p>
-                        <RoundedButton />
-                        <p>24 Avqust, 2021</p>
+                        <div className={`${styles.mt_40_1}`}>
+                            <RoundedButton color={"#000"} />
+                        </div>
                     </div>
+                       <p>24 Avqust, 2021</p>
                 </div>
 
                 <div className={`${styles.articles_card2_container}`}>
@@ -204,7 +193,7 @@ const Home = () => {
                         <div className={`${styles.articles_card2_body}`}>
                             <h2>ALKOQOL | MƏQALƏ</h2>
                             <p>Böyüyən qlobal industriya satışları istehlak dalğası üzərində deyil</p>
-                            <p>7 Sentyabr, 2021</p>
+                            <p>14 Oktyabr, 2021</p>
                         </div>
                     </div>
 
@@ -215,7 +204,7 @@ const Home = () => {
                         <div className={`${styles.articles_card2_body}`}>
                             <h2>KARQO | MƏQALƏ</h2>
                             <p>Azərbaycanda karqo şirkətləri üzrə bazar araşdırması</p>
-                            <p>7 Sentyabr, 2021</p>
+                            <p>23 Dekabr, 2021</p>
                         </div>
                     </div>
                 </div>
@@ -234,13 +223,10 @@ const Home = () => {
                 <div></div>
                 <div></div>
             </div>
-
                <div className="galler-container">
-                  <GalleryTestimonials testimonialsData={portfolioData} localeClassData={`${styles.span_img_container}`} />
+                  <GalleryTestimonials testimonialsData={testimonialsData} localeClassData={`${styles.span_img_container}`} />
                </div>
-
         </div>
-
     </main>
     )
 }

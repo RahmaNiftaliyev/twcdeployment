@@ -147,7 +147,9 @@ const ServicesInvestment = () => {
                         className={`${styles.paragraph_section} d-flex direction-column justify-center`}
                     >
                         <span className={`${styles.sub_header}`}>
-                            LOREM IPSUM
+                            KAPİTALLAŞMA
+
+
                         </span>
                         <span className={`${styles.topic_title}`}>
                             Böyümə və modernizasiya maliyyələşməsi{' '}
@@ -169,7 +171,9 @@ const ServicesInvestment = () => {
                         className={`${styles.paragraph_section} d-flex direction-column justify-center`}
                     >
                         <span className={`${styles.sub_header}`}>
-                            LOREM IPSUM
+                            KAPİTALLAŞMA
+
+
                         </span>
                         <span className={`${styles.topic_title}`}>
                             Dövriyyə kapitalın maliyyələşməsi

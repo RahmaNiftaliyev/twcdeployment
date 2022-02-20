@@ -33,9 +33,9 @@ const Gallery = ({ images }) => {
               <SiInstagram />
             </div>
           </div>
-          <div className='svg-section-team-data'>
+          {/* <div className='svg-section-team-data'>
             <img src={dividerSvg} alt='' />
-          </div>
+          </div> */}
           <div className='content-section-team-data'>
             <h4>{image.name}</h4>
             <span>{image.position}</span>

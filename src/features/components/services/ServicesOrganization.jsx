@@ -63,7 +63,8 @@ const ServicesOrganization = () => {
                         className={`${styles.paragraph_section} d-flex direction-column justify-center`}
                     >
                         <span className={`${styles.sub_header}`}>
-                            LOREM IPSUM
+                            TƏŞKİLATİ
+
                         </span>
                         <span className={`${styles.topic_title}`}>
                             Təşkilati sistemləşmə{' '}
@@ -87,7 +88,8 @@ const ServicesOrganization = () => {
                         className={`${styles.paragraph_section} d-flex direction-column justify-center`}
                     >
                         <span className={`${styles.sub_header}`}>
-                            LOREM IPSUM
+                            TƏŞKİLATİ
+
                         </span>
                         <span className={`${styles.topic_title}`}>
                             Ticarət və performans strategiyası
@@ -131,7 +133,8 @@ const ServicesOrganization = () => {
                         className={`${styles.paragraph_section} d-flex direction-column justify-center`}
                     >
                         <span className={`${styles.sub_header}`}>
-                            LOREM IPSUM
+                            TƏŞKİLATİ
+
                         </span>
                         <span className={`${styles.topic_title}`}>
                             Performans inkişafı{' '}
@@ -154,7 +157,8 @@ const ServicesOrganization = () => {
                         className={`${styles.paragraph_section} d-flex direction-column justify-center`}
                     >
                         <span className={`${styles.sub_header}`}>
-                            LOREM IPSUM
+                            TƏŞKİLATİ
+
                         </span>
                         <span className={`${styles.topic_title}`}>
                             Korporativ mədəniyyət
@@ -195,7 +199,8 @@ const ServicesOrganization = () => {
                         className={`${styles.paragraph_section} d-flex direction-column justify-center`}
                     >
                         <span className={`${styles.sub_header}`}>
-                            LOREM IPSUM
+                            TƏŞKİLATİ
+
                         </span>
                         <span className={`${styles.topic_title}`}>
                             İdarəçilik strukturunun qurulması
@@ -222,7 +227,8 @@ const ServicesOrganization = () => {
                         className={`${styles.paragraph_section} d-flex direction-column justify-center`}
                     >
                         <span className={`${styles.sub_header}`}>
-                            LOREM IPSUM
+                            TƏŞKİLATİ
+
                         </span>
                         <span className={`${styles.topic_title}`}>KPI</span>
                         <p>
@@ -262,7 +268,8 @@ const ServicesOrganization = () => {
                         className={`${styles.paragraph_section} d-flex direction-column justify-center`}
                     >
                         <span className={`${styles.sub_header}`}>
-                            LOREM IPSUM
+                            TƏŞKİLATİ
+
                         </span>
                         <span className={`${styles.topic_title}`}>Agile</span>
                         <p>

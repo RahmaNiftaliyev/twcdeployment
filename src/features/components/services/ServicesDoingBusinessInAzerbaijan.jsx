@@ -19,7 +19,6 @@ const ServicesDoingBusinessInAzerbaijan = () => {
             <div
                 className={`${styles.contact_section} d-flex direction-column align-center justify-center`}
             >
-                <span className={`${styles.sub_header}`}>LOREM ipsum</span>
                 <span className={`${styles.contact_title}`}>Əlaqə</span>
                 <button className={`${styles.contact_button}`}>
                     Ətraflı &nbsp;
@@ -70,7 +69,7 @@ const ServicesDoingBusinessInAzerbaijan = () => {
                         className={`${styles.extra_services_section} d-flex direction-column align-center`}
                     >
                         <span className={`${styles.sub_header}`}>
-                            Kapitallaşma
+                            Doing Business in Azerbaijan
                         </span>
                         <span className={`${styles.service_details_title}`}>
                             Bu xidmətlərə daxildir

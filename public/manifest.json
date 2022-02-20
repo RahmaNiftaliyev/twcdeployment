@@ -1,6 +1,6 @@
 {
   "short_name": "TWC",
-  "name": "TWC: TWC management consulting",
+  "name": "TWC:TWC management consulting",
   "icons": [
     {
       "src": "/images/icons-vector.svg",
@@ -15,18 +15,28 @@
   "theme_color": "#3367D6",
   "shortcuts": [
     {
-      "name": "How's weather today?",
-      "short_name": "Today",
-      "description": "View weather information for today",
+      "name": "Need a management consulting ?",
+      "short_name": "TWC",
+      "description": "The first pure local management consulting services in Azerbaijan",
       "url": "/today?source=pwa",
-      "icons": [{ "src": "/images/today.png", "sizes": "192x192" }]
+      "icons": [
+        {
+          "src": "/images/today.png",
+          "sizes": "192x192"
+        }
+      ]
     },
     {
-      "name": "How's weather tomorrow?",
-      "short_name": "Tomorrow",
-      "description": "View weather information for tomorrow",
+      "name": "Management consulting in Azerbaijan",
+      "short_name": "TWC is first and only one",
+      "description": "Expert advice for your business plans and strategies ",
       "url": "/tomorrow?source=pwa",
-      "icons": [{ "src": "/images/tomorrow.png", "sizes": "192x192" }]
+      "icons": [
+        {
+          "src": "/images/tomorrow.png",
+          "sizes": "192x192"
+        }
+      ]
     }
   ],
   "description": "MANAGMENT AND IT CONSULTING",

@@ -62,7 +62,8 @@ const ServicesSalesAndMarketing = () => {
                         className={`${styles.paragraph_section} d-flex direction-column justify-center`}
                     >
                         <span className={`${styles.sub_header}`}>
-                            LOREM IPSUM
+                            SATIŞ VƏ MARKETİNQ
+
                         </span>
                         <span className={`${styles.topic_title}`}>
                             Brendinq
@@ -91,7 +92,8 @@ const ServicesSalesAndMarketing = () => {
                         className={`${styles.paragraph_section} d-flex flex-mb-column direction-column justify-center`}
                     >
                         <span className={`${styles.sub_header}`}>
-                            LOREM IPSUM
+                            SATIŞ VƏ MARKETİNQ
+
                         </span>
                         <span className={`${styles.topic_title}`}>
                             Bazar araşdırması
@@ -137,7 +139,8 @@ const ServicesSalesAndMarketing = () => {
                         className={`${styles.paragraph_section} d-flex direction-column justify-center`}
                     >
                         <span className={`${styles.sub_header}`}>
-                            LOREM IPSUM
+                            SATIŞ VƏ MARKETİNQ
+
                         </span>
                         <span className={`${styles.topic_title}`}>
                             Rəqəmsal Marketinq
@@ -169,7 +172,8 @@ const ServicesSalesAndMarketing = () => {
                         className={`${styles.paragraph_section} d-flex direction-column justify-center`}
                     >
                         <span className={`${styles.sub_header}`}>
-                            LOREM IPSUM
+                            SATIŞ VƏ MARKETİNQ
+
                         </span>
                         <span className={`${styles.topic_title}`}>
                             Portfolio İdarəetməsi
@@ -213,7 +217,8 @@ const ServicesSalesAndMarketing = () => {
                         className={`${styles.paragraph_section} d-flex direction-column justify-center`}
                     >
                         <span className={`${styles.sub_header}`}>
-                            LOREM IPSUM
+                            SATIŞ VƏ MARKETİNQ
+
                         </span>
                         <span className={`${styles.topic_title}`}>
                             Satış kanallarının qurulması
@@ -244,7 +249,8 @@ const ServicesSalesAndMarketing = () => {
                         className={`${styles.paragraph_section} d-flex direction-column justify-center`}
                     >
                         <span className={`${styles.sub_header}`}>
-                            LOREM IPSUM
+                            SATIŞ VƏ MARKETİNQ
+
                         </span>
                         <span className={`${styles.topic_title}`}>
                             Müştəri təcrübəsi

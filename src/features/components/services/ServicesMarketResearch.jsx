@@ -32,7 +32,7 @@ const ServicesMarketResearch = () => {
                     >
                         <div className={` d-flex direction-column`}>
                             <span className={`${styles.sub_header}`}>
-                                Kapitallaşma
+                                BAZAR ARAŞDIRMASI
                             </span>
                             <span className={`${styles.service_title}`}>
                                 Biznesinizi bizimlə inkişaf etdirin
@@ -101,7 +101,7 @@ const ServicesMarketResearch = () => {
                         className={`${styles.extra_services_section} d-flex businesPlan-images direction-column align-center`}
                     >
                         <span className={`${styles.sub_header}`}>
-                            Kapitallaşma
+                            BAZAR ARAŞDIRMASI
                         </span>
                         <span className={`${styles.service_details_title}`}>
                             Bazar araşdırması daxilində aşağıdakılar yerinə

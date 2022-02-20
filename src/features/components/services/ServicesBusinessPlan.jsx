@@ -30,7 +30,9 @@ const ServicesBusinessPlan = () => {
                     >
                         <div className={` d-flex direction-column`}>
                             <span className={`${styles.sub_header}`}>
-                                Kapitallaşma
+                                BİZNES PLAN VƏ TİƏ
+
+
                             </span>
                             <span className={`${styles.service_title}`}>
                                 Biznesinizi bizimlə inkişaf etdirin
@@ -90,7 +92,9 @@ const ServicesBusinessPlan = () => {
                         className={`${styles.extra_services_section} d-flex direction-column align-center`}
                     >
                         <span className={`${styles.sub_header}`}>
-                            Kapitallaşma
+                            BİZNES PLAN VƏ TİƏ
+
+
                         </span>
                         <span className={`${styles.service_details_title}`}>
                             Hazırladığımız biznes planlar özündə aşağıdakıları
