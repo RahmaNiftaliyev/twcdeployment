@@ -24,7 +24,6 @@ const ChatApp = ({ clickViewController }) => {
         setError("");
         setTextClass("");
       }, 2500);
-    }
     e.preventDefault();
   };
 

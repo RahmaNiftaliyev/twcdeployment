@@ -47,6 +47,11 @@ const initialState = {
                 id:"ids2",
                 name:"LOGISTIKA",
                 title:"Logistika",
+                subtitle:['“Yüksək rəqabət və müştərilərin fərqlənən tələbləri Azərbaycandakı hava yükdaşıma şirkətlərini daha çox fərdiləşdirilmiş kampaniyalar təklif etmək üçün öz müştərilərinin məlumat bazasını toplayıb kateqoriyalaşdırmağın əhəmiyyətini artıracaq.”'],
+                subcontents:[
+                    'Komandamızın apardığı ilkin araşdırmalara görə, Azərbaycanda hava yükdaşıma şirkətlərini seçərkən qiymət, qəbul məntəqələri və sürət aparıcı amillərdir. Sənayedə nəzərə çarpacaq dərəcədə gərgin rəqabət aparıcı firmaları bazar payını artırmaq üçün yeni bir dəyər təklifi formalaşdırmağı tələb edir. Hal-hazırda təqribən 55 hava yükdaşıma şirkəti mövcuddur. Bununla belə, onların əksəriyyəti eyni dəyər təklifləri üzərində rəqabət aparır. 1A rəqabət meyarları:',
+                    'Qrafikdən də göründüyü kimi, firmaların əksəriyyəti dıyır təklifini bəyannamə doldurulma və konkret hədəf qruplarına müxtəlif tanıtım kampaniyaları təklif etməklə həyata keçirir. Karqo firmalarının əldə etməyə çalışdıqları digər mühüm amillər bölgələr daxilində qəbul məntəqələrinin sayını artırmaqdır. Bununla belə, bizim mövzu ilə bağlı ilkin və ikinci dərəcəli araşdırmalarımız Azərbaycanda yükdaşıma sənayesinin gələcəyinin firmaların öz müştərilərinə daha çox fərdiləşdirilmiş təkliflər həyata keçirəcəyini proqnozlaşdırır. Daha dəqiq desək, müştərilərinizi digərlərindən daha yaxşı tanımaq vaxtı artıq yetişib! Böyük onlayn B2C platformaları artıq bu strategiyanı qəbul ediblər. Məsələn, Amazon, Facebook və YouTube istifadəçilərinin nə istədiklərini onların özlərindən daha yaxşı bilir.'
+                ],
                 date:new Date(2021,11,23).toISOString(),
                 author:"Çingiz Novruzzadə",
                 details:[]
@@ -55,6 +60,16 @@ const initialState = {
                 id:"ids3",
                 name:"ALKOQOL",
                 title:"Böyüyən qlobal industriya satışları istehlak dalğası üzərində deyil",
+                subtitles:[
+                    'Böyüyən qlobal industriya satışları istehlak dalğası üzərində deyil',
+                    'Hazırki trendlər'
+                ],
+                subcontents:[
+                    'Alkoqollu içkilər senayesinin yeni dövründə bir şey dəqiqdir: premiumizasiya bazar mənzərəsini həmişəlik dəyişəcək. Sürətli dəyişən istehlakçı davranışları rəqabət balansına təsir göstərdiyi üçün zəif oyunçular mövqelərini qorumaqda əziyyət çəkir. Qalib olmaq üçün oyunçular cəsarətli hərəkətlər etməlidir. Ancaq, hazırki premiumizasiya dalğasını üstələyə bilmək üçün alkoqol istehlakı trendlərinin şirkətlərin bizneslərinə necə təsir etdiyini və hansı strategiyaların tətbiq edilməsini tapmalıdır.',
+                    'Premiumizasiya:Həm qlobal, həm də yerli perspektivdən baxdıqda dəyişən yaş strukturu və insanların səhhətlərinə olan diqqətləri alkoqol istehlakına mənfi təsir göstərir (aşağıdakı cədvələ nəzər yetirin); bir çox ölkədə alkoqol istehlakı ya mənfi ya da dəyişməz olaraq qalır.',
+                    'Ancaq bu, şirkətlər üçün satışların azalmasına səbəb olmur, əksinə daha yüksək qiymətlərə görə satışların artmasına gətirib çıxarır (aşağıdakı cədvələ nəzər yetirin) xüsusilə inkişaf etmiş və sənayeləşmiş ölkələrdə baxmayaraq ki, inkişaf etməkdə olan ölkələr üçün son illərdə istehlakın bazar həddinin yetişməsi müşahidə olunur.',
+                    
+                ],
                 date:new Date(2021,9,14).toISOString(),
                 author:"Anar İsmayılov",
                 details:[]
