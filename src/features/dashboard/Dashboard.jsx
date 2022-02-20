@@ -52,22 +52,46 @@ const Dashboard = () =>
   const [isVisible,setIsVisible] = React.useState(false) ; 
 
  const handleScroll = () => {
-   if(document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+   if((document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) && !chatAppView) {
     setIsVisible(true)
    } else {
-     setIsVisible(false)
+    setIsVisible(false)
    }
  }
 
  window.addEventListener("scroll",handleScroll) ; 
 
+     const [chatBoxView,setChatBoxView] = React.useState(true) ; 
+     const [chatAppView,setChatAppView] = React.useState(false);
+     const [isVisibleChat,setIsVisibleChat] = React.useState(false) ; 
+
+    const handleBoxView = () => {
+        setChatBoxView(false);
+        setChatAppView(true);
+    }
+
+    const handleAppView = () => {
+        setChatBoxView(true);
+        setChatAppView(false);
+    }
+
+    const homeProps = {
+        chatBoxView,
+        chatAppView,
+        isVisibleChat,
+        chatAppMethod:handleAppView,
+        chatBoxMethod:handleBoxView,    
+        visibleChatMethod:setIsVisibleChat
+    }
+
+
 
   return (
     <div>
-      <BackToTop showMe={isVisible} />
+    <BackToTop showMe={isVisible} />
       {/* <Cursor /> */}
       <Routes>
-        <Route path="/" element={<HomeDashboard />} />
+        <Route path="/" element={<HomeDashboard homeProps={homeProps} />} />
         <Route path="/contact" element={<ContactDashboard />} />
         <Route path="/career" element={<CareerDashboard />} />
         <Route path="/career/vacancies/:vacanciesId" element={<Vacantions />} />

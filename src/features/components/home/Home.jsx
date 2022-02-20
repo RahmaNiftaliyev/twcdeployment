@@ -21,37 +21,26 @@ import article2 from '../articles/assets/img/alcohol-cover.png';
 import article3 from '../articles/assets/img/cargo-cover.png';
 import article4 from '../articles/assets/img/startup.png';
 
-const Home = () => {
+const Home = ({homeProps}) => {
 
     const industries = useSelector(selectAllIndustries) ; 
     const allMembers = useSelector(selectAllMembers) ; 
     const testimonialsData = useSelector(selectAllTestimonials).map(testimonial => {
         return testimonial.img
     })
-    const [chatBoxView,setChatBoxView] = useState(true) ; 
-    const [chatAppView,setChatAppView] = useState(false);
-    const [isVisible,setIsVisible] = useState(false) ; 
+
 
  const handleScroll = () => {
    if(document.body.scrollTop > 140 || document.documentElement.scrollTop > 140) {
-     setIsVisible(true);
+        homeProps.visibleChatMethod(true)
    } else {
-     setIsVisible(false);
+        homeProps.visibleChatMethod(false)
    }
  }
 
  window.addEventListener("scroll",handleScroll) ; 
 
 
-    const handleBoxView = () => {
-        setChatBoxView(false);
-        setChatAppView(true);
-    }
-
-    const handleAppView = () => {
-        setChatBoxView(true);
-        setChatAppView(false);
-    }
 
 
     const renderedIndustries =
@@ -95,8 +84,8 @@ const Home = () => {
         </div>
 
         <div className='d-flex justify-end chat-box-container-keeper'>
-           {chatBoxView && isVisible && <ChatBox clickViewController={handleBoxView} />} 
-           {chatAppView && isVisible && <ChatApp clickViewController={handleAppView} />}
+           {homeProps.chatBoxView && homeProps.isVisibleChat && <ChatBox clickViewController={homeProps.chatBoxMethod} />} 
+           {homeProps.chatAppView && homeProps.isVisibleChat && <ChatApp clickViewController={homeProps.chatAppMethod} />}
         </div>
 
         {/*Our team*/}

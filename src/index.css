@@ -493,7 +493,7 @@ button {
   margin-right: auto
 }
 
-/* !chat app css */
+/*******************************************!CHAT APP CSS!*******************************************/
 
 .main {
   max-width: 372px;
@@ -528,6 +528,15 @@ button {
   width: 32px;
   height: 32px;
   color: #ccc;
+}
+
+.send-button:hover > * {
+  color:#0275d8;
+  -webkit-transition: .3s ease-in;
+  -moz-transition: .3s ease-in;
+  -ms-transition: .3s ease-in;
+  -o-transition: .3s ease-in;
+  transition: .3s ease-in;
 }
 
 .chat-header {
@@ -604,11 +613,19 @@ button {
 }
 
 .message-operator {
+      background: rgb(240, 242, 247);
+}
+
+.message-user {
+  background-color: rgb(120,121,123);
+}
+
+.message-operator,
+.message-user {
     padding: 10px 16px;
     position: relative;
     z-index: 30;
     color: rgb(6, 19, 43);
-    background: rgb(240, 242, 247);
     border-radius: 20px;
     margin:10px 0 2px 0px;
     font-size: 15px;
@@ -649,9 +666,33 @@ button {
 }
 
 .input-group img {
-  position: relative;
   bottom: 80px;
+  display: inline-block;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -o-border-radius: 100%;
+  border-radius: 100%;
+  -moz-transition: 0.28s ease-in-out ;
+  -ms-transition: 0.28s ease-in-out ;
+  -o-transition: 0.28s ease-in-out ;
+  -webkit-transition: 0.28s ease-in-out ;
+   transition: 0.28s ease-in-out ;
+   position: relative;
 }
+
+.input-group img:hover {
+  box-shadow: 0 0 0 0.2rem rgba(2,117,216,.25);
+  -webkit-transition: 0.28s ease-in-out ;
+  -moz-transition: 0.28s ease-in-out ;
+  -ms-transition: 0.28s ease-in-out ;
+  -o-transition: 0.28s ease-in-out ;
+  transition: 0.28s ease-in-out ;
+  background-color: rgba(2,117,216,.25);
+}
+
+
+/*******************************************!RESPONSIVE!*******************************************/
 
 @media screen and (max-width:767px) {
   .navigation-container {

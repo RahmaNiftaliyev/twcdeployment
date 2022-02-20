@@ -11,6 +11,19 @@ const ChatApp = ({clickViewController}) => {
 
 
   const [message,setMessage] =  React.useState('') ; 
+  const [error,setError] = React.useState('') ; 
+
+  const isDisabled = message.length > 0 ? true : false
+
+
+
+
+  const formValidationController = (e) => {
+
+
+
+    e.preventDefault() ; 
+  }
 
 
   return (
@@ -23,7 +36,7 @@ const ChatApp = ({clickViewController}) => {
               <div className="profile"></div>
               <h2>TWC</h2>
             </div>
-                <MdOutlineKeyboardArrowDown onClick={clickViewController} className='icon-font-size-lg' />
+                <MdOutlineKeyboardArrowDown onClick={clickViewController} className='icon-font-size-lg pointer' />
         </div>
         <div className="betweener">
           <p>Bir neçə dəqiqə ərzində sizə geri dönüş olunacaq</p>
@@ -31,16 +44,26 @@ const ChatApp = ({clickViewController}) => {
         
         <div className="conversation-group">
             <img src={linear} alt="" />
-            <p className="message-operator">
+            <p className="message-operator animate__animated animate__fadeIn animate__delay-2s">
                 Salam, mən TWC-nin onlayn dəstəyiyəm. Sizə necə kömək edə bilərəm?
             </p>
         </div>
         <div className="input-group">
           <hr />
-            <form action="">
-                <textarea name="" id="" placeholder='Mesajınızı daxil edin...'></textarea>
-                 <img src={emoji} alt="" />
-            </form>
+            <form onSubmit={formValidationController}>
+                <textarea 
+                  name="message" 
+                  id="message" 
+                  value={message} 
+                  placeholder={error.length > 0 ? error : 'Mesajınızı daxil edin...'}
+                  onChange={(e) => setMessage(e.target.value)}
+                >
+                </textarea>
+                 <img className='pointer' src={emoji} alt="" />
+                     <button  className='send-button'>
+                          <BiSend />
+                    </button>
+              </form>
                    
         </div>
     </div>
