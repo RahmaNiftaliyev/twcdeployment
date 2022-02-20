@@ -46,7 +46,7 @@ const Home = ({homeProps}) => {
            
                 industries.map((ind,index) => {
                     return (
-                         <Link to="/" className={`${styles.link_style_none }`}><span key={ind.id} className={`size-font-mb-span pointer hoverable-span ${index >= 8 &&  styles.margin_bottom_zero}`}>{ind.name}  {index % 3 === 0 && <span className={`${styles.mb_display_none}`}></span>}</span></Link>
+                         <Link to="/" className={`${styles.link_style_none }  ${styles.mb_industries_span} mb-align-center display-mb-flex justify-mb-center`}><span key={ind.id} className={`size-font-mb-span pointer hoverable-span ${index >= 8 &&  styles.margin_bottom_zero}`}>{ind.name}</span></Link>
                     )      
                 })    
             
@@ -69,13 +69,13 @@ const Home = ({homeProps}) => {
                 <AnimationOnScroll animateIn="animate__backInLeft">
                     <h2 className='size-font-mb-h2'>Sizə necə kömək <br /> edə bilərik?</h2>
                 </AnimationOnScroll>
-                <p className='size-font-mb-p'>Özəl, dövlət və sosial təşkilatlarla əməkdaşlıq edərək,<br /> biz qlobal təcrübəmizi və yerli anlayışlarımızı <br />birləşdirərək real və davamlı dəyişiklik yaradırıq</p>
+                <p className='size-font-mb-p'>Özəl, dövlət və sosial təşkilatlarla əməkdaşlıq edərək, <span className={`${styles.line_home_divider}`}></span> biz qlobal təcrübəmizi və yerli anlayışlarımızı <span className={`${styles.line_home_divider}`}></span> birləşdirərək real və davamlı dəyişiklik yaradırıq</p>
             </div>
 
             <div className={`${styles.services_list_container}`}>
-                <h2>Sizin biznes istiqamətiniz?</h2>
+                <h2 className={`${styles.mt_40_1}`}>Sizin biznes istiqamətiniz?</h2>
            <AnimationOnScroll animateIn='animate__backInRight'>
-                <div>
+                <div className={`flex-mb-column flex-mb-column mb-align-center display-mb-flex ${styles.mt_40_1}`}>
                         {renderedIndustries}
                 </div>
             </AnimationOnScroll>
@@ -90,7 +90,7 @@ const Home = ({homeProps}) => {
         {/*Our team*/}
         <div className={`${styles.our_team}`}>
             <p>Peşəkar komandamız</p>
-            <h2>Ən son layihədə iştirak <br /> edən komanda üzvlərimiz </h2>
+            <h2>Ən son layihədə iştirak <span className={`${styles.line_home_divider}`}></span> edən komanda üzvlərimiz </h2>
              <div className={`${styles.slide_dot}`}>
                 <div></div>
                 <div></div>
@@ -124,9 +124,9 @@ const Home = ({homeProps}) => {
                 <AnimationOnScroll animateIn='animate__backInRight'>
                     <p>Karyera</p>
                     <h3>Karyeranıza bizimlə başlayın</h3>
-                    <p className='mb-text-justify mt-15'>TWC-də məqsədimizin yeganə sütunu bizim <br />
-                        insanlarımızdır. Bizim dinamik mühitdə siz komanda <br />
-                        tərəfindən ilk gündən dəstək görməyinizə baxmayaraq, <br />
+                    <p className='mb-text-justify mt-15'>TWC-də məqsədimizin yeganə sütunu bizim <span className={`${styles.line_home_divider}`}></span>
+                        insanlarımızdır. Bizim dinamik mühitdə siz komanda <span className={`${styles.line_home_divider}`}></span>
+                        tərəfindən ilk gündən dəstək görməyinizə baxmayaraq,<span className={`${styles.line_home_divider}`}></span>
                         siz öz yolunuzu müəyyən edəcəksiniz.</p>
                 </AnimationOnScroll>
         <div onClick={()=> handleNavigation("/career")} className={`display-mb-flex justify-mb-end mt-mb-2 mb-padding-right-home ${styles.mt_40_1}`}>

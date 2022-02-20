@@ -690,6 +690,8 @@ button {
   .mb-top-padding {
     padding-top: 40px
   }
+
+  /* flex-mb-column flex-mb-column justify-mb-center*/
   .mb-padding-right-home {
     padding-right: 20px
   }
@@ -699,8 +701,15 @@ button {
   .flex-mb-column {
     flex-direction: column
   }
+  .justify-mb-center {
+    justify-content: center;
+  }
   .justify-mb-end {
     justify-content: flex-end
+  }
+
+  .mb-align-center {
+    align-items: center;
   }
   .slider-mb-visible {
     right: 0!important
@@ -769,7 +778,8 @@ button {
     width: 25%
   }
   .size-font-mb-h2 {
-    font-size: 18px
+    font-size: 18px;
+    line-height: 40px!important;
   }
   .size-font-mb-p {
     font-size: 18px
@@ -808,5 +818,9 @@ button {
   }
   .mb-self-center {
     align-self: center
+  }
+
+  .mb-mt-40 {
+    margin-top: 40px!important;
   }
 }

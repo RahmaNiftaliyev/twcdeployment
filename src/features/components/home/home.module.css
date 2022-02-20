@@ -37,9 +37,7 @@
   padding-left: 208px;
   padding-right: 97px
 }
-.line_home_divider {
-  display: inline-block!important
-}
+
 .services_describtion h2 {
   font-size: clamp(32px,3.681vw,52px);
   font-weight: 400;
@@ -467,6 +465,38 @@
     padding-left: 10px;
     padding-right: 10px
   }
+
+  .our_team {
+    margin-top: 81px
+}
+
+  .line_home_divider {
+  display: inline-block!important
+}
+
+
+  .mt_40_1 {
+  margin-top: 20px;
+}
+
+.articles_card1_body {
+  height: 500px;
+}
+
+  .mb_industries_span {
+   display: inline-block;
+   width:100%; 
+   margin-right: 0!important;
+  }
+
+  .doing_business {
+    margin-top: 81px;
+  }
+
+  .text_sec > p:first-child {
+    line-height: 26px;
+  }
+
   .mb_display_none {
     display: none
   }
@@ -559,12 +589,12 @@
   }
   .services_list_container > div span {
     margin-right: 10px!important;
-    margin-bottom: 10px!important
   }
   .articles_card1 {
-    width: 90%;
+    width: 100%;
     margin-top: 20px;
     position: relative;
+    margin-right: 0px;
   }
   .text_sec {
     margin-top: 60px
