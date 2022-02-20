@@ -25,7 +25,8 @@ const ChatApp = ({ clickViewController }) => {
         setTextClass("");
       }, 2500);
     e.preventDefault();
-  };
+  }
+}
 
   const addEmoji = (emoji) => {
     const updatedMessage = message.concat(emoji.native);
@@ -66,6 +67,7 @@ const ChatApp = ({ clickViewController }) => {
             set='apple'
             showPreview={false}
             showSkinTones={false}
+            perLine={8}
           />
         </div>
       </div>
@@ -92,7 +94,7 @@ const ChatApp = ({ clickViewController }) => {
         </form>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default ChatApp;
+export default ChatApp
