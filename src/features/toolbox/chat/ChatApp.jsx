@@ -93,6 +93,8 @@ const ChatApp = ({ clickViewController }) => {
       </div>
     </div>
   );
-};
+}
+}
 
-export default ChatApp;
+export default ChatApp
+
