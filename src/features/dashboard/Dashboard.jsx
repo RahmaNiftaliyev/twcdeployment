@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import HomeDashboard from './../components/home/HomeDashboard';
 import CareerDashboard from './../components/career/CareerDashboard';
@@ -42,59 +42,51 @@ import SignUp from './../components/form/SignUp';
 import SignIn from './../components/form/SignIn';
 import BackToTop from '../toolbox/buttons/BackToTop';
 import Vacantions from '../components/career/Vacantions';
-// import Cursor from './../toolbox/cursor/Cursor';
 
-
-
-const Dashboard = () =>
-{
-
-  const [isVisible,setIsVisible] = React.useState(false) ; 
-
- const handleScroll = () => {
-   if((document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) && !chatAppView) {
-    setIsVisible(true)
-   } else {
-    setIsVisible(false)
-   }
- }
-
- window.addEventListener("scroll",handleScroll) ; 
-
-     const [chatBoxView,setChatBoxView] = React.useState(true) ; 
-     const [chatAppView,setChatAppView] = React.useState(false);
-     const [isVisibleChat,setIsVisibleChat] = React.useState(false) ; 
-
-    const handleBoxView = () => {
-        setChatBoxView(false);
-        setChatAppView(true);
+const Dashboard = () => {
+  const [isVisible, setIsVisible] = React.useState(false);
+  
+  const handleScroll = () => {
+    if ((document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) && !chatAppView) {
+      setIsVisible(true);
+    } else {
+      setIsVisible(false);
     }
+  };
 
-    const handleAppView = () => {
-        setChatBoxView(true);
-        setChatAppView(false);
-    }
+  window.addEventListener('scroll', handleScroll);
 
-    const homeProps = {
-        chatBoxView,
-        chatAppView,
-        isVisibleChat,
-        chatAppMethod:handleAppView,
-        chatBoxMethod:handleBoxView,    
-        visibleChatMethod:setIsVisibleChat
-    }
+  const [chatBoxView, setChatBoxView] = React.useState(true);
+  const [chatAppView, setChatAppView] = React.useState(false);
+  const [isVisibleChat, setIsVisibleChat] = React.useState(false);
 
+  const handleBoxView = () => {
+    setChatBoxView(false);
+    setChatAppView(true);
+  };
 
+  const handleAppView = () => {
+    setChatBoxView(true);
+    setChatAppView(false);
+  };
+
+  const homeProps = {
+    chatBoxView,
+    chatAppView,
+    isVisibleChat,
+    chatAppMethod: handleAppView,
+    chatBoxMethod: handleBoxView,
+    visibleChatMethod: setIsVisibleChat
+  };
 
   return (
     <div>
-    <BackToTop showMe={isVisible} />
+      <BackToTop showMe={isVisible} />
       <Routes>
         <Route path="/" element={<HomeDashboard homeProps={homeProps} />} />
         <Route path="/contact" element={<ContactDashboard />} />
         <Route path="/career" element={<CareerDashboard />} />
         <Route path="/career/vacancies/:vacanciesId" element={<Vacantions />} />
-
 
         {/* !FIKIRLER */}
         <Route path="/ideas" element={<Articles />} />
@@ -103,68 +95,28 @@ const Dashboard = () =>
         <Route path="/ideas/logistics" element={<ArticlesLogistics />} />
         <Route path="/ideas/finance" element={<ArticlesFinance />} />
 
-
         {/* !HAQQIMIZDA */}
         <Route path="/about" element={<About />} />
         <Route path="/about/team" element={<AboutOurTeam />} />
         <Route path="/about/testimonials" element={<AboutTestimonials />} />
         <Route path="/about/partneers" element={<AboutPartneers />} />
 
-
-
-           {/* !XİDMƏTLƏR */}
-        <Route
-          path="/services/marketing"
-          element={<ServicesSalesAndMarketing />}
-        />
-        <Route
-          path="/services/companyable"
-          element={<ServicesOrganization />}
-        />
-        <Route
-          path="/services/finance"
-          element={<ServicesFinanceAndPayment />}
-        />
-        <Route
-          path="/services/investmentable"
-          element={<ServicesInvestment />}
-        />
-        <Route
-          path="/services/businessazerbaijan"
-          element={<ServicesDoingBusinessInAzerbaijan />}
-        />
-        <Route
-          path="/services/businessplan"
-          element={<ServicesBusinessPlan />}
-        />
-        <Route
-          path="/services/marketresearch"
-          element={<ServicesMarketResearch />}
-        />
-
+        {/* !XİDMƏTLƏR */}
+        <Route path="/services/marketing" element={<ServicesSalesAndMarketing />} />
+        <Route path="/services/companyable" element={<ServicesOrganization />} />
+        <Route path="/services/finance" element={<ServicesFinanceAndPayment />} />
+        <Route path="/services/investmentable" element={<ServicesInvestment />} />
+        <Route path="/services/businessazerbaijan" element={<ServicesDoingBusinessInAzerbaijan />} />
+        <Route path="/services/businessplan" element={<ServicesBusinessPlan />} />
+        <Route path="/services/marketresearch" element={<ServicesMarketResearch />} />
 
         {/* !SENAYE */}
-        <Route
-          path="/industry/immovableproperty"
-          element={<IndustryImmovableProperty />}
-        />
-        <Route
-          path="/industry/financialservice"
-          element={<IndustryFinancialService />}
-        />
+        <Route path="/industry/immovableproperty" element={<IndustryImmovableProperty />} />
+        <Route path="/industry/financialservice" element={<IndustryFinancialService />} />
         <Route path="/industry/retail" element={<IndustryRetail />} />
-        <Route
-          path="/industry/industryproducts"
-          element={<IndustryProducts />}
-        />
-        <Route
-          path="/industry/techmediaandfun"
-          element={<IndustryTechMediaAndFun />}
-        />
-        <Route
-          path="/industry/transportationandlogistics"
-          element={<IndustryTransPortationAndLogistics />}
-        />
+        <Route path="/industry/industryproducts" element={<IndustryProducts />} />
+        <Route path="/industry/techmediaandfun" element={<IndustryTechMediaAndFun />} />
+        <Route path="/industry/transportationandlogistics" element={<IndustryTransPortationAndLogistics />} />
         <Route path="/industry/supplements" element={<IndustrySupplements />} />
         <Route path="/industry/fmcg" element={<IndustryFMCG />} />
         <Route path="/industry/architect" element={<IndustryArchitect />} />
@@ -177,13 +129,11 @@ const Dashboard = () =>
         <Route path="/faq" element={<Faq />} />
         <Route path="/privacy" element={<Privacy />} />
 
-        <Route path="/login" element={< SignIn />} />
-        <Route path="/register" element={< SignUp />} />
+        <Route path="/login" element={<SignIn />} />
+        <Route path="/register" element={<SignUp />} />
       </Routes>
-
-
     </div>
-  )
-}
+  );
+};
 
-export default Dashboard
+export default Dashboard;

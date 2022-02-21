@@ -5,19 +5,20 @@
   width: 182px;
   height: 40px;
   border: 1px solid #878787;
+  border-bottom:none;
   padding-left: 23px;
   padding-right: 23px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #fff;
-  transform:rotate(270deg);
   position: absolute;
-  right: -71px;
+  right: -90px;
   -webkit-transform:rotate(270deg);
   -moz-transform:rotate(270deg);
   -ms-transform:rotate(270deg);
   -o-transform:rotate(270deg);
+   transform:rotate(270deg);
 }
 
 .chat_box_span {
@@ -44,4 +45,115 @@
   z-index: 999;
   bottom: 0px;
   border: none
+}
+
+
+.email_container_app {
+  width:425px;
+  height:652px;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center ;
+  box-shadow: inset 11px 11px 96px 0px #ABABAB;
+  background-color:white;
+}
+
+.email_container_app > div {
+  width: 100%;
+}
+
+.email_container_app_header {
+  height: 50px;
+  background: linear-gradient(45deg,#171717 0,#485563 100%);
+  padding: 8px 15px 8px 8px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.email_x_icon {
+  color: white;
+  font-size: 1.2rem;
+}
+
+.email_container_app_center {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center ;
+
+
+}
+
+
+.email_container_app_center > h2 {
+    font-size: 20px;
+    font-weight: 400;
+    text-align: center;
+    color:#171717;
+    margin-bottom: 32px;
+}
+
+
+.email_container_app_center input[type="email"] {
+       width: 233px;
+      border: 1px solid rgba(108, 125, 159, 0.24);
+      font-size: 15px;
+      padding: 9px 12px 10px 10px;
+      margin: 0px 0px 8px;
+      -webkit-border-radius:4px;
+      -moz-border-radius:4px;
+      -ms-border-radius:4px;
+      -o-border-radius:4px;
+      border-radius:4px;
+      -webkit-transition: .3s ease;
+      -moz-transition: .3s ease;
+      -ms-transition: .3s ease;
+      -o-transition: .3s ease;
+      transition: .3s ease;
+}
+
+
+.email_container_app_center input[type="email"]:focus {
+   border-color: #86b7fe;
+   box-shadow: 0 0 0 0.25rem rgb(13 110 253 / 25%);
+}
+
+
+
+.email_container_app_center button {
+    width: 233px;
+    height: 40px;
+    font-size: 16px;
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+    border-radius: 6px;
+    background: linear-gradient(45deg,#171717 0,#485563 100%);
+    margin: 16px 0px;
+    position: relative;
+}
+
+.email_container_app_center > form > div {
+  margin-top: 8px;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+}
+
+
+.email_container_app_center small {
+  font-size:11px ;
+  color: #171717;
+  margin-left: 8px;
+}
+
+
+
+
+.email_container_app_bottom {
+
 }

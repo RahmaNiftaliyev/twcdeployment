@@ -21,136 +21,61 @@ import logo11 from './assets/img/customers/az-minerals.png';
 import logo12 from './assets/img/customers/Oil-Supply.png';
 
 const AboutTestimonials = () => {
-    return (
-        <div>
-            <AboutHeaderDash isBlack={true} img={testimonialsPng} textStructure={'Müştəri layihələrimiz'} textStructureData={'Client projects'}  />
-            <section
-                className={`${styles.customers_container} d-flex direction-column align-center justify-center`}
-            >
-                <div
-                    className={`${styles.customers_row} d-flex align-center justify-center`}
-                >
-                    <div
-                        className={`${styles.customer_firm_img_box} d-flex align-center justify-center`}
-                    >
-                        <img
-                            className={`${styles.customer_firm_img}`}
-                            src={logo1}
-                            alt=""
-                        />
-                    </div>
-                    <div
-                        className={`${styles.customer_firm_img_box} d-flex align-center justify-center`}
-                    >
-                        <img
-                            className={`${styles.customer_firm_img}`}
-                            src={logo2}
-                            alt=""
-                        />
-                    </div>
-                    <div
-                        className={`${styles.customer_firm_img_box} d-flex align-center justify-center`}
-                    >
-                        <img
-                            className={`${styles.customer_firm_img}`}
-                            src={logo3}
-                            alt=""
-                        />
-                    </div>
-                    <div
-                        className={`${styles.customer_firm_img_box} d-flex align-center justify-center`}
-                    >
-                        <img
-                            className={`${styles.customer_firm_img}`}
-                            src={logo4}
-                            alt=""
-                        />
-                    </div>
-                </div>
-                <div
-                    className={`${styles.customers_row}  d-flex align-center justify-center`}
-                >
-                    <div
-                        className={`${styles.customer_firm_img_box} d-flex align-center justify-center`}
-                    >
-                        <img
-                            className={`${styles.customer_firm_img}`}
-                            src={logo5}
-                            alt=""
-                        />
-                    </div>
-                    <div
-                        className={`${styles.customer_firm_img_box} d-flex align-center justify-center`}
-                    >
-                        <img
-                            className={`${styles.customer_firm_img}`}
-                            src={logo6}
-                            alt=""
-                        />
-                    </div>
-                    <div
-                        className={`${styles.customer_firm_img_box} d-flex align-center justify-center`}
-                    >
-                        <img
-                            className={`${styles.customer_firm_img}`}
-                            src={logo7}
-                            alt=""
-                        />
-                    </div>
-                    <div
-                        className={`${styles.customer_firm_img_box} d-flex align-center justify-center`}
-                    >
-                        <img
-                            className={`${styles.customer_firm_img}`}
-                            src={logo8}
-                            alt=""
-                        />
-                    </div>
-                </div>
-                <div
-                    className={`${styles.customers_row}  d-flex align-center justify-center`}
-                >
-                    <div
-                        className={`${styles.customer_firm_img_box} d-flex align-center justify-center`}
-                    >
-                        <img
-                            className={`${styles.customer_firm_img}`}
-                            src={logo9}
-                            alt=""
-                        />
-                    </div>
-                    <div
-                        className={`${styles.customer_firm_img_box} d-flex align-center justify-center`}
-                    >
-                        <img
-                            className={`${styles.customer_firm_img}`}
-                            src={logo10}
-                            alt=""
-                        />
-                    </div>
-                    <div
-                        className={`${styles.customer_firm_img_box} d-flex align-center justify-center`}
-                    >
-                        <img
-                            className={`${styles.customer_firm_img}`}
-                            src={logo11}
-                            alt=""
-                        />
-                    </div>
-                    <div
-                        className={`${styles.customer_firm_img_box} d-flex align-center justify-center`}
-                    >
-                        <img
-                            className={`${styles.customer_firm_img}`}
-                            src={logo12}
-                            alt=""
-                        />
-                    </div>
-                </div>
-            </section>
-            <Footer />
+  return (
+    <div>
+      <AboutHeaderDash
+        isBlack={true}
+        img={testimonialsPng}
+        textStructure={'Müştəri layihələrimiz'}
+        textStructureData={'Client projects'}
+      />
+      <section className={`${styles.customers_container} d-flex direction-column align-center justify-center`}>
+        <div className={`${styles.customers_row} d-flex align-center justify-center`}>
+          <div className={`${styles.customer_firm_img_box} d-flex align-center justify-center`}>
+            <img className={`${styles.customer_firm_img}`} src={logo1} alt="" />
+          </div>
+          <div className={`${styles.customer_firm_img_box} d-flex align-center justify-center`}>
+            <img className={`${styles.customer_firm_img}`} src={logo2} alt="" />
+          </div>
+          <div className={`${styles.customer_firm_img_box} d-flex align-center justify-center`}>
+            <img className={`${styles.customer_firm_img}`} src={logo3} alt="" />
+          </div>
+          <div className={`${styles.customer_firm_img_box} d-flex align-center justify-center`}>
+            <img className={`${styles.customer_firm_img}`} src={logo4} alt="" />
+          </div>
         </div>
-    );
+        <div className={`${styles.customers_row}  d-flex align-center justify-center`}>
+          <div className={`${styles.customer_firm_img_box} d-flex align-center justify-center`}>
+            <img className={`${styles.customer_firm_img}`} src={logo5} alt="" />
+          </div>
+          <div className={`${styles.customer_firm_img_box} d-flex align-center justify-center`}>
+            <img className={`${styles.customer_firm_img}`} src={logo6} alt="" />
+          </div>
+          <div className={`${styles.customer_firm_img_box} d-flex align-center justify-center`}>
+            <img className={`${styles.customer_firm_img}`} src={logo7} alt="" />
+          </div>
+          <div className={`${styles.customer_firm_img_box} d-flex align-center justify-center`}>
+            <img className={`${styles.customer_firm_img}`} src={logo8} alt="" />
+          </div>
+        </div>
+        <div className={`${styles.customers_row}  d-flex align-center justify-center`}>
+          <div className={`${styles.customer_firm_img_box} d-flex align-center justify-center`}>
+            <img className={`${styles.customer_firm_img}`} src={logo9} alt="" />
+          </div>
+          <div className={`${styles.customer_firm_img_box} d-flex align-center justify-center`}>
+            <img className={`${styles.customer_firm_img}`} src={logo10} alt="" />
+          </div>
+          <div className={`${styles.customer_firm_img_box} d-flex align-center justify-center`}>
+            <img className={`${styles.customer_firm_img}`} src={logo11} alt="" />
+          </div>
+          <div className={`${styles.customer_firm_img_box} d-flex align-center justify-center`}>
+            <img className={`${styles.customer_firm_img}`} src={logo12} alt="" />
+          </div>
+        </div>
+      </section>
+      <Footer />
+    </div>
+  );
 };
 
 export default AboutTestimonials;

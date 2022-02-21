@@ -1,5 +1,5 @@
-import React from "react";
-import AliceCarousel from "react-alice-carousel";
+import React from 'react';
+import AliceCarousel from 'react-alice-carousel';
 
 const GalleryTestimonials = ({ testimonialsData, localeClassData }) => {
   const handleDragStart = (e) => e.preventDefault();
@@ -7,18 +7,14 @@ const GalleryTestimonials = ({ testimonialsData, localeClassData }) => {
   const responsive = {
     0: { items: 1 },
     568: { items: 2 },
-    1024: { items: 3 },
+    1024: { items: 3 }
   };
 
   const renderedItems = testimonialsData.map((testimonial, index) => {
     return (
-      <div className='container-testimonials-data'>
+      <div className="container-testimonials-data">
         <span className={localeClassData} key={index}>
-          <img
-            src={testimonial}
-            onDragStart={handleDragStart}
-            alt='TWC company testimonials'
-          />
+          <img src={testimonial} onDragStart={handleDragStart} alt="TWC company testimonials" />
         </span>
       </div>
     );
@@ -35,7 +31,7 @@ const GalleryTestimonials = ({ testimonialsData, localeClassData }) => {
       responsive={responsive}
       autoPlayInterval={2000}
       animationDuration={2000}
-      autoPlayStrategy={"none"}
+      autoPlayStrategy={'none'}
     />
   );
 };

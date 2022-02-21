@@ -379,6 +379,11 @@ button {
 }
 
 
+.margin-bottom-32 {
+  margin-bottom: 32px;
+}
+
+
 .send-button {
   width: 56px;
   height: 56px;
@@ -708,8 +713,9 @@ button {
   color: #171717
 }
 
-.text-area-placeholder-changer::placeholder {
-  color: #d9534f
+.text-area-placeholder-changer::placeholder,
+input.text-area-placeholder-changer::placeholder {
+  color: #d9534f!important;
 ;
 }
 

@@ -1,6 +1,6 @@
-import React from 'react'
-import Career from './Career'
-import CareerHeaderDash from './CareerHeaderDash'
+import React from 'react';
+import Career from './Career';
+import CareerHeaderDash from './CareerHeaderDash';
 
 const CareerDashboard = () => {
   return (
@@ -8,7 +8,7 @@ const CareerDashboard = () => {
       <CareerHeaderDash />
       <Career />
     </div>
-  )
-}
+  );
+};
 
-export default CareerDashboard
+export default CareerDashboard;

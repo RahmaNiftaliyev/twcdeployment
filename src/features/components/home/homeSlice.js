@@ -3,37 +3,36 @@
  *   All rights reserved.
  */
 
-import { createSlice, createEntityAdapter } from '@reduxjs/toolkit'
-import { homeData } from './homeData'
+import { createSlice, createEntityAdapter } from '@reduxjs/toolkit';
+import { homeData } from './homeData';
 
 const homeAdapter = createEntityAdapter({
   selectId: (item) => item.id,
-  sortComparer: (preService, nextService) =>
-    preService.id.localeCompare(nextService.id),
-})
+  sortComparer: (preService, nextService) => preService.id.localeCompare(nextService.id)
+});
 
 const initialState = {
   error: null,
   status: 'idle',
   activeService: {},
-  services: homeData,
-}
+  services: homeData
+};
 
-const homeSlice = createSlice(sliceInvoker())
+const homeSlice = createSlice(sliceInvoker());
 
 function sliceInvoker() {
   return {
     name: 'home',
     initialState,
     reducers: {},
-    extraReducers: {},
-  }
+    extraReducers: {}
+  };
 }
 
 export const {
   selectAll: selectAllServices,
   selectById: selectServiceById,
-  selectIds: selectServiceIds,
-} = homeAdapter.getSelectors((state) => state.home.services)
+  selectIds: selectServiceIds
+} = homeAdapter.getSelectors((state) => state.home.services);
 
-export default homeSlice.reducer
+export default homeSlice.reducer;
