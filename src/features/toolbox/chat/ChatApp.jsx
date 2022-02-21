@@ -1,13 +1,14 @@
 // @ts-nocheck
 import React from "react";
+import SpeedDialsHooks from './../speed-dial/SpeedDialsHooks';
+import { Picker } from "emoji-mart";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 import { BiSend } from "react-icons/bi";
 import "emoji-mart/css/emoji-mart.css";
-import { Picker } from "emoji-mart";
 import styles from "./chat.module.css";
 import linear from "./assets/team-shape.svg";
 import emoji from "./assets/emoji.svg";
-import SpeedDialsHooks from './../speed-dial/SpeedDialsHooks';
+
 
 
 const ChatApp = ({ clickViewController }) => {

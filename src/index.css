@@ -8,6 +8,24 @@
   padding: 0
 }
 
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: #171717;
+}
+
+
+::-webkit-scrollbar-thumb {
+  background-color: yellow;
+  border-radius: 202px;
+  -webkit-border-radius: 202px;
+  -moz-border-radius: 202px;
+  -ms-border-radius: 202px;
+  -o-border-radius: 202px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #C78F21;
+}
 
 .opacity-zero {
   opacity: 0;

@@ -47,21 +47,23 @@
 
 .media_icons_file,
 .media_icons_image {
-     font-size: 45px;
+    display: inline-block;
+    padding:8px;
+     background: linear-gradient(135deg, #171717, #485563);
+     color: white;
+     cursor: pointer;
      -webkit-transition:.8s ease;
      -moz-transition:.8s ease;
      -ms-transition:.8s ease;
      -o-transition:.8s ease;
      transition:.8s ease;
-     display: inline-block;
-     padding:8px;
-     background: linear-gradient(135deg, #171717, #485563);
-     color: white;
      -webkit-border-radius: 100%;
      -moz-border-radius: 100%;
      -ms-border-radius: 100%;
      -o-border-radius: 100%;
      border-radius: 100%;
+     box-shadow: rgb(41 50 60 / 50%) 0 4px 12px;
+     font-size: 45px;
 }
 
 
