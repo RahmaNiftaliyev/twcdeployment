@@ -82,7 +82,7 @@ const Home = ({homeProps}) => {
             </div>
         </div>
 
-        <div className='d-flex justify-end chat-box-container-keeper'>
+        <div className={`d-flex justify-end ${homeProps.chatAppView ? 'justify-mb-center' : ""} chat-box-container-keeper`}>
            {homeProps.chatBoxView && homeProps.isVisibleChat && <ChatBox clickViewController={homeProps.chatBoxMethod} />} 
            {homeProps.chatAppView && homeProps.isVisibleChat && <ChatApp clickViewController={homeProps.chatAppMethod} />}
         </div>

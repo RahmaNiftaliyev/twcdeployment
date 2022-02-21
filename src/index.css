@@ -717,6 +717,15 @@ button {
   .navigation-container {
     flex-direction: column
   }
+
+
+  .main {
+  max-width: 335px;
+  margin-right: 10px;
+  margin-left: 10px
+}
+
+
   .mobile-display-block {
     display: block
   }
