@@ -25,7 +25,7 @@
 
 }
 
-.speed_dials > .plus_icon {
+.plus_icon {
     font-size: 25px;
     -webkit-transition: .3s ease;
     -moz-transition: .3s ease;
@@ -34,13 +34,7 @@
     transition: .3s ease;
 }
 
-.speed_dials:hover > .plus_icon {
-    -webkit-transform:rotate(45deg) ;
-    -moz-transform:rotate(45deg) ;
-    -ms-transform:rotate(45deg) ;
-    -o-transform:rotate(45deg) ;
-     transform:rotate(45deg) ;
-}
+
 
 .media_icons_file {
     margin-bottom: 20px;
@@ -53,28 +47,30 @@
 
 .media_icons_file,
 .media_icons_image {
-    font-size: 45px;
-    opacity: 0;
-    -webkit-transition:.4s ease;
-    -moz-transition:.4s ease;
-    -ms-transition:.4s ease;
-    -o-transition:.4s ease;
-     transition:.4s ease;
-    display: inline-block;
-    padding:8px;
+     font-size: 45px;
+     -webkit-transition:.8s ease;
+     -moz-transition:.8s ease;
+     -ms-transition:.8s ease;
+     -o-transition:.8s ease;
+     transition:.8s ease;
+     display: inline-block;
+     padding:8px;
      background: linear-gradient(135deg, #171717, #485563);
-    color: white;
-    -webkit-border-radius: 100%;
-    -moz-border-radius: 100%;
-    -ms-border-radius: 100%;
-    -o-border-radius: 100%;
+     color: white;
+     -webkit-border-radius: 100%;
+     -moz-border-radius: 100%;
+     -ms-border-radius: 100%;
+     -o-border-radius: 100%;
      border-radius: 100%;
 }
 
 
-.speed_dials_container:hover .media_icons_file,
-.speed_dials_container:hover .media_icons_image {
-    opacity: 1;
-    cursor: pointer;
+
+.speed_dials:hover .plus_icon {
+    -webkit-transform:rotate(45deg) ;
+    -moz-transform:rotate(45deg) ;
+    -ms-transform:rotate(45deg) ;
+    -o-transform:rotate(45deg) ;
+     transform:rotate(45deg) ;
 }
 

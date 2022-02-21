@@ -7,8 +7,8 @@ import { Picker } from "emoji-mart";
 import styles from "./chat.module.css";
 import linear from "./assets/team-shape.svg";
 import emoji from "./assets/emoji.svg";
-import SpeedDialsHooks from './../speed-dial/SpeedDialsHooks'
-;
+import SpeedDialsHooks from './../speed-dial/SpeedDialsHooks';
+
 
 const ChatApp = ({ clickViewController }) => {
   const [message, setMessage] = React.useState("");
@@ -68,12 +68,13 @@ const ChatApp = ({ clickViewController }) => {
             set='apple'
             showPreview={false}
             showSkinTones={false}
+            i18n={{ search: 'Recherche', categories: { search: 'Résultats de recherche', recent: 'Récents' } }} />
           />
         </div>
       </div>
       <div className='input-group'>
         <hr />
-         <SpeedDialsHooks />
+         <SpeedDialsHooks  />
         <form onSubmit={formValidationController}>
          <button className='send-button'>
           <BiSend />

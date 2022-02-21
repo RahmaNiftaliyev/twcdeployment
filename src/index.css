@@ -7,6 +7,15 @@
   margin: 0;
   padding: 0
 }
+
+
+.opacity-zero {
+  opacity: 0;
+}
+.opacity-one {
+  opacity: 1;
+}
+
 ul:not(ul.non-cleared) {
   list-style-type: none
 }
@@ -342,15 +351,13 @@ button {
 
 
 .emoji-mart {
-  height: 200px;
   overflow: hidden;
-  width: 290px% !important;
+  width: 290px !important;
   border: none;
 }
 .emoji-mart-scroll {
   margin-top: 5px;
   width: 290px !important;
-  overflow: hidden;
 }
 
 
