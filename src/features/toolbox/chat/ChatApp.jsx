@@ -7,11 +7,14 @@ import { Picker } from "emoji-mart";
 import styles from "./chat.module.css";
 import linear from "./assets/team-shape.svg";
 import emoji from "./assets/emoji.svg";
+import SpeedDialsHooks from './../speed-dial/SpeedDialsHooks'
+;
 
 const ChatApp = ({ clickViewController }) => {
   const [message, setMessage] = React.useState("");
   const [error, setError] = React.useState("");
   const [textClass, setTextClass] = React.useState("");
+  const [firstMessageEmail,setFirstMessageEmail] = React.useState(false)
   const [showEmojiBox, setShowEmojiBox] = React.useState(false);
 
   const isDisabled = message.length > 0 ? true : false;
@@ -25,6 +28,8 @@ const ChatApp = ({ clickViewController }) => {
         setTextClass("");
       }, 2500);
     e.preventDefault();
+  } else {
+      setFirstMessageEmail(true) ; 
   }
 }
 
@@ -35,15 +40,13 @@ const ChatApp = ({ clickViewController }) => {
 
   return (
     <div className='main animate__animated animate__backInRight'>
-      <button className='send-button'>
-        <BiSend />
-      </button>
+     
       <div className='chat-header'>
         <div className='profile-container'>
           <div className='profile'></div>
           <h2>TWC</h2>
         </div>
-        <MdOutlineKeyboardArrowDown
+          <MdOutlineKeyboardArrowDown
           onClick={clickViewController}
           className='icon-font-size-lg pointer'
         />
@@ -58,9 +61,7 @@ const ChatApp = ({ clickViewController }) => {
           Salam, mən TWC-nin onlayn dəstəyiyəm. Sizə necə kömək edə bilərəm?
         </p>
         <div
-          className={
-            showEmojiBox === true ? `${styles.emoji_box}` : "display_none"
-          }
+          className={`${showEmojiBox === true ? `${styles.emoji_box}` : "display_none"} d-flex justify-center`}
         >
           <Picker
             onClick={(emoji, event) => addEmoji(emoji)}
@@ -73,7 +74,11 @@ const ChatApp = ({ clickViewController }) => {
       </div>
       <div className='input-group'>
         <hr />
+         <SpeedDialsHooks />
         <form onSubmit={formValidationController}>
+         <button className='send-button'>
+          <BiSend />
+        </button>
           <textarea
             name='message'
             id='message'
@@ -88,9 +93,7 @@ const ChatApp = ({ clickViewController }) => {
             alt=''
             onClick={() => setShowEmojiBox(!showEmojiBox)}
           />
-          <button className='send-button'>
-            <BiSend />
-          </button>
+
         </form>
       </div>
     </div>

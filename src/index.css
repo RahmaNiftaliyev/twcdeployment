@@ -352,8 +352,8 @@ button {
 }
 
 .send-button {
-  width: 60px;
-  height: 60px;
+  width: 56px;
+  height: 56px;
   -webkit-border-radius: 100%;
   -moz-border-radius: 100%;
   -ms-border-radius: 100%;
@@ -361,9 +361,9 @@ button {
   border-radius: 100%;
   z-index: 100;
   position: absolute;
-  bottom: 20px;
-  right: -20px;
-  background: linear-gradient(135deg, #29323c, #485563);
+  bottom: 70px;
+  right: -15px;
+  background: linear-gradient(135deg, #171717, #485563);
   box-shadow: rgb(41 50 60 / 50%) 0 4px 24px;
   display: flex;
   justify-content: center;
@@ -555,7 +555,7 @@ button {
   margin-right: auto
 }
 .main {
-  max-width: 372px;
+  max-width: 425px;
   height: 652px;
   box-shadow: rgb(0 18 46 / 16%) 0 8px 36px 0;
   pointer-events: auto;
@@ -566,7 +566,7 @@ button {
 
 .chat-header {
   color: #fff;
-  background: linear-gradient(135deg,#29323c 0,#485563 100%);
+  background: linear-gradient(135deg,#171717 0,#485563 100%);
   padding: 24px 28px;
   pointer-events: auto;
   display: flex;
@@ -575,6 +575,19 @@ button {
   border-top-left-radius: 16px;
   border-top-right-radius: 16px
 }
+
+
+.betweener {
+  height: 80px;
+  background: linear-gradient(45deg,#171717 0,#485563 100%);
+  padding-left: 28px;
+  padding-right: 28px;
+  padding-bottom: 20px;
+  display: flex;
+  align-items: center
+}
+
+
 .profile-container {
   display: flex;
   align-items: center
@@ -600,23 +613,18 @@ button {
 .icon-font-size-lg {
   font-size: 36px
 }
-.betweener {
-  height: 100px;
-  background: linear-gradient(45deg,#29323c 0,#485563 100%);
-  padding-left: 28px;
-  padding-right: 28px;
-  padding-bottom: 20px;
-  display: flex;
-  align-items: center
-}
+
 .betweener > p {
   color: #fff
 }
 .conversation-group {
-  height: 300px;
+  height: 330px;
   padding: 0 28px 24px 28px;
   position: relative;
-  background-color: #fff
+  background-color: #fff;
+  display: flex;
+  flex-direction:column;
+  justify-content:space-between;
 }
 .conversation-group > img {
   position: absolute;
@@ -651,7 +659,8 @@ button {
 .input-group {
   padding-left: 28px;
   padding-right: 28px;
-  background-color: #fff
+  background-color: #fff;
+  position: relative;
 }
 .input-group > hr {
   margin: 0;
@@ -662,9 +671,9 @@ button {
 .input-group > form > textarea {
   border: 0;
   width: 100%;
-  height: 150px;
+  height: 140px;
   font-size: 17px;
-  padding: 20px 0 14px;
+  padding: 10px 0 14px;
   resize: none;
   line-height: 24px;
   overflow-x: hidden;
@@ -678,6 +687,7 @@ button {
 
 .input-group img {
   bottom: 80px;
+  left: 80px;
   display: inline-block;
   -webkit-border-radius: 100%;
   -moz-border-radius: 100%;
