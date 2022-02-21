@@ -69,7 +69,6 @@ const ChatApp = ({ clickViewController }) => {
             showPreview={false}
             showSkinTones={false}
             i18n={{ search: 'Recherche', categories: { search: 'Résultats de recherche', recent: 'Récents' } }} />
-          />
         </div>
       </div>
       <div className='input-group'>
