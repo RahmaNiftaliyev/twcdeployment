@@ -15,7 +15,7 @@
 
 
 ::-webkit-scrollbar-thumb {
-  background-color: yellow;
+  background-color: #01AB8D;
   border-radius: 202px;
   -webkit-border-radius: 202px;
   -moz-border-radius: 202px;
@@ -24,7 +24,7 @@
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: #C78F21;
+  background-color: #3a6351;
 }
 
 .opacity-zero {
