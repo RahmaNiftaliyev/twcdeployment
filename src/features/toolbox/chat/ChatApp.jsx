@@ -68,7 +68,6 @@ const ChatApp = ({ clickViewController }) => {
             set='apple'
             showPreview={false}
             showSkinTones={false}
-            perLine={8}
           />
         </div>
       </div>
