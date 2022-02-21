@@ -344,12 +344,13 @@ button {
 .emoji-mart {
   height: 200px;
   overflow: hidden;
-  max-width: 290px !important;
+  width: 290px% !important;
   border: none;
 }
 .emoji-mart-scroll {
   margin-top: 5px;
-  max-width: 316px !important;
+  width: 290px !important;
+  overflow: hidden;
 }
 
 
