@@ -22,21 +22,15 @@ const SpeedDialsHooks = ({ selectFile }) => {
       <label htmlFor="file">
         <AiFillFileAdd className={`${styles.media_icons_file} ${view}`} />
       </label>
-      <input type="file" name="file" id="file" className="display_none" />
+      <input type="file" name="file" id="file" accept=".docx,.pdf" className="display_none" />
 
       <label htmlFor="image">
         <BsImages
           className={`${styles.media_icons_image} ${view}`}
-           onClick={() => {
-          // Single File Upload accepts only images
-          selectFile({ accept: 'image/*' }, ({ source, name, size, file }) => {
-            // file - is the raw File Object
-            console.log({ source, name, size, file })
-            // Todo: Upload to cloud.
-          })}}
+          onClick={() => selectFile(({ source, name, size, file }) => {})}
         />
       </label>
-      <input type="file" name="image" id="image" className="display_none" />
+      <input type="file" name="image" id="image" accept=".jpg,.png" className="display_none" />
 
       <button onMouseEnter={enableIcons} className={`${styles.speed_dials}`}>
         <HiPlus className={`${styles.plus_icon}`} />

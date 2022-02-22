@@ -12,6 +12,8 @@ import emoji from './assets/emoji.svg';
 
 const ChatApp = ({ clickViewController, setFirstMessageEmail, firstMessageEmail }) => {
   const [file, selectFile] = useFileUpload();
+  const [docs,selectDosc] = useFileUpload();
+
 
   const [message, setMessage] = React.useState('');
   const [error, setError] = React.useState('');

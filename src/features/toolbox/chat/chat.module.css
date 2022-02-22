@@ -60,6 +60,7 @@
   align-items: center ;
   box-shadow: inset 11px 11px 96px 0px #ABABAB;
   background-color:white;
+  background-image: url("./../../components/common/assets/png/cool-background.png");
 }
 
 .email_container_app > div {

@@ -12,7 +12,7 @@
   background-color: #171717
 }
 ::-webkit-scrollbar-thumb {
-  background-color: #01ab8d;
+  background-color: #171717;
   border-radius: 202px;
   -webkit-border-radius: 202px;
   -moz-border-radius: 202px;
@@ -61,7 +61,7 @@ button {
   position: fixed;
   top: calc(100vh - 652px);
   right: 0;
-  width: 100%;
+  width: auto;
   z-index: 100000000
 }
 .block-center {
@@ -630,10 +630,10 @@ button {
   height: 330px;
   padding: 0 28px 24px 28px;
   position: relative;
-  background-color: #fff;
+  background-image: url("./features/components/common/assets/png/cool-background.png");
   display: flex;
   flex-direction: column;
-  justify-content: space-between
+  justify-content: space-between;
 }
 .conversation-group > img {
   position: absolute;
@@ -669,7 +669,8 @@ button {
   padding-left: 28px;
   padding-right: 28px;
   background-color: #fff;
-  position: relative
+  position: relative;
+  background-image: url("./features/components/common/assets/png/cool-background.png");
 }
 .input-group > hr {
   margin: 0;
@@ -686,7 +687,8 @@ button {
   resize: none;
   line-height: 24px;
   overflow-x: hidden;
-  color: #171717
+  color: #171717;
+  background: url("./features/components/common/assets/png/cool-background.png");
 }
 .text-area-placeholder-changer::placeholder,
 input.text-area-placeholder-changer::placeholder {
