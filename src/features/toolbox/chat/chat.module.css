@@ -14,6 +14,7 @@
   background-color: #fff;
   position: absolute;
   right: -90px;
+  top: 150px;
   -webkit-transform:rotate(270deg);
   -moz-transform:rotate(270deg);
   -ms-transform:rotate(270deg);
@@ -159,5 +160,9 @@
     height: 100vh;
       border-top-left-radius: 0;
       border-top-right-radius: 0;
+  }
+  .chat_box{
+    top: 90px;
+    right: -72px;
   }
 }
