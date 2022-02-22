@@ -40,7 +40,6 @@
         "emoji-mart": "^3.0.1",
         "merge": "^2.1.1",
         "oidc-client": "^1.11.5",
-        "particlesjs": "^2.2.3",
         "react": "^17.0.2",
         "react-admin": "^3.19.10",
         "react-alice-carousel": "^2.5.1",
