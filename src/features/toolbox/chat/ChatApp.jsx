@@ -4,12 +4,15 @@ import SpeedDialsHooks from './../speed-dial/SpeedDialsHooks';
 import { Picker } from 'emoji-mart';
 import { MdOutlineKeyboardArrowDown } from 'react-icons/md';
 import { BiSend } from 'react-icons/bi';
+import { useFileUpload } from 'use-file-upload';
 import 'emoji-mart/css/emoji-mart.css';
 import styles from './chat.module.css';
 import linear from './assets/team-shape.svg';
 import emoji from './assets/emoji.svg';
 
 const ChatApp = ({ clickViewController, setFirstMessageEmail, firstMessageEmail }) => {
+  const [file, selectFile] = useFileUpload();
+
   const [message, setMessage] = React.useState('');
   const [error, setError] = React.useState('');
   const [textClass, setTextClass] = React.useState('');
@@ -73,7 +76,7 @@ const ChatApp = ({ clickViewController, setFirstMessageEmail, firstMessageEmail 
         </div>
         <div className="input-group">
           <hr />
-          <SpeedDialsHooks />
+          <SpeedDialsHooks selectFile={selectFile} />
           <form onSubmit={formValidationController}>
             <button className="send-button">
               <BiSend />
@@ -81,7 +84,7 @@ const ChatApp = ({ clickViewController, setFirstMessageEmail, firstMessageEmail 
             <textarea
               name="message"
               id="message"
-              value={message}
+              value={message && file ? `${message} ${file.name}` : message ? message : file ? file.name : ''}
               className={`${textClass}`}
               placeholder={error.length > 0 ? error : 'Mesajınızı daxil edin...'}
               onChange={(e) => setMessage(e.target.value)}

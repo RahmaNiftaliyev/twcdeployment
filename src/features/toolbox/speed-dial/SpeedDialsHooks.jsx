@@ -3,9 +3,10 @@ import React, { useState } from 'react';
 import { HiPlus } from 'react-icons/hi';
 import { AiFillFileAdd } from 'react-icons/ai';
 import { BsImages } from 'react-icons/bs';
+
 import styles from './speed.module.css';
 
-const SpeedDialsHooks = () => {
+const SpeedDialsHooks = ({ selectFile }) => {
   const [view, setView] = useState('opacity-zero');
 
   const enableIcons = () => {
@@ -18,8 +19,25 @@ const SpeedDialsHooks = () => {
 
   return (
     <div className={`${styles.speed_dials_container}`} onMouseLeave={disableIcons}>
-      <AiFillFileAdd className={`${styles.media_icons_file} ${view}`} />
-      <BsImages className={`${styles.media_icons_image} ${view}`} />
+      <label htmlFor="file">
+        <AiFillFileAdd className={`${styles.media_icons_file} ${view}`} />
+      </label>
+      <input type="file" name="file" id="file" className="display_none" />
+
+      <label htmlFor="image">
+        <BsImages
+          className={`${styles.media_icons_image} ${view}`}
+           onClick={() => {
+          // Single File Upload accepts only images
+          selectFile({ accept: 'image/*' }, ({ source, name, size, file }) => {
+            // file - is the raw File Object
+            console.log({ source, name, size, file })
+            // Todo: Upload to cloud.
+          })}}
+        />
+      </label>
+      <input type="file" name="image" id="image" className="display_none" />
+
       <button onMouseEnter={enableIcons} className={`${styles.speed_dials}`}>
         <HiPlus className={`${styles.plus_icon}`} />
       </button>
