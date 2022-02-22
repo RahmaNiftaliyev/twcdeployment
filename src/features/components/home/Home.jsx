@@ -118,7 +118,8 @@ const Home = ({ homeProps }) => {
           Ən son layihədə iştirak <span className={`${styles.line_home_divider}`}></span> edən komanda üzvlərimiz{' '}
         </h2>
         <div className={`${styles.slide_dot}`}>
-          <div></div>\<div></div>
+          <div></div>
+          <div></div>
           <div></div>
         </div>
       </div>

@@ -53,7 +53,7 @@ const EmailService = ({ setFirstMessageEmail, firstMessageEmail, clickViewContro
 
   return (
     firstMessageEmail && (
-      <div className="main animate__animated animate__backInRight">
+      <div className={`main animate__animated ${firstMessageEmail ? 'animate__fadeInUp' : 'animate__fadeOutDown'}`}>
         <div className={`${styles.email_container_app}`}>
           <div className={`${styles.email_container_app_header}`}>
             <FaTimes className={`${styles.email_x_icon} pointer`} onClick={closeBox} />

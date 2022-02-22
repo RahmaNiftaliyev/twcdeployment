@@ -152,8 +152,8 @@
 }
 
 
-
-
-.email_container_app_bottom {
-
+@media screen and (max-width:767px) {
+  .email_container_app {
+    width: 335px;
+  }
 }

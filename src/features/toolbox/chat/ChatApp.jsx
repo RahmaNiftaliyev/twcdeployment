@@ -41,7 +41,7 @@ const ChatApp = ({ clickViewController, setFirstMessageEmail, firstMessageEmail 
 
   return (
     !firstMessageEmail && (
-      <div className="main animate__animated animate__backInRight">
+      <div className={`main animate__animated animate__fadeInUp`}>
         <div className="chat-header">
           <div className="profile-container">
             <div className="profile"></div>
