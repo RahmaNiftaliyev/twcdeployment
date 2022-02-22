@@ -155,6 +155,9 @@
 
 @media screen and (max-width:767px) {
   .email_container_app {
-    width: 335px;
+    width: 100%;
+    height: 100vh;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
   }
 }
