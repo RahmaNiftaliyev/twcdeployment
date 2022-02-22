@@ -75,7 +75,7 @@ const Home = ({ homeProps }) => {
             </h2>
           </AnimationOnScroll>
           <p className="size-font-mb-p">
-            Özəl, dövlət və sosial təşkilatlarla əməkdaşlıq edərək,{' '}
+            Özəl, dövlət və sosial təşkilatlarla əməkdaşlıq edərək,
             <span className={`${styles.line_home_divider}`}></span> biz qlobal təcrübəmizi və yerli anlayışlarımızı{' '}
             <span className={`${styles.line_home_divider}`}></span> birləşdirərək real və davamlı dəyişiklik yaradırıq
           </p>
