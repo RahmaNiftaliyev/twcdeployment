@@ -9,6 +9,7 @@ import styles from './hamburger.module.css';
 import icon from './assets/img/menu-x-icon.svg';
 import sliderTwc from './../../components/common/assets/svg/navigation-slider.svg';
 import { SiAnalogue } from 'react-icons/si';
+import { useNavigate } from 'react-router-dom';
 
 const Slider = ({ classData, handleSliderClick, conditionView }) => {
   const contactData = useSelector((state) => selectFooterLinkById(state, 'id4'));
@@ -19,6 +20,8 @@ const Slider = ({ classData, handleSliderClick, conditionView }) => {
   const [toggle, setToggle] = useState(false);
   const [finded,setFinded] = useState([]);
 
+  const navigate = useNavigate()
+
 
   const handleNaviAnimation = (paramsNaviItem) => {
     if (paramsNaviItem.hasSubmenu) {
@@ -26,6 +29,7 @@ const Slider = ({ classData, handleSliderClick, conditionView }) => {
       setFinded(paramsNaviItem);
     }
 
+    navigate(paramsNaviItem.link.length > 1 ? paramsNaviItem.link : 0);
   }
 
   const mainMenu =!toggle ? naviMainData.map((item) => {
@@ -37,7 +41,7 @@ const Slider = ({ classData, handleSliderClick, conditionView }) => {
   }):finded.map(item => {
     return (
       <li className={`${styles.animate_character} mb-mb-20`} key={item.id}>
-        {item.name}
+     {item.name}
       </li>
     );
   })
@@ -65,7 +69,7 @@ const Slider = ({ classData, handleSliderClick, conditionView }) => {
         }}
       />
 
-      <ul className={`${styles.menu_centerer}`}>
+      <ul className={`${styles.menu_centerer}`} st>
         {mainMenu}
       </ul>
 

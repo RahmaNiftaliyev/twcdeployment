@@ -68,4 +68,6 @@ img[alt='slider menu bg'] {
 
 .menu_centerer {
   margin: auto;
+  position: relative;
+  z-index:500;
 }
