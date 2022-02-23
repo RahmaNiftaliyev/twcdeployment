@@ -1,50 +1,58 @@
 // @ts-nocheck
 import React, { useState } from 'react';
-import RoundedButton from './../buttons/RoundedButton';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { selectAllLinks } from './../../navigation/navigationSlice';
-import { selectFooterLinkById } from './../../footer/footerSlice';
 import styles from './hamburger.module.css';
 import icon from './assets/img/menu-x-icon.svg';
 import sliderTwc from './../../components/common/assets/svg/navigation-slider.svg';
-import { SiAnalogue } from 'react-icons/si';
 import { useNavigate } from 'react-router-dom';
 
 const Slider = ({ classData, handleSliderClick, conditionView }) => {
-  const contactData = useSelector((state) => selectFooterLinkById(state, 'id4'));
   const allLinks = useSelector(selectAllLinks);
   let naviMainData = allLinks.map((item) => {
     return { link: item.link, name: item.name, id: item.id, hasSubmenu: item.hasSubmenu };
   });
   const [toggle, setToggle] = useState(false);
-  const [finded,setFinded] = useState([]);
+  const [finded, setFinded] = useState([]);
 
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
+  const routerHelper = (paramsLink) => {
+    if (paramsLink.length > 1) {
+      navigate(paramsLink);
+    }
+  };
+
+  const dataFinder = (paramsId) => {
+    const finded = allLinks.find((item) => {
+      return item.id === paramsId;
+    });
+    return finded.subMenus;
+  };
 
   const handleNaviAnimation = (paramsNaviItem) => {
     if (paramsNaviItem.hasSubmenu) {
-      setToggle(!toggle);
-      setFinded(paramsNaviItem);
+
+      setFinded((previousValue) => {
+        while(previousValue.length > 0){
+          previousValue.pop();
+        }
+      return previousValue.concat(dataFinder(paramsNaviItem.id));
+      });
+      console.log(finded);
     }
 
-    navigate(paramsNaviItem.link.length > 1 ? paramsNaviItem.link : 0);
-  }
+    routerHelper(paramsNaviItem.link);
+  };
 
-  const mainMenu =!toggle ? naviMainData.map((item) => {
+  const mainMenu = naviMainData.map((item) => {
     return (
       <li onClick={() => handleNaviAnimation(item)} className={`${styles.animate_character} mb-mb-20`} key={item.id}>
         {item.name}
       </li>
     );
-  }):finded.map(item => {
-    return (
-      <li className={`${styles.animate_character} mb-mb-20`} key={item.id}>
-     {item.name}
-      </li>
-    );
-  })
+  });
 
   return (
     <div
