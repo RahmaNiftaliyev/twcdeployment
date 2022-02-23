@@ -11,23 +11,24 @@ export const navigationData = {
       link: '/',
       hasSubmenu: true,
       subMenus: [
-        { name: 'DAŞINMAZ ƏMLAK', link: '/industry/immovableproperty' },
-        { name: 'MALİYYƏ SERVİSLƏRİ', link: '/industry/financialservice' },
-        { name: 'RETAIL', link: '/industry/retail' },
-        { name: 'SƏNAYE MƏHSULLARI', link: '/industry/industryproducts' },
-        { name: 'TEXNOLOGİYA, MEDİA VƏ ƏYLƏNCƏ', link: '/industry/techmediaandfun' },
+        { id: 'sub-1', name: 'DAŞINMAZ ƏMLAK', link: '/industry/immovableproperty' },
+        { id: 'sub-2', name: 'MALİYYƏ SERVİSLƏRİ', link: '/industry/financialservice' },
+        { id: 'sub-3', name: 'RETAIL', link: '/industry/retail' },
+        { id: 'sub-4', name: 'SƏNAYE MƏHSULLARI', link: '/industry/industryproducts' },
+        { id: 'sub-5', name: 'TEXNOLOGİYA, MEDİA VƏ ƏYLƏNCƏ', link: '/industry/techmediaandfun' },
         {
+          id: 'sub-6',
           name: 'TRANSPORTASİYA VƏ LOGİSTİKA',
-          link: '/industry/transportationandlogistics',
+          link: '/industry/transportationandlogistics'
         },
-        { name: 'TƏCHİZAT', link: '/industry/supplements' },
-        { name: 'FMCG', link: '/industry/fmcg' },
-        { name: 'TİKİNTİ', link: '/industry/architect' },
-        { name: 'İSTEHSALAT', link: '/industry/manufacture' },
-        { name: 'TƏHSİL', link: '/industry/education' },
-        { name: 'E-TİCARƏT', link: '/industry/ecommerce' },
-        { name: 'ENERJİ', link: '/industry/energy' },
-      ],
+        { id:'sub-7', name: 'TƏCHİZAT', link: '/industry/supplements' },
+        { id:'sub-8', name: 'FMCG', link: '/industry/fmcg' },
+        { id:'sub-9', name: 'TİKİNTİ', link: '/industry/architect' },
+        { id:'sub-10', name: 'İSTEHSALAT', link: '/industry/manufacture' },
+        { id:'sub-11', name: 'TƏHSİL', link: '/industry/education' },
+        { id:'sub-12', name: 'E-TİCARƏT', link: '/industry/ecommerce' },
+        { id:'sub-13', name: 'ENERJİ', link: '/industry/energy' }
+      ]
     },
     id2: {
       id: 'id2',
@@ -35,17 +36,18 @@ export const navigationData = {
       link: '/',
       hasSubmenu: true,
       subMenus: [
-        { name: 'SATIŞ VƏ MARKETİNG', link: '/services/marketing' },
-        { name: 'TƏŞKİLATİ', link: '/services/companyable' },
-        { name: 'STRATEGİYA VƏ MALİYYƏ', link: '/services/finance' },
-        { name: 'KAPİTALLAŞMA', link: '/services/investmentable' },
+        { id: 'sub-1', name: 'SATIŞ VƏ MARKETİNG', link: '/services/marketing' },
+        { id: 'sub-2', name: 'TƏŞKİLATİ', link: '/services/companyable' },
+        { id: 'sub-3', name: 'STRATEGİYA VƏ MALİYYƏ', link: '/services/finance' },
+        { id: 'sub-4', name: 'KAPİTALLAŞMA', link: '/services/investmentable' },
         {
+          id: 'sub-5',
           name: 'DOING BUSINESS IN AZERBAIJAN',
-          link: '/services/businessazerbaijan',
+          link: '/services/businessazerbaijan'
         },
-        { name: 'BİZNES PLAN VƏ TİƏ', link: '/services/businessplan' },
-        { name: 'BAZAR ARAŞDIRMASI', link: '/services/marketresearch' },
-      ],
+        { id: 'sub-6', name: 'BİZNES PLAN VƏ TİƏ', link: '/services/businessplan' },
+        { id: 'sub-7', name: 'BAZAR ARAŞDIRMASI', link: '/services/marketresearch' }
+      ]
     },
     id3: {
       id: 'id3',
@@ -53,12 +55,12 @@ export const navigationData = {
       link: '/',
       hasSubmenu: true,
       subMenus: [
-        { name: 'NETFLIX', link: '/ideas' },
-        { name: 'LOGİSTİKA', link: '/ideas/logistics' },
-        { name: 'ALKOQOL', link: '/ideas/alcohol' },
-        { name: 'STARTAP', link: '/ideas/startup' },
-        { name: 'MALİYYƏ', link: '/ideas/finance' },
-      ],
+        { id: 'sub-1', name: 'NETFLIX', link: '/ideas' },
+        { id: 'sub-2', name: 'LOGİSTİKA', link: '/ideas/logistics' },
+        { id: 'sub-3', name: 'ALKOQOL', link: '/ideas/alcohol' },
+        { id: 'sub-4', name: 'STARTAP', link: '/ideas/startup' },
+        { id: 'sub-5', name: 'MALİYYƏ', link: '/ideas/finance' }
+      ]
     },
     id4: {
       id: 'id4',
@@ -66,13 +68,13 @@ export const navigationData = {
       link: '/',
       hasSubmenu: true,
       subMenus: [
-        { name: 'TWC HAQQINDA', link: '/about' },
-        { name: 'KOMANDAMIZ', link: '/about/team' },
-        { name: 'MÜŞTƏRİ LAYİHƏLƏRİMİZ', link: '/about/testimonials' },
-        { name: 'PARTNYORLARIMIZ', link: '/about/partneers' },
-      ],
+        { id: 'sub-1', name: 'TWC HAQQINDA', link: '/about' },
+        { id: 'sub-2', name: 'KOMANDAMIZ', link: '/about/team' },
+        { id: 'sub-3', name: 'MÜŞTƏRİ LAYİHƏLƏRİMİZ', link: '/about/testimonials' },
+        { id: 'sub-4', name: 'PARTNYORLARIMIZ', link: '/about/partneers' }
+      ]
     },
     id5: { id: 'id5', name: 'Karyera', link: '/career', hasSubmenu: false },
-    id6: { id: 'id6', name: 'Əlaqə', link: '/contact', hasSubmenu: false },
-  },
-}
+    id6: { id: 'id6', name: 'Əlaqə', link: '/contact', hasSubmenu: false }
+  }
+};

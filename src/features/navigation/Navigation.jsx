@@ -1,42 +1,34 @@
 // @ts-nocheck
-import React, { useState } from 'react'
-import NaviEnableBlock from './NaviEnableBlock'
-import Hamburger from './../toolbox/hamburger/Hamburger'
-import Slider from '../toolbox/hamburger/Slider'
-import { useSelector } from 'react-redux'
-import { selectAllLinks } from './navigationSlice'
-import { GoTriangleRight } from 'react-icons/go'
-import { Link } from 'react-router-dom'
-import { useNavigate } from 'react-router-dom'
-import styles from './navigation.module.css'
+import React, { useState } from 'react';
+import NaviEnableBlock from './NaviEnableBlock';
+import Hamburger from './../toolbox/hamburger/Hamburger';
+import Slider from '../toolbox/hamburger/Slider';
+import { useSelector } from 'react-redux';
+import { selectAllLinks } from './navigationSlice';
+import { GoTriangleRight } from 'react-icons/go';
+import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+import styles from './navigation.module.css';
 
-const Navigation = ({
-  logo,
-  enable,
-  textColor,
-  bgColor,
-  isArticle,
-  isHeader,
-  isPrivacy,
-}) => {
-  const allLinks = useSelector(selectAllLinks)
-  const navigate = useNavigate()
+const Navigation = ({ logo, enable, textColor, bgColor, isArticle, isHeader, isPrivacy }) => {
+  const allLinks = useSelector(selectAllLinks);
+  const navigate = useNavigate();
 
-  const [view, setView] = useState('')
-  const [hidden, setHidden] = useState('')
+  const [view, setView] = useState('');
+  const [hidden, setHidden] = useState('');
 
   const handleNavigation = () => {
-    navigate('/')
-  }
+    navigate('/');
+  };
 
   const clickHandler = () => {
-    setView('slider-visible slider-mb-visible')
-    setHidden('')
-  }
+    setView('slider-visible slider-mb-visible');
+    setHidden('');
+  };
 
   const disableSlider = () => {
-    setHidden('slider-hidden slider-mb-hidden ')
-  }
+    setHidden('slider-hidden slider-mb-hidden ');
+  };
 
   const renderedLinks = allLinks.map((link) => {
     return (
@@ -55,30 +47,26 @@ const Navigation = ({
                 style={{
                   width: '200px',
                   height: '30px',
-                  background: 'transparent',
+                  background: 'transparent'
                 }}
               />
               <ul className="hoverable animate__animated animate__fadeIn">
                 {link.subMenus.map((menu) => {
                   return (
                     <li className={`${styles.link_height}`} key={menu.name}>
-                      <Link
-                        className={`${styles.link_none} text-upper`}
-                        key={menu.name}
-                        to={menu.link}
-                      >
+                      <Link className={`${styles.link_none} text-upper`} key={menu.name} to={menu.link}>
                         {menu.name}
                       </Link>
                     </li>
-                  )
+                  );
                 })}
               </ul>
             </div>
           )}
         </Link>
       </li>
-    )
-  })
+    );
+  });
 
   return (
     <div
@@ -86,11 +74,7 @@ const Navigation = ({
         styles.navigation_padding_top
       } ${isArticle || isHeader || isPrivacy ? styles.ptAndPb : ''}`}
     >
-      <Slider
-        handleSliderClick={disableSlider}
-        classData={view}
-        conditionView={hidden}
-      />
+      <Slider handleSliderClick={disableSlider} classData={view} conditionView={hidden} />
       <div className="d-flex">
         <img
           src={logo}
@@ -110,7 +94,7 @@ const Navigation = ({
         <Hamburger bgColor={bgColor} handleClick={clickHandler} />
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Navigation
+export default Navigation;

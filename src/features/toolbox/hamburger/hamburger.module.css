@@ -33,11 +33,39 @@ img[alt='slider menu bg'] {
 .list_item_slider {
   font-size: 14px;
   line-height: 26px;
-  color: #fff
 }
 .list_item_slider_header {
   font-size: 11px;
   line-height: 20px;
   letter-spacing: 4.85px;
   color: rgba(255,255,255,.7)
+}
+
+.animate_character {
+  text-transform: uppercase;
+  background-image: linear-gradient(    -225deg,    #fff 0%,    #171717 29%,    #fff 67%,    #171717 100%  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  display: block;
+  font-size:40px;
+  text-align:center;
+  -webkit-animation: textclip 8s linear infinite;
+}
+
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+
+.menu_centerer {
+  margin: auto;
 }

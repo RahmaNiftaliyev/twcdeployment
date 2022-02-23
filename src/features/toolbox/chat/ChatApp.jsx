@@ -71,7 +71,7 @@ const ChatApp = ({ clickViewController, setFirstMessageEmail, firstMessageEmail 
               showSkinTones={false}
               i18n={{
                 search: 'Recherche',
-                categories: { search: 'Résultats de recherche', recent: 'Récents' }
+                categories: { search: 'Axtarış edin', recent: 'Récents' }
               }}
             />
           </div>

@@ -123,6 +123,8 @@ button {
 .display_none {
   display: none
 }
+
+
 .absolute {
   position: absolute
 }
@@ -741,7 +743,7 @@ input.text-area-placeholder-changer::placeholder {
   }
 
 .chat-box-container-keeper {
-  top: 0;
+  top: -1px;
   width: 100%;
 }
 
@@ -788,18 +790,17 @@ input.text-area-placeholder-changer::placeholder {
     right: 0!important
   }
   .slider-mb-hidden {
-    right: -300px!important
+    right: -100%!important
   }
   .slider-mb {
-    width: 300px;
+    width: 100%;
     padding: 50px 20px 55px 20px;
-    right: -300px;
+    right: -100%;
     overflow-x: hidden
   }
   .mb-list-item {
     text-align: center;
     width: 100%;
-    background-color: rgba(255,255,255,.2);
     margin-bottom: 3px;
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
@@ -808,7 +809,8 @@ input.text-area-placeholder-changer::placeholder {
     border-radius: 4px;
     padding-top: 10px;
     padding-bottom: 10px;
-    cursor: pointer
+    cursor: pointer;
+    font-size: 20px;
   }
   .mb-none {
     height: 0;
@@ -895,4 +897,10 @@ input.text-area-placeholder-changer::placeholder {
   .mb-mt-40 {
     margin-top: 40px!important
   }
+
+
+  .mb-mb-20 {
+    margin-bottom: 20px;
+  }
 }
+
