@@ -42,10 +42,11 @@ import SignUp from './../components/form/SignUp';
 import SignIn from './../components/form/SignIn';
 import BackToTop from '../toolbox/buttons/BackToTop';
 import Vacantions from '../components/career/Vacantions';
+import Team from '../components/team/Team';
 
 const Dashboard = () => {
   const [isVisible, setIsVisible] = React.useState(false);
-  
+
   const handleScroll = () => {
     if ((document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) && !chatAppView) {
       setIsVisible(true);
@@ -131,6 +132,9 @@ const Dashboard = () => {
 
         <Route path="/login" element={<SignIn />} />
         <Route path="/register" element={<SignUp />} />
+
+        <Route path="/team"element={<Team/>} />
+
       </Routes>
     </div>
   );

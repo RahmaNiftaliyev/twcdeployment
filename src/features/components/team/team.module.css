@@ -1,0 +1,123 @@
+.carousel_container{
+    margin-top: 100px;
+}
+
+.team_member_about{
+    color: #171717;
+    width: 50%!important;
+}
+
+
+/* 
+._upper_container {
+    padding: 60px 0;
+} */
+
+.team_member_about *:not(:last-child){
+    margin-bottom: 10px;
+}
+
+.team_member_name{
+    font-size: 50px;
+    font-weight: 600;
+    color: #3a6351;
+}
+
+.team_member_job_title{
+    font-size: 30px;
+    font-weight: 400;
+    color: #aaa;
+
+}
+
+.team_member_education{
+    color: #5e5e5e;
+    font-size:14px;
+    max-width: 300px;
+    text-align: center;
+}
+
+.team_member_img_container{
+    height: 500px;
+    width: 50%;
+}
+.team_member_img{
+    max-width: 100%;
+}
+
+.thumbs_container{
+    position: relative;
+    padding: 20px 0;
+    margin-bottom: 100px;
+}
+.thumbs_blured_background{
+    /* filter: blur(8px); */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color:hsla(360, 100%, 100%, 0.43);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    z-index: -1;
+}
+
+.team_member_thumb_section{
+    width: 200px;
+    position: relative;
+    z-index: 999;
+   
+}
+
+.team_member_thumb_img_container{
+   height: 100px;
+   width: 100px;
+    background-position: center!important;
+    background-size: cover!important;
+    border-radius: 100%;
+    overflow: hidden;
+}
+
+.team_member_thumb_img{
+    max-width: 100%;
+}
+
+.team_member_thumb_name{
+    font-size: 16px;
+}
+
+.team_member_thumb_job_title{
+    font-size: 12px;
+}
+
+
+@media screen and (max-width: 400px) {
+    .team_member_img{
+        /* width: 100px!important; */
+    }
+ 
+    .team_member_img_container{
+        height: auto;
+    }
+    .team_member_about {
+        margin: 0px
+    }
+    .team_member_name{
+        font-size: 20px;
+    }
+    .team_member_job_title{ font-size: 14px;}
+    .team_member_education{ font-size: 10px;}
+    .team_member_thumb_img_container{
+        height: 50px;
+        width: 50px;}
+        
+.team_member_thumb_name{
+    font-size: 8px;
+}
+
+.team_member_thumb_job_title{
+    font-size: 6px;
+}
+}
+
+

@@ -3,7 +3,7 @@ import { createEntityAdapter, createSlice } from "@reduxjs/toolkit";
 import team_mem1 from './../home/assets/img/team-aynur.png';
 import team_mem2 from './../home/assets/img/team-chingiz.png';
 import team_mem3 from './../home/assets/img/team-ramazan.png';
-import team_mem4 from './../home/assets/img/team-aynure.jpg';
+import team_mem4 from './../home/assets/img/team-aynure.png';
 import team_mem5 from './../home/assets/img/team-question.png';
 import team_mem6 from './../home/assets/img/team-mehemmed.png';
 
