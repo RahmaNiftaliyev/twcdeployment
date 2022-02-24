@@ -52,11 +52,11 @@ img[alt='slider menu bg'] {
   text-fill-color: transparent;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: textclip 2s linear infinite;
+  animation: textclip 4s linear infinite;
   display: block;
   font-size:40px;
   text-align:center;
-  -webkit-animation: textclip 8s linear infinite;
+  -webkit-animation: textclip 4s linear infinite;
 }
 
 
