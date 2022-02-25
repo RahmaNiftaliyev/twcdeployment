@@ -20,6 +20,9 @@ import article1 from '../articles/assets/img/ntflx.png';
 import article2 from '../articles/assets/img/alcohol-cover.png';
 import article3 from '../articles/assets/img/cargo-cover.png';
 import article4 from '../articles/assets/img/startup.png';
+import Bizniz from '../biznis/Bizniz';
+import Biznizmodal from '../biznis/Biznezmodal';
+
 
 const Home = ({ homeProps }) => {
   const industries = useSelector(selectAllIndustries);
@@ -39,21 +42,16 @@ const Home = ({ homeProps }) => {
 
   window.addEventListener('scroll', handleScroll);
 
-  const renderedIndustries = industries.map((ind, index) => {
-    return (
-      <Link
-        to="/"
-        className={`${styles.link_style_none}  ${styles.mb_industries_span} mb-align-center display-mb-flex justify-mb-center`}
-      >
-        <span
-          key={ind.id}
-          className={`size-font-mb-span pointer hoverable-span ${index >= 8 && styles.margin_bottom_zero}`}
-        >
-          {ind.name}
-        </span>
-      </Link>
-    );
-  });
+  const [display, setDisplay] = useState(false);
+
+  const renderedIndustries = industries.map((industry, index) => (
+    <div key={industry.id} className={styles.business_item} onClick={()=>{handleNavigation(industry.link)}}>
+      <img src={industry.img} className={`${styles.industry_images}`} alt={`industries service ${industry.name}`} />
+      <p className={`${styles.industry_names}`}>{industry.name}</p>
+    </div>
+  ))
+
+
 
   const navigate = useNavigate();
 
@@ -67,6 +65,7 @@ const Home = ({ homeProps }) => {
 
   return (
     <main className={`mb-top-padding ${styles.main_padding}`}>
+      <Biznizmodal display={display} renderedIndustries={renderedIndustries} setDisplay={setDisplay} />
       <div className={`${styles.services}`}>
         <div className={`${styles.services_describtion}`}>
           <AnimationOnScroll animateIn="animate__backInLeft">
@@ -85,7 +84,7 @@ const Home = ({ homeProps }) => {
           <h2 className={`${styles.mt_40_1}`}>Sizin biznes istiqamətiniz?</h2>
           <AnimationOnScroll animateIn="animate__backInRight">
             <div className={`flex-mb-column flex-mb-column mb-align-center display-mb-flex ${styles.mt_40_1}`}>
-              {renderedIndustries}
+              <Bizniz display={display} renderedIndustries={renderedIndustries} setDisplay={setDisplay} />
             </div>
           </AnimationOnScroll>
         </div>

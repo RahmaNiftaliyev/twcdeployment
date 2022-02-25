@@ -1,5 +1,17 @@
 import { createSlice, createEntityAdapter } from "@reduxjs/toolkit";
-
+import techizat from './assets/icons/techizat.png';
+import dasinmaz from './assets/icons/dasinmaz.png';
+import ecommerce from './assets/icons/ecommerce.png';
+import energy from './assets/icons/energy.png';
+import tech from './assets/icons/tech.png';
+import fmcg from './assets/icons/fmcg.png';
+import maliyye from './assets/icons/maliyye.png';
+import tikinti from './assets/icons/tikinti.png';
+import transport from './assets/icons/transport.png';
+import tehsil from './assets/icons/edu.png';
+import senaye from './assets/icons/senaye.png';
+import istehsal from './assets/icons/istehsal.png';
+import retail from './assets/icons/retail.png';
 
 const industriesAdapter = createEntityAdapter({
     selectId:(id) => id,
@@ -13,19 +25,19 @@ const initialState = {
     industries:{
         ids:["id1","id2","id3","id4","id5","id6","id7","id8","id9","id10","id11","id12","id13"],
         entities:{
-            id1:{id:"id1",name:"Daşınmaz Əmlak"},
-            id2:{id:"id2",name:"Enerji"},
-            id3:{id:"id3",name:"Maliyyə Servisləri"},
-            id4:{id:"id4",name:"Sənaye Məhsulları"},
-            id5:{id:"id5",name:"Texnologiya, Media və Əyləncə"},
-            id6:{id:"id6",name:"Transporstasiya  və Logistika"},
-            id7:{id:"id7",name:"İstehsal"},
-            id8:{id:"id8",name:"Retail"},
-            id9:{id:"id9",name:"Təchizat"},
-            id10:{id:"id10",name:"Təhsil"},
-            id11:{id:"id11",name:"FMCG"},
-            id12:{id:"id12",name:"Tikinti"},
-            id13:{id:"id13",name:"E-commerce"}
+            id1:{id:"id1",name:"Daşınmaz Əmlak", img:dasinmaz,link:"/industry/immovableproperty"},
+            id2:{id:"id2",name:"Enerji", img:energy,link:"/industry/energy"},
+            id3:{id:"id3",name:"Maliyyə Servisləri", img:maliyye,link:"/industry/financialservice"},
+            id4:{id:"id4",name:"Sənaye Məhsulları", img:senaye,link:"/industry/industryproducts"},
+            id5:{id:"id5",name:"Texnologiya, Media və Əyləncə", img:tech,link:"/industry/techmediaandfun"},
+            id6:{id:"id6",name:"Transporstasiya  və Logistika", img:transport,link:"/industry/transportationandlogistics"},
+            id7:{id:"id7",name:"İstehsal", img:istehsal,link:"/industry/manufacture"},
+            id8:{id:"id8",name:"Retail", img:retail,link:"/industry/retail"},
+            id9:{id:"id9",name:"Təchizat", img:techizat,link:"/industry/supplements"},
+            id10:{id:"id10",name:"Təhsil", img:tehsil,link:"/industry/education"},
+            id11:{id:"id11",name:"FMCG", img:fmcg,link:"/industry/fmcg"},
+            id12:{id:"id12",name:"Tikinti", img:tikinti,link:"/industry/architect"},
+            id13:{id:"id13",name:"E-commerce", img:ecommerce,link:"/industry/ecommerce"}
         }
     }
 }
