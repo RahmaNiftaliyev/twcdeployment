@@ -1,7 +1,6 @@
 // @ts-nocheck
 import React, { useState, useEffect } from 'react';
 import Gallery from '../../toolbox/gallery/Gallery';
-import Team2 from './../team/Team2'
 import GalleryTestimonials from '../../toolbox/gallery/GalleryTestimonials';
 import ChatBox from './../../toolbox/chat/ChatBox';
 import ChatApp from './../../toolbox/chat/ChatApp';
@@ -113,7 +112,7 @@ const Home = ({ homeProps }) => {
 
       {/*Our team*/}
       <div className="galler-container">
-        <Team2 />
+        <Gallery />
       </div>
       <div className={`${styles.text_sec}`}>
         <p>

@@ -1,64 +1,125 @@
 // @ts-nocheck
-import React from 'react';
-import { ImFacebook, ImLinkedin2 } from 'react-icons/im';
-import { SiInstagram } from 'react-icons/si';
+import React, { useState } from 'react';
+import { useSelector } from 'react-redux';
+import { selectAllMembers } from './../../components/about/aboutSlice';
 import AliceCarousel from 'react-alice-carousel';
-import dividerSvg from './assets/team-shape.svg';
 import 'react-alice-carousel/lib/alice-carousel.css';
-const Gallery = ({ images }) => {
-  const handleDragStart = (e) => e.preventDefault();
+import styles from './gallery.module.css';
 
-  const responsive = {
-    0: { items: 1 },
-    568: { items: 2 },
-    1024: { items: 3 }
+const Gallery = () => {
+  const allMembers = useSelector(selectAllMembers);
+
+  const thumbItems = (allMembers, [setThumbIndex, setThumbAnimation]) => {
+    return allMembers.map((item, i) => (
+      <div className="thumb" onClick={() => (setThumbIndex(i), setThumbAnimation(true))}>
+        <div className={`${styles.rounded_image_container}`}>
+          <img src={item.img} width="100" />
+        </div>
+        <h3 className={`${styles.thumb_item_name}`}>{item.name}</h3>
+        <p className={`${styles.thumb_item_position}`}>{item.position}</p>
+      </div>
+    ));
   };
 
-  const renderedImages2 = images.map((image) => {
+  const mainSlide = allMembers.map((oneOfThem) => {
     return (
-      <div className="container-team-data" key={image.id}>
-        <div>
-          <div className="img-section-team-data">
-            <img
-              src={image.img}
-              onDragStart={handleDragStart}
-              width="319"
-              alt="Think wise professional team member resume"
-            />
-            <div className="absolute social-section-team-data">
-              <ImFacebook />
-              <br />
-              <ImLinkedin2 />
-              <br />
-              <SiInstagram />
+      <div className={`${styles.main_container_team_top}`}>
+        <div className={`${styles.img_item} d-flex`}>
+          <div className={`${styles.img_item_content}`}>
+            <div className={`${styles.position_protecter}`}>
+              <h2>{oneOfThem.name}</h2>
+              <h3>{oneOfThem.position}</h3>
+              <p>{oneOfThem.education}</p>
             </div>
           </div>
-          {/* <div className='svg-section-team-data'>
-            <img src={dividerSvg} alt='' />
-          </div> */}
-          <div className="content-section-team-data">
-            <h4>{image.name}</h4>
-            <span>{image.position}</span>
-            <p>{image.education}</p>
+          <div className={`${styles.img_item_img}`}>
+            <img src={oneOfThem.img} alt={`TWC professional team member ${oneOfThem.name}`} />
           </div>
         </div>
       </div>
     );
   });
 
+  const [mainIndex, setMainIndex] = useState(0);
+  const [mainAnimation, setMainAnimation] = useState(false);
+  const [thumbIndex, setThumbIndex] = useState(0);
+  const [thumbAnimation, setThumbAnimation] = useState(false);
+  const [thumbs] = useState(thumbItems(allMembers, [setThumbIndex, setThumbAnimation]));
+
+  const slideNext = () => {
+    if (!thumbAnimation && thumbIndex < thumbs.length - 1) {
+      setThumbAnimation(true);
+      setThumbIndex(thumbIndex + 1);
+    }
+  };
+  const slidePrev = () => {
+    if (!thumbAnimation && thumbIndex > 0) {
+      setThumbAnimation(true);
+      setThumbIndex(thumbIndex - 1);
+    }
+  };
+
+  const syncMainBeforeChange = (e) => {
+    setMainAnimation(true);
+  };
+
+  const syncMainAfterChange = (e) => {
+    setMainAnimation(false);
+
+    if (e.type === 'action') {
+      setThumbIndex(e.item);
+      setThumbAnimation(false);
+    } else {
+      setMainIndex(thumbIndex);
+    }
+  };
+
+  const syncThumbs = (e) => {
+    setThumbIndex(e.item);
+    setThumbAnimation(false);
+
+    if (!mainAnimation) {
+      setMainIndex(e.item);
+    }
+  };
+
   return (
-    <AliceCarousel
-      mouseTracking
-      disableDotsControls
-      disableButtonsControls
-      autoPlay
-      infinite={true}
-      autoPlayStrategy={'none'}
-      responsive={responsive}
-      items={renderedImages2}
-      autoPlayInterval={2400}
-      animationDuration={2400}
-    />
+    <div className={`${styles.main_container_team}`}>
+      <div class={`${styles.our_team__top}`}>
+        <p>Peşəkar komandamız</p>
+        <h2>
+          Ən son layihədə iştirak <br /> edən komanda üzvlərimiz
+        </h2>
+      </div>
+      <AliceCarousel
+        activeIndex={mainIndex}
+        animationDuration={2400}
+        disableDotsControls={true}
+        disableButtonsControls={true}
+        autoPlay={true}
+        infinite={true}
+        items={mainSlide}
+        mouseTracking={true}
+        onSlideChange={syncMainBeforeChange}
+        onSlideChanged={syncMainAfterChange}
+        touchTracking={true}
+      />
+
+      <div className={`${styles.main_container_team_bottom}`}>
+        <div className="thumbs" style={{ width: '100%' }}>
+          <AliceCarousel
+            activeIndex={thumbIndex}
+            autoWidth={true}
+            disableDotsControls={true}
+            disableButtonsControls={true}
+            items={thumbs}
+            mouseTracking={true}
+            onSlideChanged={syncThumbs}
+            touchTracking={true}
+          />
+        </div>
+      </div>
+    </div>
   );
 };
 
