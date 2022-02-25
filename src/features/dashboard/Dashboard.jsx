@@ -43,6 +43,7 @@ import SignIn from './../components/form/SignIn';
 import BackToTop from '../toolbox/buttons/BackToTop';
 import Vacantions from '../components/career/Vacantions';
 import Team from '../components/team/Team';
+import Biznis from '../components/biznis/Bizniz';
 
 const Dashboard = () => {
   const [isVisible, setIsVisible] = React.useState(false);
@@ -133,6 +134,8 @@ const Dashboard = () => {
         <Route path="/login" element={<SignIn />} />
         <Route path="/register" element={<SignUp />} />
         <Route path="/team2"element={<Team/>} />
+
+        <Route path="/biznis"element={<Biznis/>} />
 
       </Routes>
     </div>
