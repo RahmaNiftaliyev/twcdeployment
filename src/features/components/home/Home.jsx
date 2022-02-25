@@ -1,6 +1,7 @@
 // @ts-nocheck
 import React, { useState, useEffect } from 'react';
 import Gallery from '../../toolbox/gallery/Gallery';
+import Team2 from './../team/Team2'
 import GalleryTestimonials from '../../toolbox/gallery/GalleryTestimonials';
 import ChatBox from './../../toolbox/chat/ChatBox';
 import ChatApp from './../../toolbox/chat/ChatApp';
@@ -112,19 +113,8 @@ const Home = ({ homeProps }) => {
       </div>
 
       {/*Our team*/}
-      <div className={`${styles.our_team}`}>
-        <p>Peşəkar komandamız</p>
-        <h2>
-          Ən son layihədə iştirak <span className={`${styles.line_home_divider}`}></span> edən komanda üzvlərimiz{' '}
-        </h2>
-        <div className={`${styles.slide_dot}`}>
-          <div></div>
-          <div></div>
-          <div></div>
-        </div>
-      </div>
       <div className="galler-container">
-        <Gallery images={allMembers} localClassData={`${styles.team_card}`} />
+        <Team2 />
       </div>
       <div className={`${styles.text_sec}`}>
         <p>
