@@ -24,19 +24,7 @@ const AboutOurTeam = () => {
         textStructure={'Peşəkar komandamızla biznesinizin uğura gedən yolu'}
         textStructureData={'The way to success of your business with our professional team'}
       />
-
-      <div className={`${styles.our_team} d-flex direction-column justify-center align-center`}>
-        <p className={`${styles.our_team_sub_title}`}>Professİonal komandamız</p>
-        <h2>
-          Ən son layihədə iştirak <br /> edən komanda üzvlərimiz{' '}
-        </h2>
-        <div className={`${styles.circle_options} d-flex justify-between`}>
-          <div className={`${styles.circle} ${styles.activ_circle}`}></div>
-          <div className={`${styles.circle} `}></div>
-          <div className={`${styles.circle} `}></div>
-        </div>
-      </div>
-      {/* <Gallery images={allMembers} localClassData={`${styles.team_card}`} /> */}
+       <Gallery  />
       <div className={`${styles.our_team} d-flex direction-column justify-center align-center`}>
         <div className={`${styles.container}`}>
           <section className={`${styles.topic_section} d-flex`}>
