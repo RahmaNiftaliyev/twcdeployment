@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { selectAllIndustries } from '../industry/industriesSlice';
 import { useSelector } from 'react-redux';
 import { useState } from 'react';

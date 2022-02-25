@@ -13,7 +13,7 @@ const Gallery = () => {
     return allMembers.map((item, i) => (
       <div className="thumb" onClick={() => (setThumbIndex(i), setThumbAnimation(true))}>
         <div className={`${styles.rounded_image_container}`}>
-          <img src={item.img} width="100" />
+          <img src={item.img} width="100" alt={`TWC professional team member ${item.name}`} />
         </div>
         <h3 className={`${styles.thumb_item_name}`}>{item.name}</h3>
         <p className={`${styles.thumb_item_position}`}>{item.position}</p>
