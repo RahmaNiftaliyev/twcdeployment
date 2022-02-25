@@ -132,8 +132,6 @@ const Dashboard = () => {
 
         <Route path="/login" element={<SignIn />} />
         <Route path="/register" element={<SignUp />} />
-        <Route path="/team2"element={<Team/>} />
-
       </Routes>
     </div>
   );
