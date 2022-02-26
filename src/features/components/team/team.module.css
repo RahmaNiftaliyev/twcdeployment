@@ -41,7 +41,7 @@
 
 .team_member_job_title {
     font-size: 30px;
-    font-weight: 400;
+    font-weight: 500;
     color: #5e5e5e;
 }
 
@@ -78,8 +78,8 @@
 }
 
 .team_member_thumb_section {
-    width: 200px;
-    position: relative;
+    width: 200px!important;
+    margin: 0px!important;
     z-index: 999;
 }
 
