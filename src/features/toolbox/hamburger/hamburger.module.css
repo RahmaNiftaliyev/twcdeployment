@@ -70,6 +70,7 @@ img[alt='slider menu bg'] {
   margin: auto;
   position: relative;
   z-index:500;
+  left: calc((100% - 248px) / 2);
 }
 
 

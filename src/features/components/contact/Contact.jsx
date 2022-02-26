@@ -87,7 +87,7 @@ const Contact = () => {
               aria-labelledby="message"
               required={true}
               value={message}
-              placeholder={''}
+              placeholder="Mesaj*"
               onChange={(e) => setMessage(e.target.value)}
             />
             <button disabled={!canSubmit}>

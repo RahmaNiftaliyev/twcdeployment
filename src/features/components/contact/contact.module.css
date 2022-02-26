@@ -86,7 +86,8 @@ form h2 {
   margin-top: 35px
 }
 .form input[type=email],
-.form input[type=text] {
+.form input[type=text]
+ {
   width: 499px;
   height: 26px;
   background: #fff;
@@ -96,8 +97,19 @@ form h2 {
   padding-bottom: 13px;
   box-sizing: content-box
 }
+
+.form  textarea {
+  background: #fff;
+  border: 1px solid #f5f5f3;
+  padding-left: 15px;
+  padding-top: 13px;
+  padding-bottom: 13px;
+}
+
+
 form > input[type=email]::placeholder,
-form > input[type=text]::placeholder {
+form > input[type=text]::placeholder,
+form > textarea::placeholder {
   font-weight: 400;
   font-size: 14px;
   line-height: 26px;
