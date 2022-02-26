@@ -42,8 +42,8 @@ import SignUp from './../components/form/SignUp';
 import SignIn from './../components/form/SignIn';
 import BackToTop from '../toolbox/buttons/BackToTop';
 import Vacantions from '../components/career/Vacantions';
-import Team from '../components/team/Team';
-import Biznis from '../components/biznis/Bizniz';
+
+
 
 const Dashboard = () => {
   const [isVisible, setIsVisible] = React.useState(false);

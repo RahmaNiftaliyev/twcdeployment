@@ -20,8 +20,8 @@ import article1 from '../articles/assets/img/ntflx.png';
 import article2 from '../articles/assets/img/alcohol-cover.png';
 import article3 from '../articles/assets/img/cargo-cover.png';
 import article4 from '../articles/assets/img/startup.png';
-import Bizniz from '../biznis/Bizniz';
-import Biznizmodal from '../biznis/Biznezmodal';
+import Business from '../business/Business';
+import BusinessModel from '../business/BusinessModel';
 
 
 const Home = ({ homeProps }) => {
@@ -65,7 +65,7 @@ const Home = ({ homeProps }) => {
 
   return (
     <main className={`mb-top-padding ${styles.main_padding}`}>
-      <Biznizmodal display={display} renderedIndustries={renderedIndustries} setDisplay={setDisplay} />
+      <BusinessModel display={display} renderedIndustries={renderedIndustries} setDisplay={setDisplay} />
       <div className={`${styles.services}`}>
         <div className={`${styles.services_describtion}`}>
           <AnimationOnScroll animateIn="animate__backInLeft">
@@ -84,7 +84,7 @@ const Home = ({ homeProps }) => {
           <h2 className={`${styles.mt_40_1}`}>Sizin biznes istiqamətiniz?</h2>
           <AnimationOnScroll animateIn="animate__backInRight">
             <div className={`flex-mb-column flex-mb-column mb-align-center display-mb-flex ${styles.mt_40_1}`}>
-              <Bizniz display={display} renderedIndustries={renderedIndustries} setDisplay={setDisplay} />
+              <Business display={display} renderedIndustries={renderedIndustries} setDisplay={setDisplay} />
             </div>
           </AnimationOnScroll>
         </div>
