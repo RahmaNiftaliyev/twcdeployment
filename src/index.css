@@ -646,7 +646,7 @@ button {
   margin: 0;
   padding: 34px 15px 20px;
   width: 306px;
-  color: #444!important;
+  color: #444 !important;
   background-color: #fff
 }
 
@@ -687,31 +687,13 @@ button {
   margin: 0px !important;
 }
 
-.thumbs .alice-carousel__stage {
-  transition: all ease 1s;
-}
-
 .thumbs .alice-carousel__stage-item {
   width: 20%;
 }
 
-.thumbs .alice-carousel__stage .__active .team_team_member_thumb_img_container__gZMmF {
-  animation: thumbAnim 2s ease 0s 1 normal forwards;
-}
+/* !Class for thumb animation */
+/* .thumbs .alice-carousel__stage .__active .team_team_member_thumb_img_container__gZMmF {} */
 
-@keyframes thumbAnim {
-  0% {
-    transform: scale(1);
-  }
-
-  50% {
-    transform: scale(1.1);
-  }
-
-  100% {
-    transform: scale(1);
-  }
-}
 
 .main {
   max-width: 425px;
