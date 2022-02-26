@@ -79,7 +79,7 @@
 
 .team_member_thumb_section {
     width: 200px!important;
-    margin: 0px!important;
+    margin: 0px auto;
     z-index: 999;
 }
 

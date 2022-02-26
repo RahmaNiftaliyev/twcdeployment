@@ -688,7 +688,7 @@ button {
 }
 
 .thumbs .alice-carousel__stage-item {
-  width: 20%;
+  width: 16.6% !important;
 }
 
 /* !Class for thumb animation */
