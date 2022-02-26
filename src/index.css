@@ -905,6 +905,9 @@ input.text-area-placeholder-changer::placeholder {
     margin-top: 40px!important
   }
 
+  .display-mb-block {
+    display: block;
+  }
 
   .mb-mb-20 {
     margin-bottom: 20px;
