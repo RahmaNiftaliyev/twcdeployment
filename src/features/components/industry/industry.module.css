@@ -40,6 +40,12 @@
   color: #878787;
   margin-bottom: 20px
 }
+.paragraph_title{
+  font-size: 36px!important;
+  line-height: 44px!important;
+  color: #171717!important;
+  margin: 42px 0px!important;
+}
 .education_list_title {
   margin-bottom: 20px;
   color: #212121

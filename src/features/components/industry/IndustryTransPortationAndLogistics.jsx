@@ -24,7 +24,7 @@ const IndustryTransPortationAndLogistics = () => {
                 </section>
                 <section className={`d-flex direction-column`}>
                     <span className={`${styles.header_subtitle}`}>Sənaye</span>
-                    <span className={`${styles.header_title}`}>Təchizat</span>
+                    <span className={`${styles.header_title}`}>Transportasiya və logistika</span>
                 </section>
                 <section className={`${styles.paragraph_section}`}>
                     <p>

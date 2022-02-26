@@ -11,7 +11,6 @@ import { Link, useNavigate } from 'react-router-dom';
 import { AnimationOnScroll } from 'react-animation-on-scroll';
 import { useSelector } from 'react-redux';
 import { selectAllIndustries } from '../industry/industriesSlice';
-import { selectAllMembers } from '../about/aboutSlice';
 import { selectAllTestimonials } from './../testimonials/testimonialsSlice';
 import styles from './home.module.css';
 // !----------------------------------------------------------
@@ -22,15 +21,25 @@ import article3 from '../articles/assets/img/cargo-cover.png';
 import article4 from '../articles/assets/img/startup.png';
 import Business from '../business/Business';
 import BusinessModel from '../business/BusinessModel';
-
+import Team from '../team/Team';
 
 const Home = ({ homeProps }) => {
+  const navigate = useNavigate();
   const industries = useSelector(selectAllIndustries);
-  const allMembers = useSelector(selectAllMembers);
   const [firstMessageEmail, setFirstMessageEmail] = React.useState(false);
+  const [display, setDisplay] = useState(false);
+
   const testimonialsData = useSelector(selectAllTestimonials).map((testimonial) => {
     return testimonial.img;
   });
+
+  const handleNavigation = (paramsPath) => {
+    navigate(paramsPath);
+  };
+
+  const handleNavigateArticle = () => {
+    navigate('/ideas');
+  };
 
   const handleScroll = () => {
     if (document.body.scrollTop > 140 || document.documentElement.scrollTop > 140) {
@@ -40,28 +49,20 @@ const Home = ({ homeProps }) => {
     }
   };
 
-  window.addEventListener('scroll', handleScroll);
-
-  const [display, setDisplay] = useState(false);
-
   const renderedIndustries = industries.map((industry, index) => (
-    <div key={industry.id} className={styles.business_item} onClick={()=>{handleNavigation(industry.link)}}>
+    <div
+      key={industry.id}
+      className={styles.business_item}
+      onClick={() => {
+        handleNavigation(industry.link);
+      }}
+    >
       <img src={industry.img} className={`${styles.industry_images}`} alt={`industries service ${industry.name}`} />
       <p className={`${styles.industry_names}`}>{industry.name}</p>
     </div>
-  ))
+  ));
 
-
-
-  const navigate = useNavigate();
-
-  const handleNavigation = (paramsPath) => {
-    navigate(paramsPath);
-  };
-
-  const handleNavigateArticle = () => {
-    navigate('/ideas');
-  };
+  window.addEventListener('scroll', handleScroll);
 
   return (
     <main className={`mb-top-padding ${styles.main_padding}`}>
@@ -109,10 +110,8 @@ const Home = ({ homeProps }) => {
           />
         }
       </div>
-
-      {/*Our team*/}
-      <div className="galler-container">
-        <Gallery />
+      <div className="team-container">
+        <Team />
       </div>
       <div className={`${styles.text_sec}`}>
         <p>

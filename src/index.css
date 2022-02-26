@@ -459,8 +459,8 @@ button {
 .header-img-industry {
   width: calc(100% - 340px)!important
 }
-.galler-container {
-  padding-top: 53px;
+.team-container{
+  padding-top: 153px;
   margin-bottom: 53px
 }
 .container-team-data {
