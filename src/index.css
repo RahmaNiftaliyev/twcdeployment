@@ -396,7 +396,7 @@ button {
 }
 
 .animated-css-able-1 {
-  top: 21.5px;
+  top:calc((100% - 8px) / 2)!important;
   position: absolute;
   opacity: 1;
   left: -8px;
@@ -408,7 +408,7 @@ button {
 }
 
 .animated-css-able-2 {
-  top: 21.5px;
+  top:calc((100% - 8px) / 2)!important;
   position: absolute;
   left: -60px;
   opacity: 0;
@@ -421,7 +421,7 @@ button {
 
 .opacity-0,
 .opacity-1 {
-  top: 21.5px;
+   top:calc((100% - 8px) / 2)!important;
   position: absolute
 }
 
@@ -1082,6 +1082,9 @@ input.text-area-placeholder-changer::placeholder {
     margin-top: 40px !important
   }
 
+  .display-mb-block {
+    display: block;
+  }
 
   .mb-mb-20 {
     margin-bottom: 20px;

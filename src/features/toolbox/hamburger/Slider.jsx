@@ -1,14 +1,22 @@
 // @ts-nocheck
 import React, { useState } from 'react';
+import GalleryServices from './../gallery/GalleryServices'
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { selectAllLinks } from './../../navigation/navigationSlice';
+import { selectAllServices } from './../../components/services/servicesSlice'
 import styles from './hamburger.module.css';
 import icon from './assets/img/menu-x-icon.svg';
 import sliderTwc from './../../components/common/assets/svg/navigation-slider.svg';
 import { useNavigate } from 'react-router-dom';
 
 const Slider = ({ classData, handleSliderClick, conditionView }) => {
+
+
+
+  const allServices = useSelector(selectAllServices)
+
+
   const allLinks = useSelector(selectAllLinks);
   let naviMainData = allLinks.map((item) => {
     return { link: item.link, name: item.name, id: item.id, hasSubmenu: item.hasSubmenu };
@@ -48,7 +56,11 @@ const Slider = ({ classData, handleSliderClick, conditionView }) => {
 
   const mainMenu = naviMainData.map((item) => {
     return (
-      <li onClick={() => handleNaviAnimation(item)} className={`${styles.animate_character} mb-mb-20`} key={item.id}>
+      <li
+        onClick={() => handleNaviAnimation(item)}
+        className={`${styles.animate_character} mb-mb-20 display_none display-mb-block`}
+        key={item.id}
+      >
         {item.name}
       </li>
     );
@@ -77,10 +89,9 @@ const Slider = ({ classData, handleSliderClick, conditionView }) => {
         }}
       />
 
-      <ul className={`${styles.menu_centerer}`} st>
+      <ul className={`${styles.menu_centerer}`}>
         {mainMenu}
       </ul>
-
       <p className={`mobile-display-none text-upper text-white ${styles.slider_paragraph}`}>
         BİZNESİNİZİ TWC İLƏ YÜKSƏLDİN
       </p>
@@ -88,6 +99,18 @@ const Slider = ({ classData, handleSliderClick, conditionView }) => {
       <p className={`mobile-display-none ${styles.twc_difference}`}>
         Peşəkar komandamızla TWC sizə uğurlu biznesinizi qurmağa <br /> və inkişaf etdirməyə imkan verir.
       </p>
+      <h2 className={`${styles.header_text} mobile-display-none`}>Konsalting servislərimiz</h2>
+      <GalleryServices 
+        data={allServices} 
+        className="alice-without-image" 
+        boxContainerClass={`${styles.service_logo_group} mobile-display-none d-flex  justify-between`}
+        boxClass={`${styles.service_logo_box} d-flex direction-column align-center justify-center `}
+        imgClass={`${styles.service_logo}`}
+        spanClass={`${styles.service_logo_sub_title}`}
+        isWhite={true}
+        buttonSize="32px"
+      />
+      
     </div>
   );
 };
