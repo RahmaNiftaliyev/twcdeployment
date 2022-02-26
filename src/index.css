@@ -326,7 +326,7 @@ button {
   border-radius: 100%
 }
 .animated-css-able-1 {
-  top: 21.5px;
+  top:calc((100% - 8px) / 2)!important;
   position: absolute;
   opacity: 1;
   left: -8px;
@@ -337,7 +337,7 @@ button {
   animation-delay: 0s
 }
 .animated-css-able-2 {
-  top: 21.5px;
+  top:calc((100% - 8px) / 2)!important;
   position: absolute;
   left: -60px;
   opacity: 0;
@@ -349,7 +349,7 @@ button {
 }
 .opacity-0,
 .opacity-1 {
-  top: 21.5px;
+   top:calc((100% - 8px) / 2)!important;
   position: absolute
 }
 .opacity-0 {

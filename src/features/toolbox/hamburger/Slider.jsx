@@ -108,6 +108,7 @@ const Slider = ({ classData, handleSliderClick, conditionView }) => {
         imgClass={`${styles.service_logo}`}
         spanClass={`${styles.service_logo_sub_title}`}
         isWhite={true}
+        buttonSize="32px"
       />
       
     </div>

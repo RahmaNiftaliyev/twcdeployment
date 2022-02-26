@@ -21,7 +21,7 @@ img[alt='slider menu bg'] {
   font-size: 43px;
   font-weight: 400;
   line-height: 1.2em;
-  margin:100px 0 25px 0;
+  margin:100px 0 100px 0;
   word-wrap: break-word;
   color: #fff
 }
@@ -74,8 +74,8 @@ img[alt='slider menu bg'] {
 
 
 .service_logo {
-  width: 64px;
-  height: 64px;
+  width: 32px;
+  height: 32px;
   margin-bottom: 22px;
   -webkit-filter: brightness(0) invert(1);
  filter: brightness(0) invert(1); 
