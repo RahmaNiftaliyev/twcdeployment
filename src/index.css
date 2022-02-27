@@ -864,13 +864,19 @@ input.text-area-placeholder-changer::placeholder {
   background-color: rgba(2, 117, 216, .25)
 }
 
+@media screen and (max-width:1200px) {
+  .thumbs .alice-carousel__stage-item {
+    width: 25%!important;
+  }
+}
+
 @media screen and (max-width:767px) {
   .navigation-container {
     flex-direction: column
   }
 
   .thumbs .alice-carousel__stage-item {
-    width: 50%;
+    width: 50%!important;
   }
 
   .main {
