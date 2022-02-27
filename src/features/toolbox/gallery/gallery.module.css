@@ -124,7 +124,7 @@
 
 .thumb_item_name{
 
-    font-size: 16px;
+    font-size: 19px;
     font-weight: 500;
     color: #171717;
     text-align: center;
@@ -153,13 +153,8 @@
 
 }
 
-.our_team__top
- {
-     height: 250px;
-     justify-content: center;
- }
 .main_container_team_top{
-    height: 375px;
+    height: 300px;
     width: 100%;
   
 }
@@ -169,13 +164,12 @@
     margin-left: auto;
     margin-right: auto;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
   
 }
 
 .img_item_img > img {
     width: 100%;
-    margin-bottom: 100px;
     /* background-color: green; */
 }
 
@@ -184,9 +178,6 @@
     /* background-color: red; */
     width: 100%;
     padding-left: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
 
 }
 .img_item_content{
@@ -200,7 +191,7 @@
 
 .position_protecter > h2 {
     font-weight: 300;
-    font-size: 16px;
+    font-size: 14px;
     color: #171717;
     line-height: 16px;
 
@@ -208,9 +199,9 @@
 
 .position_protecter > h3 {
     font-weight: 300;
-    font-size: 14px;
+    font-size: 16px;
     color: #aaa;
-    line-height: 14px;
+    line-height: 16px;
     
 } 
 
@@ -220,14 +211,13 @@
     max-width: 100%;
     font-size: 12px;
     margin-top: 0px;
-    margin-bottom: 100px;
 }
 
 
 .main_container_team_bottom {
     height: auto;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding: 10px;
+
 }
 
 
@@ -237,16 +227,8 @@
 }
 
 .mb_styles_ul {
-    width: 190px;
-}
-
-
-.thumb_item_name{
-
-    font-size: 16px;
-    font-weight: 400;
-    color: #171717;
-    text-align: center;
+    width: max-content;
+    padding: 0 10px;
 }
 
 }
