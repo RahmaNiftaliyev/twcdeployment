@@ -57,7 +57,7 @@ const Gallery = () => {
         </h2>
       </div>
       <AliceCarousel
-        animationDuration={2400}
+        animationDuration={4800}
         disableDotsControls={true}
         disableButtonsControls={true}
         autoPlay={true}

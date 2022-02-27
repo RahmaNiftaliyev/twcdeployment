@@ -728,6 +728,12 @@ input.text-area-placeholder-changer::placeholder {
   transition: .28s ease-in-out;
   background-color: rgba(2,117,216,.25)
 }
+
+
+.galler-container {
+  margin-top: 100px;
+}
+
 @media screen and (max-width:767px) {
 
 
