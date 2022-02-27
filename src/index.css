@@ -729,6 +729,18 @@ input.text-area-placeholder-changer::placeholder {
   background-color: rgba(2,117,216,.25)
 }
 @media screen and (max-width:767px) {
+
+
+  .team-container {
+  padding-top: 23px;
+  margin-bottom: 23px
+}
+
+
+.team-responsive .alice-carousel__stage-item {
+  width: max-content!important;
+}
+
   .navigation-container {
     flex-direction: column
   }

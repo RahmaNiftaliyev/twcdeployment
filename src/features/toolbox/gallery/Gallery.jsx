@@ -9,6 +9,14 @@ import styles from './gallery.module.css';
 const Gallery = () => {
   const allMembers = useSelector(selectAllMembers);
 
+  const responsive = {
+    0: { items: 1 },
+    568: { items: 1 },
+    1024: { items: 1 },
+    1440: { items: 1 }
+  };
+
+
   const mainSlide = allMembers.map((oneOfThem) => {
     return (
       <div className={`${styles.main_container_team_top}`}>
@@ -30,7 +38,7 @@ const Gallery = () => {
 
   const thumbItems = allMembers.map((item) => {
     return (
-      <div className="thumb">
+      <div className={`thumb ${styles.botttom_image_rounded_container} ${styles.mb_styles_ul}`}>
         <div className={`${styles.rounded_image_container}`}>
           <img src={item.img} width="100" alt={`TWC professional team member ${item.name}`} />
         </div>
@@ -41,7 +49,7 @@ const Gallery = () => {
   });
 
   return (
-    <div className={`${styles.main_container_team}`}>
+    <div className={`${styles.main_container_team} `}>
       <div class={`${styles.our_team__top}`}>
         <p>Peşəkar komandamız</p>
         <h2>
@@ -57,9 +65,10 @@ const Gallery = () => {
         items={mainSlide}
         mouseTracking={true}
         touchTracking={true}
+        responsive={responsive}
       />
 
-      <div className={`${styles.main_container_team_bottom}`}>
+      <div className={`${styles.main_container_team_bottom} team-responsive`}>
         <div className="thumbs" style={{ width: '100%' }}>
           <AliceCarousel
             autoWidth={true}
@@ -68,6 +77,7 @@ const Gallery = () => {
             items={thumbItems}
             mouseTracking={true}
             touchTracking={true}
+            responsive={responsive} 
           />
         </div>
       </div>
