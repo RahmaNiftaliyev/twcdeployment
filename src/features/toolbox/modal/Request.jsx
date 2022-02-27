@@ -17,7 +17,6 @@ const Request = ({ classData, classRemover }) => {
     const isSaving = [fullName, email, number, content.message].some((content) => Boolean(content));
 
     if (isSaving) {
-      debugger;
       alertify.confirm(
         'TWC.AZ',
         'Şəxsi Məlumatlarınız Saxlanılsın ?',
@@ -107,7 +106,7 @@ const Request = ({ classData, classRemover }) => {
             Göndər <img src={arrow} alt="arrow svg button design" />
           </button>
           &nbsp; &nbsp;
-          <button type="button" onClick={() => handleErrorView()}>
+          <button type="button" onClick={handleErrorView}>
             Geri qayıt
           </button>
         </form>

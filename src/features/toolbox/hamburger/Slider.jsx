@@ -1,27 +1,24 @@
 // @ts-nocheck
 import React, { useState } from 'react';
-import GalleryServices from './../gallery/GalleryServices'
+import GalleryServices from './../gallery/GalleryServices';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { selectAllLinks } from './../../navigation/navigationSlice';
-import { selectAllServices } from './../../components/services/servicesSlice'
+import { selectAllServices } from './../../components/services/servicesSlice';
 import styles from './hamburger.module.css';
 import icon from './assets/img/menu-x-icon.svg';
 import sliderTwc from './../../components/common/assets/svg/navigation-slider.svg';
 import { useNavigate } from 'react-router-dom';
 
 const Slider = ({ classData, handleSliderClick, conditionView }) => {
-
-
-
-  const allServices = useSelector(selectAllServices)
-
+  const allServices = useSelector(selectAllServices);
 
   const allLinks = useSelector(selectAllLinks);
   let naviMainData = allLinks.map((item) => {
     return { link: item.link, name: item.name, id: item.id, hasSubmenu: item.hasSubmenu };
   });
   const [toggle, setToggle] = useState(false);
+  const [oneTime,setOneTime] = useState(true)
   const [finded, setFinded] = useState([]);
 
   const navigate = useNavigate();
@@ -32,38 +29,62 @@ const Slider = ({ classData, handleSliderClick, conditionView }) => {
     }
   };
 
-  const dataFinder = (paramsId) => {
-    const finded = allLinks.find((item) => {
-      return item.id === paramsId;
-    });
-    return finded.subMenus;
-  };
-
   const handleNaviAnimation = (paramsNaviItem) => {
     if (paramsNaviItem.hasSubmenu) {
-
-      setFinded((previousValue) => {
-        while(previousValue.length > 0){
-          previousValue.pop();
-        }
-      return previousValue.concat(dataFinder(paramsNaviItem.id));
-      });
-      console.log(finded);
+      const { subMenus } = allLinks.find((item) => item.id === paramsNaviItem.id);
+      setFinded(previouseValue => previouseValue.concat(subMenus));
+      setToggle(!toggle);
     }
 
     routerHelper(paramsNaviItem.link);
   };
 
-  const mainMenu = naviMainData.map((item) => {
+  //
+
+  const setMainMenu = (item) => {
     return (
       <li
         onClick={() => handleNaviAnimation(item)}
-        className={`${styles.animate_character} mb-mb-20 display_none display-mb-block`}
         key={item.id}
+        className={`${styles.animate_character} mb-mb-20 display_none display-mb-block`}
       >
         {item.name}
       </li>
     );
+  };
+
+  const setSubMenu = (item,index) => {
+    debugger
+    if(oneTime) {
+      debugger
+          if (index === 0) {
+            return (
+              <li
+                onClick={() => handleNaviAnimation(item)}
+                key={item.id}
+                className={`${styles.animate_character} mb-mb-20 display_none display-mb-block`}
+              >
+                {item.name}
+              </li>
+            );
+          } else {
+            debugger
+              return (
+                <li
+                  key={finded[index].id}
+                  className={`${styles.animate_character} mb-mb-20 display_none display-mb-block`}
+                >
+                  <Link to={finded[index].link}>{finded[index].name}</Link>
+                </li>
+              );
+
+
+          }
+    }
+  };
+
+  const mainMenu = naviMainData.map((item, index) => {
+    return !toggle ? setMainMenu(item,index) : setSubMenu(item, index) 
   });
 
   return (
@@ -89,9 +110,7 @@ const Slider = ({ classData, handleSliderClick, conditionView }) => {
         }}
       />
 
-      <ul className={`${styles.menu_centerer}`}>
-        {mainMenu}
-      </ul>
+      <ul className={`${styles.menu_centerer}`}>{mainMenu}</ul>
       <p className={`mobile-display-none text-upper text-white ${styles.slider_paragraph}`}>
         BİZNESİNİZİ TWC İLƏ YÜKSƏLDİN
       </p>
@@ -99,10 +118,10 @@ const Slider = ({ classData, handleSliderClick, conditionView }) => {
       <p className={`mobile-display-none ${styles.twc_difference}`}>
         Peşəkar komandamızla TWC sizə uğurlu biznesinizi qurmağa <br /> və inkişaf etdirməyə imkan verir.
       </p>
-      <h2 className={`${styles.header_text} mobile-display-none`}>Konsalting servislərimiz</h2>
-      <GalleryServices 
-        data={allServices} 
-        className="alice-without-image" 
+      <h2 className={`${styles.header_text} ${styles.animate_character} mobile-display-none`}>Konsalting servislərimiz</h2>
+      <GalleryServices
+        data={allServices}
+        className="alice-without-image"
         boxContainerClass={`${styles.service_logo_group} mobile-display-none d-flex  justify-between`}
         boxClass={`${styles.service_logo_box} d-flex direction-column align-center justify-center `}
         imgClass={`${styles.service_logo}`}
@@ -110,7 +129,6 @@ const Slider = ({ classData, handleSliderClick, conditionView }) => {
         isWhite={true}
         buttonSize="32px"
       />
-      
     </div>
   );
 };

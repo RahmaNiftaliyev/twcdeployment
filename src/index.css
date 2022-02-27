@@ -456,6 +456,12 @@ button {
     left: -8px
   }
 }
+
+
+.line_home_divider {
+  display: block!important
+}
+
 .header-img-industry {
   width: calc(100% - 340px)!important
 }
@@ -732,6 +738,14 @@ input.text-area-placeholder-changer::placeholder {
   .navigation-container {
     flex-direction: column
   }
+
+
+ .line_home_divider {
+  display: inline-block!important
+}
+
+
+
 .main {
     width: 100%;
     height: 100vh;

@@ -70,7 +70,7 @@ const Home = ({ homeProps }) => {
       <div className={`${styles.services}`}>
         <div className={`${styles.services_describtion}`}>
           <AnimationOnScroll animateIn="animate__backInLeft">
-            <h2 className="size-font-mb-h2">
+            <h2 className={`size-font-mb-h2`}>
               Sizə necə kömək <br /> edə bilərik?
             </h2>
           </AnimationOnScroll>
@@ -82,7 +82,7 @@ const Home = ({ homeProps }) => {
         </div>
 
         <div className={`${styles.services_list_container}`}>
-          <h2 className={`${styles.mt_40_1}`}>Sizin biznes istiqamətiniz?</h2>
+          <h2 className={`${styles.mt_40_1} ${styles.header_margin_left}`}>Sizin biznes istiqamətiniz?</h2>
           <AnimationOnScroll animateIn="animate__backInRight">
             <div className={`flex-mb-column flex-mb-column mb-align-center display-mb-flex ${styles.mt_40_1}`}>
               <Business display={display} renderedIndustries={renderedIndustries} setDisplay={setDisplay} />

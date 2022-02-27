@@ -18,7 +18,7 @@ const Contact = () => {
   };
 
   return (
-    <main className="mobile-padding">
+    <main >
       <section className={`${styles.map_numbers}`}>
         <div className={`${styles.map}`}>
           <GoogleMapFancyLoader />
@@ -28,19 +28,19 @@ const Contact = () => {
             <div>
               <span>ƏLAQƏ</span>
               <h2>
-                Bizimlə əlaqə saxlayın <br />
+                Bizimlə əlaqə saxlayın <span className="line_home_divider"></span> 
                 və ya ofisimizə yaxınlaşın
               </h2>
               <div className={`${styles.contact_informations}`}>
                 <div>
-                  <a href="mailto:info@thinkwise.az">info@thinkwise.az</a> <br />
-                  <a href="tel:+994 50 447 10 90">+994 50 447 10 90</a> <br />
+                  <a href="mailto:info@thinkwise.az">info@thinkwise.az</a> <span className="line_home_divider"></span> 
+                  <a href="tel:+994 50 447 10 90">+994 50 447 10 90</a> <span className="line_home_divider"></span> 
                   <a href="tel:+994 50 447 10 90">+994 50 447 10 90</a>
                 </div>
 
                 <p>
-                  Nobel prospekti 15, <br /> Azure Biznes Mərkəzi <br />
-                  Mərtəbə 17, Otaq 118
+                <a href="#">Nobel prospekti 15,</a> <span className="line_home_divider"></span> <a href="#">Azure Biznes Mərkəzi</a> <span className="line_home_divider"></span> 
+                 <a href="#"> Mərtəbə 17, Otaq 118</a>
                 </p>
               </div>
             </div>
@@ -54,8 +54,8 @@ const Contact = () => {
             <AnimationOnScroll animateIn="animate__zoomInDown">
               <span>ƏLAQƏ</span>
               <h2>
-                Müraciətinizi burada <br />
-                qeyd edə bilərsiniz
+                Müraciətinizi burada<span className="line_home_divider"></span> 
+                &nbsp;qeyd edə bilərsiniz
               </h2>
             </AnimationOnScroll>
 

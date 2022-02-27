@@ -225,25 +225,45 @@ section.vacantion > h4 {
     height: 350px
   }
   .join_vacation p {
-    width: 50%
+    width: 100%
   }
+
   .join_vacation button {
-    position: absolute!important;
-    top: 20px
+    position:static!important;
   }
-  .join_vacation button {
-    right: 15px!important;
-    height: 90px!important
+
+    .join_vacation {
+    padding: 20px 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
-}
+
+
+  }
 @media screen and (max-width:767px) {
+
+  .join_vacation button {
+    position:static!important;
+  }
+
+    .join_vacation {
+    padding: 20px 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+
   .vacancy_container {
     padding: 49px 20px
   }
 }
 @media screen and (max-width:940px) {
   .bg_container {
-    height: 200px
+    height: 200px;
+    padding-left:10px;
+    padding-right:10px;
   }
   .career_main {
     padding: 170px 20px
@@ -255,14 +275,17 @@ section.vacantion > h4 {
   }
   .content_img,
   .content_text {
-    width: 100%
+    width: 100%;
   }
-  .join_vacation {
-    padding: 20px 15px
+
+  .content_text {
+    padding-left:10px;
   }
+  
+
   .join_vacation > p {
     font-size: 14px;
-    width: 56%
+    width: 100%
   }
   .join_vacation > h2 {
     margin-bottom: 15px

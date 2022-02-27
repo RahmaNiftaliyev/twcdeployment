@@ -6,6 +6,7 @@ import  store  from './app/store';
 import * as serviceWorker from './serviceWorker';
 import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
+import 'alertifyjs/build/css/alertify.min.css'
 import 'animate.css/animate.min.css';
 import 'animate.css';
 import './index.css';

@@ -37,8 +37,8 @@ const Career = () => {
         <Request classData={demo_class} classRemover={handleRemoveSlider} />
         <div className={`${styles.bg_container}`}>
           <h3>
-            TWC-də məqsədimizin yeganə sütunu bizim insanlarımızdır. Bizim <br /> dinamik mühitdə siz komanda tərəfindən
-            ilk gündən dəstək <br /> görməyinizə baxmayaraq, siz öz yolunuzu müəyyən edəcəksiniz. <br />
+            TWC-də məqsədimizin yeganə sütunu bizim insanlarımızdır. Bizim <span className="line_home_divider"></span> dinamik mühitdə siz komanda tərəfindən
+            ilk gündən dəstək <span className="line_home_divider"></span> görməyinizə baxmayaraq, siz öz yolunuzu müəyyən edəcəksiniz. <span className="line_home_divider"></span>
           </h3>
         </div>
         <div>
@@ -52,9 +52,9 @@ const Career = () => {
         <div className={`${styles.bg_container}`}>
           <div>
             <h3>
-              “TWC-də məqsədimizin yeganə sütunu bizim insanlarımızdır. Bizim <br />
-              dinamik mühitdə siz komanda tərəfindən ilk gündən dəstək <br /> görməyinizə baxmayaraq, siz öz yolunuzu
-              yaradacaqsınız. TWC-yə <br /> xoş gəlmisiniz”.
+              “TWC-də məqsədimizin yeganə sütunu bizim insanlarımızdır. Bizim <span className="line_home_divider"></span>
+              dinamik mühitdə siz komanda tərəfindən ilk gündən dəstək <span className="line_home_divider"></span> görməyinizə baxmayaraq, siz öz yolunuzu
+              yaradacaqsınız. TWC-yə <span className="line_home_divider"></span> xoş gəlmisiniz”.
             </h3>
             <h4>
               <strong>Çingiz Novruzzadə Təsisçi və Direktor</strong>
@@ -69,7 +69,7 @@ const Career = () => {
           <div>
             <span className={`${styles.career_span}`}>Karyera</span>
             <h4>
-              TWC-yə qoşulmağa <br />
+              TWC-yə qoşulmağa <span className="line_home_divider"></span>
               hazırsan?
             </h4>
 
@@ -87,9 +87,9 @@ const Career = () => {
             <div className={`${styles.join_vacation} animated_controller`}>
               <h2>{vacantion.name}</h2>
               <p>
-                <strong>Biz kimik?</strong> <br />
-                Cənub-Şərqi Avropanın ilk erkən mərhələdə olan saf menecement <br />
-                konsaltinq şirkəti olan TWC gənc, dinamik və istedadlı komandası ilə hər <br />
+                <strong>Biz kimik?</strong> <span className="line_home_divider"></span>
+                Cənub-Şərqi Avropanın ilk erkən mərhələdə olan saf menecement <span className="line_home_divider"></span>
+                konsaltinq şirkəti olan TWC gənc, dinamik və istedadlı komandası ilə hər <span className="line_home_divider"></span>
                 çətinliyin üstəsindən gəlməyə hazırdır.
               </p>
               <button onClick={() => handleNavigateVacancy(`${vacantion.forwarding}${vacantion.id}`)}>

@@ -148,15 +148,32 @@ form > textarea {
   .form {
     padding: 20px
   }
-  .form input[type=email],
-  .form input[type=text] {
-    padding-left: 0
-  }
+
   .form input[type=email],
   .form input[type=text],
-  form > textarea {
-    width: 100%
+  .form  textarea {
+    width: calc(100% - 40px);
   }
+
+
+  .form  textarea {
+    box-sizing:content-box;
+  }
+
+  .contact_informations a,
+  .contact_informations p {
+    font-size:14px;
+  }
+
+
+  .contact_informations p,
+  .contact_informations div {
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+  }
+
 }
 @media screen and (max-width:1130px) {
   .pic_form {
