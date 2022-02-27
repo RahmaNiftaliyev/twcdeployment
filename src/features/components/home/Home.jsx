@@ -111,7 +111,7 @@ const Home = ({ homeProps }) => {
         }
       </div>
       <div className="team-container">
-        <Team />
+        <Gallery />
       </div>
       <div className={`${styles.text_sec}`}>
         <p>

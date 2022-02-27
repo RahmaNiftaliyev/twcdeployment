@@ -53,7 +53,6 @@ body {
   overflow-x: hidden;
   background-image: url("./features/components/common/assets/png/cool-background.png")
 }
-
 button {
   cursor: pointer
 }
@@ -123,8 +122,6 @@ button {
 .display_none {
   display: none
 }
-
-
 .absolute {
   position: absolute
 }
@@ -326,7 +323,7 @@ button {
   border-radius: 100%
 }
 .animated-css-able-1 {
-  top:calc((100% - 8px) / 2)!important;
+  top: calc((100% - 8px)/ 2)!important;
   position: absolute;
   opacity: 1;
   left: -8px;
@@ -337,7 +334,7 @@ button {
   animation-delay: 0s
 }
 .animated-css-able-2 {
-  top:calc((100% - 8px) / 2)!important;
+  top: calc((100% - 8px)/ 2)!important;
   position: absolute;
   left: -60px;
   opacity: 0;
@@ -349,7 +346,7 @@ button {
 }
 .opacity-0,
 .opacity-1 {
-   top:calc((100% - 8px) / 2)!important;
+  top: calc((100% - 8px)/ 2)!important;
   position: absolute
 }
 .opacity-0 {
@@ -456,16 +453,13 @@ button {
     left: -8px
   }
 }
-
-
 .line_home_divider {
   display: block!important
 }
-
 .header-img-industry {
   width: calc(100% - 340px)!important
 }
-.team-container{
+.team-container {
   padding-top: 153px;
   margin-bottom: 53px
 }
@@ -577,12 +571,12 @@ button {
   margin-left: auto;
   margin-right: auto
 }
-.team_carousel > .alice-carousel{
-  margin: 0px!important;
+.team_carousel > .alice-carousel {
+  margin: 0!important
 }
-.thumbs .alice-carousel__stage{
+.thumbs .alice-carousel__stage {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-around
 }
 .main {
   max-width: 425px;
@@ -648,7 +642,7 @@ button {
   background-image: url("./features/components/common/assets/png/cool-background.png");
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-between
 }
 .conversation-group > img {
   position: absolute;
@@ -685,7 +679,7 @@ button {
   padding-right: 28px;
   background-color: #fff;
   position: relative;
-  background-image: url("./features/components/common/assets/png/cool-background.png");
+  background-image: url("./features/components/common/assets/png/cool-background.png")
 }
 .input-group > hr {
   margin: 0;
@@ -703,7 +697,7 @@ button {
   line-height: 24px;
   overflow-x: hidden;
   color: #171717;
-  background: url("./features/components/common/assets/png/cool-background.png");
+  background: url("./features/components/common/assets/png/cool-background.png")
 }
 .text-area-placeholder-changer::placeholder,
 input.text-area-placeholder-changer::placeholder {
@@ -738,40 +732,32 @@ input.text-area-placeholder-changer::placeholder {
   .navigation-container {
     flex-direction: column
   }
-
-
- .line_home_divider {
-  display: inline-block!important
-}
-
-
-
-.main {
+  .line_home_divider {
+    display: inline-block!important
+  }
+  .main {
     width: 100%;
     height: 100vh;
-    margin-right: 0px;
-    margin-left: 0px
+    margin-right: 0;
+    margin-left: 0
   }
   .chat-header {
-    border-top-left-radius: 0px;
-    border-top-right-radius: 0px
+    border-top-left-radius: 0;
+    border-top-right-radius: 0
   }
   .conversation-group {
-    height: calc(100vh - 366px);
+    height: calc(100vh - 366px)
   }
   .send-button {
-    right: 28px;
+    right: 28px
   }
-
-.chat-box-container-keeper {
-  top: -1px;
-  width: 100%;
-}
-
+  .chat-box-container-keeper {
+    top: -1px;
+    width: 100%
+  }
   .mobile-display-block {
     display: block
   }
-
   .mobile-display-none {
     display: none!important
   }
@@ -831,7 +817,7 @@ input.text-area-placeholder-changer::placeholder {
     padding-top: 10px;
     padding-bottom: 10px;
     cursor: pointer;
-    font-size: 20px;
+    font-size: 20px
   }
   .mb-none {
     height: 0;
@@ -918,13 +904,10 @@ input.text-area-placeholder-changer::placeholder {
   .mb-mt-40 {
     margin-top: 40px!important
   }
-
   .display-mb-block {
-    display: block;
+    display: block
   }
-
   .mb-mb-20 {
-    margin-bottom: 20px;
+    margin-bottom: 20px
   }
 }
-
