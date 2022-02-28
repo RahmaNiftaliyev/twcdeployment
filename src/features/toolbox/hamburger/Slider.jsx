@@ -36,23 +36,29 @@ const Slider = ({ classData, handleSliderClick, conditionView }) => {
         style={
           item.id === idData && toggle
             ? {
-                display: 'block',
-                animation: !animatorController ? 'slideInLeft 0.5s ease-in-out' : 'textclip 4s linear infinite'
+                display: 'block'
               }
             : item.id !== idData && toggle
-            ? { display: 'none', animation:'textclip 4s linear infinite' }
+            ? { display: 'none' }
             : {
-                display: 'block',
-                animation: !animatorController ? 'slideOutLeft 0.5s ease-in-out' : 'textclip 4s linear infinite'
+                display: 'block'
               }
         }
       >
-        <Link to={item.link} className={styles.link}>
+        <Link to={item.link} className={styles.link} style={{ fontSize: '35px' }}>
           {item.name}
         </Link>
         {item.hasSubmenu && (
           <div className={styles.submenu}>
-            <ul>
+            <ul
+              style={{
+                background: 'rgba(255,255,255,.1)',
+                marginTop: '20px',
+                width: '90%',
+                marginLeft: 'auto',
+                marginRight: 'auto',
+              }}
+            >
               {toggle &&
                 allLinks
                   .find((item) => item.id === idData)
@@ -65,9 +71,7 @@ const Slider = ({ classData, handleSliderClick, conditionView }) => {
                           navigate(`${item.link}`);
                         }}
                       >
-                        <Link to={item.link} className={styles.link}>
-                          {item.name}
-                        </Link>
+                        <Link to={item.link}>{item.name}</Link>
                       </li>
                     );
                   })}
@@ -80,45 +84,6 @@ const Slider = ({ classData, handleSliderClick, conditionView }) => {
 
   const mainMenu = allLinks.map((item, index) => {
     return setMainMenu(item);
-  });
-
-  const secondMainMenu = allLinks.map((item) => {
-    if (item.hasSubmenu) {
-      const { subMenus } = item;
-      const subMenu = subMenus.map((item) => {
-        return (
-          <li key={item.id} className={`${styles.animate_character} mb-mb-10 display_none display-mb-block`}>
-            <Link to={item.link}>{item.name}</Link>
-          </li>
-        );
-      });
-
-      return (
-        <li
-          onClick={(e) => {
-            setToggle(!toggle);
-            setFinded(e.target.innerText);
-          }}
-          key={item.id}
-          className={`${styles.animate_character} mb-mb-10 display_none display-mb-block`}
-        >
-          &bull;{item.name}
-          <div className={`${styles.submenu}`}>
-            <ul>{subMenu}</ul>
-          </div>
-        </li>
-      );
-    } else {
-      return (
-        <li
-          onClick={() => handleSliderClick(item.id)}
-          key={item.id}
-          className={`${styles.animate_character} mb-mb-10 display_none display-mb-block`}
-        >
-          <Link to={item.link}>{item.name}</Link>
-        </li>
-      );
-    }
   });
 
   return (
