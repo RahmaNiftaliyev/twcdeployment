@@ -819,9 +819,11 @@ input.text-area-placeholder-changer::placeholder {
   }
   .slider-mb {
     width: 100%;
-    padding: 50px 20px 55px 20px;
+    padding: 50px 0 55px;
     right: -100%;
-    overflow-x: hidden
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
   }
   .mb-list-item {
     text-align: center;
@@ -927,5 +929,8 @@ input.text-area-placeholder-changer::placeholder {
   }
   .mb-mb-20 {
     margin-bottom: 20px
+  }
+  .mb-mb-10 {
+    margin-bottom: 10px
   }
 }

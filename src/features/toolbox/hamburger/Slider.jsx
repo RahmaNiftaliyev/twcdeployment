@@ -11,64 +11,114 @@ import sliderTwc from './../../components/common/assets/svg/navigation-slider.sv
 import { useNavigate } from 'react-router-dom';
 
 const Slider = ({ classData, handleSliderClick, conditionView }) => {
+  // !services from service slice
   const allServices = useSelector(selectAllServices);
-
+  // !menu links from navigation slice
   const allLinks = useSelector(selectAllLinks);
-  let naviMainData = allLinks.map((item) => {
-    return { link: item.link, name: item.name, id: item.id, hasSubmenu: item.hasSubmenu };
-  });
+  const [animatorController, setAnimatorController] = useState(false);
+
   const [toggle, setToggle] = useState(false);
-  const [oneTime, setOneTime] = useState(true);
+  const [idData, setIdData] = useState('');
+  // !clicked navigation item
   const [finded, setFinded] = useState([]);
 
   const navigate = useNavigate();
 
-  const routerHelper = (paramsLink) => {
-    if (paramsLink.length > 1) {
-      navigate(paramsLink);
-    }
-  };
-
-  const handleNaviAnimation = (paramsNaviItem) => {
-    if (paramsNaviItem.hasSubmenu) {
-      const { subMenus } = allLinks.find((item) => item.id === paramsNaviItem.id);
-      setFinded((previouseValue) => previouseValue.concat(subMenus));
-      setToggle(!toggle);
-    }
-
-    routerHelper(paramsNaviItem.link);
-  };
-
-  //
-
   const setMainMenu = (item) => {
     return (
       <li
-        onClick={() => handleNaviAnimation(item)}
         key={item.id}
+        onClick={() => {
+          setToggle(!toggle);
+          setIdData(item.id);
+        }}
         className={`${styles.animate_character} mb-mb-20 display_none display-mb-block`}
+        style={
+          item.id === idData && toggle
+            ? {
+                display: 'block',
+                animation: !animatorController ? 'slideInLeft 0.5s ease-in-out' : 'textclip 4s linear infinite'
+              }
+            : item.id !== idData && toggle
+            ? { display: 'none', animation:'textclip 4s linear infinite' }
+            : {
+                display: 'block',
+                animation: !animatorController ? 'slideOutLeft 0.5s ease-in-out' : 'textclip 4s linear infinite'
+              }
+        }
       >
-        {item.name}
+        <Link to={item.link} className={styles.link}>
+          {item.name}
+        </Link>
+        {item.hasSubmenu && (
+          <div className={styles.submenu}>
+            <ul>
+              {toggle &&
+                allLinks
+                  .find((item) => item.id === idData)
+                  .subMenus.map((item) => {
+                    return (
+                      <li
+                        onClick={() => {
+                          setToggle(!toggle);
+                          setFinded(item.id);
+                          navigate(`${item.link}`);
+                        }}
+                      >
+                        <Link to={item.link} className={styles.link}>
+                          {item.name}
+                        </Link>
+                      </li>
+                    );
+                  })}
+            </ul>
+          </div>
+        )}
       </li>
     );
   };
 
-  const setSubMenu = (item) => {
-    const { id, name, link } = item;
+  const mainMenu = allLinks.map((item, index) => {
+    return setMainMenu(item);
+  });
 
-    setFinded((previouseValue) => previouseValue.unshift({ id, name, link }));
+  const secondMainMenu = allLinks.map((item) => {
+    if (item.hasSubmenu) {
+      const { subMenus } = item;
+      const subMenu = subMenus.map((item) => {
+        return (
+          <li key={item.id} className={`${styles.animate_character} mb-mb-10 display_none display-mb-block`}>
+            <Link to={item.link}>{item.name}</Link>
+          </li>
+        );
+      });
 
-    finded.map((item) => {
       return (
-        <li key={item.id} className={`${styles.animate_character} mb-mb-20 display_none display-mb-block`}>
+        <li
+          onClick={(e) => {
+            setToggle(!toggle);
+            setFinded(e.target.innerText);
+          }}
+          key={item.id}
+          className={`${styles.animate_character} mb-mb-10 display_none display-mb-block`}
+        >
+          &bull;{item.name}
+          <div className={`${styles.submenu}`}>
+            <ul>{subMenu}</ul>
+          </div>
+        </li>
+      );
+    } else {
+      return (
+        <li
+          onClick={() => handleSliderClick(item.id)}
+          key={item.id}
+          className={`${styles.animate_character} mb-mb-10 display_none display-mb-block`}
+        >
           <Link to={item.link}>{item.name}</Link>
         </li>
       );
-    });
-  };
-
-  const mainMenu = naviMainData.map((item, index) => {
-    return !toggle ? setMainMenu(item, index) : setSubMenu(item, index);
+    }
   });
 
   return (
@@ -94,7 +144,7 @@ const Slider = ({ classData, handleSliderClick, conditionView }) => {
         }}
       />
 
-      <ul className={`${styles.menu_centerer}`}>{mainMenu}</ul>
+      <ul className={`${styles.menu_centerer} display_none flex-mb-column display-mb-block`}>{mainMenu}</ul>
       <p className={`mobile-display-none text-upper text-white ${styles.slider_paragraph}`}>
         BİZNESİNİZİ TWC İLƏ YÜKSƏLDİN
       </p>
