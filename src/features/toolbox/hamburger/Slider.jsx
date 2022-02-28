@@ -15,12 +15,12 @@ const Slider = ({ classData, handleSliderClick, conditionView }) => {
   const allServices = useSelector(selectAllServices);
   // !menu links from navigation slice
   const allLinks = useSelector(selectAllLinks);
-  const [animatorController, setAnimatorController] = useState(false);
+
 
   const [toggle, setToggle] = useState(false);
   const [idData, setIdData] = useState('');
   // !clicked navigation item
-  const [finded, setFinded] = useState([]);
+
 
   const navigate = useNavigate();
 
@@ -67,7 +67,6 @@ const Slider = ({ classData, handleSliderClick, conditionView }) => {
                       <li
                         onClick={() => {
                           setToggle(!toggle);
-                          setFinded(item.id);
                           navigate(`${item.link}`);
                         }}
                       >
