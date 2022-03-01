@@ -3,7 +3,6 @@ import React from 'react';
 import AboutHeaderDash from './AboutHeaderDash';
 import Footer from './../../footer/Footer';
 import Gallery from './../../toolbox/gallery/Gallery';
-import GalleryServices from './../../toolbox/gallery/GalleryServices';
 import { useSelector } from 'react-redux';
 import { selectAllMembers } from './aboutSlice';
 import { selectAllServices } from './../services/servicesSlice';
@@ -31,7 +30,7 @@ const AboutOurTeam = () => {
             <div
               className={`${styles.paragraph_section} ${styles.team_paragraph} d-flex direction-column justify-start `}
             >
-              <span className={`${styles.sub_header}`}>LOREM IPSUM</span>
+              <span className={`${styles.sub_header}`}>Komandamız</span>
               <span className={`${styles.topic_title}`}>TWC-yə xoş gəlmisiniz</span>
               <p className={`${styles.team_desc}`}>
                 TWC ilk gündən etibarən fərqliliyi, dünyaya və bir-birimizə müsbət təsirin vacibiliyini vurğulayan
@@ -52,23 +51,6 @@ const AboutOurTeam = () => {
           </section>
         </div>
       </div>
-
-      <section className={`${styles.services_header} d-flex direction-column justify-center align-center`}>
-        <span className={`${styles.service_sub_title}`}>ProfESSİONAL KOMANDAMIZLA</span>
-        <span className={`${styles.service_title}`}>Konsaltinq Servislərimiz</span>
-        <div className={`${styles.circle_options} d-flex justify-between`}>
-          <div className={`${styles.circle} ${styles.activ_circle}`}></div>
-          <div className={`${styles.circle} `}></div>
-          <div className={`${styles.circle} `}></div>
-        </div>
-        <GalleryServices
-          data={allServices}
-          boxContainerClass={`${styles.service_logo_group} d-flex  justify-between`}
-          boxClass={`${styles.service_logo_box} d-flex direction-column align-center justify-center `}
-          imgClass={`${styles.service_logo}`}
-          spanClass={`${styles.service_logo_sub_title}`}
-        />
-      </section>
       <Footer />
     </div>
   );

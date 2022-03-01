@@ -21,9 +21,9 @@ img[alt='slider menu bg'] {
   font-size: 35px!important;
   font-weight: 400;
   line-height: 1.2em;
-  margin:100px 0 100px 0;
+  margin: 100px 0 100px 0;
   color: #fff;
-  text-align:left!important;
+  text-align: left!important
 }
 .twc_difference {
   font-size: 16px;
@@ -32,7 +32,7 @@ img[alt='slider menu bg'] {
 }
 .list_item_slider {
   font-size: 14px;
-  line-height: 26px;
+  line-height: 26px
 }
 .list_item_slider_header {
   font-size: 11px;
@@ -40,10 +40,9 @@ img[alt='slider menu bg'] {
   letter-spacing: 4.85px;
   color: rgba(255,255,255,.7)
 }
-
 .animate_character {
   text-transform: uppercase;
-  background-image: linear-gradient(    -225deg,    #fff 0%,    #171717 29%,    #fff 67%,    #171717 100%  );
+  background-image: linear-gradient(-225deg,#fff 0,#171717 29%,#fff 67%,#171717 100%);
   background-size: auto auto;
   background-clip: border-box;
   background-size: 200% auto;
@@ -54,65 +53,50 @@ img[alt='slider menu bg'] {
   -webkit-text-fill-color: transparent;
   animation: textclip 4s linear infinite;
   display: block;
-  font-size:40px;
-  text-align:center;
+  font-size: 20px;
+  text-align: center;
   -webkit-animation: textclip 4s linear infinite;
-  word-wrap:normal;
+  white-space: nowrap
 }
-
-
 @keyframes textclip {
   to {
-    background-position: 200% center;
+    background-position: 200% center
   }
 }
-
 .menu_centerer {
   margin: auto;
   position: relative;
-  z-index:500;
-  left: calc((100% - 248px) / 2);
+  z-index: 500
 }
-
-
 .service_logo {
   width: 32px;
   height: 32px;
   margin-bottom: 22px;
   -webkit-filter: brightness(0) invert(1);
- filter: brightness(0) invert(1); 
+  filter: brightness(0) invert(1)
 }
-
 .service_logo_sub_title {
   margin-bottom: 24px;
-  color:white;
-  font-size: 11px;
+  color: #fff;
+  font-size: 11px
 }
-
-
 .service_sub_title {
-
   line-height: 20px;
   text-align: center;
   letter-spacing: 3.85px;
   text-transform: uppercase;
-  color:white!important;
+  color: #fff!important;
   display: inline-block;
   margin-top: 130px
 }
-
-
 .service_logo_group {
   max-width: 505px;
   margin: 0 auto
 }
-
-  .service_logo_box {
-    margin-bottom: 20px
-  }
-
-
-  .our_team_sub_title {
+.service_logo_box {
+  margin-bottom: 20px
+}
+.our_team_sub_title {
   font-size: 11px;
   line-height: 20px;
   text-align: center;
@@ -120,4 +104,14 @@ img[alt='slider menu bg'] {
   text-transform: uppercase;
   color: #8b8b8b
 }
+@media screen and (max-width:767px) {
+  .menu_centerer {
+    width: 100%;
+    margin: auto
+  }
+  .display_inline_animation_view {
+    display: inline-block
+  }
 
+
+}

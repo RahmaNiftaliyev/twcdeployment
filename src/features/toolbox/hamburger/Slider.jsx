@@ -9,66 +9,155 @@ import styles from './hamburger.module.css';
 import icon from './assets/img/menu-x-icon.svg';
 import sliderTwc from './../../components/common/assets/svg/navigation-slider.svg';
 import { useNavigate } from 'react-router-dom';
+import styled, { keyframes } from 'styled-components';
 
 const Slider = ({ classData, handleSliderClick, conditionView }) => {
-  const allServices = useSelector(selectAllServices);
+  const lenganimation = keyframes` 
+  
+  
+  0% {
+      width: 1%;
+      opacity: 0;
+     
+    }
+    16% {
+      width: 100%;
+      float: left;
+        opacity: 0.33;
+    
+    }
 
+    32% {
+        width: 100%;
+        float: right;
+          opacity: 0.66;
+    }
+
+    48% {
+      float: right;
+      width: 1%;
+        opacity: 0.99;
+    }
+
+    64%{
+      width: 100%;
+      float: right;
+        opacity: 0.66;
+    }
+
+    80% {
+      width: 100%;
+      float: left;
+        opacity: 0.33;
+    }
+
+    100% {
+      width: 1%;
+        opacity: 0;
+    }
+  
+  `;
+
+  const AnimatedBox = styled.div`
+    width: 1%;
+    height: 1px;
+    background-color: #fff;
+    opacity: 0;
+    margin-top: 5px;
+    animation-name: ${lenganimation};
+    animation-delay: ${(props) => props.index * 4}s;
+    animation-duration: 4s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    float: left;
+  `;
+
+  // !services from service slice
+  const allServices = useSelector(selectAllServices);
+  // !menu links from navigation slice
   const allLinks = useSelector(selectAllLinks);
-  let naviMainData = allLinks.map((item) => {
-    return { link: item.link, name: item.name, id: item.id, hasSubmenu: item.hasSubmenu };
-  });
+
   const [toggle, setToggle] = useState(false);
-  const [oneTime, setOneTime] = useState(true);
-  const [finded, setFinded] = useState([]);
+  const [idData, setIdData] = useState('');
+  const [isTrue, setIsTrue] = useState(false);
+  // !clicked navigation item
 
   const navigate = useNavigate();
 
-  const routerHelper = (paramsLink) => {
-    if (paramsLink.length > 1) {
-      navigate(paramsLink);
+  const handleanimateStepByStep = (paramsItem) => {
+    const maxData = paramsItem.hasSubmenu ? paramsItem.submenu.length : 0;
+    let delayableValue;
+
+    for (let i = 0; i < maxData; i++) {
+      delayableValue = i * 4;
+      setTimeout(() => {
+        setIsTrue(true);
+      }, delayableValue);
     }
   };
-
-  const handleNaviAnimation = (paramsNaviItem) => {
-    if (paramsNaviItem.hasSubmenu) {
-      const { subMenus } = allLinks.find((item) => item.id === paramsNaviItem.id);
-      setFinded((previouseValue) => previouseValue.concat(subMenus));
-      setToggle(!toggle);
-    }
-
-    routerHelper(paramsNaviItem.link);
-  };
-
-  //
 
   const setMainMenu = (item) => {
     return (
       <li
-        onClick={() => handleNaviAnimation(item)}
         key={item.id}
+        onClick={() => {
+          setToggle(!toggle);
+          setIdData(item.id);
+        }}
         className={`${styles.animate_character} mb-mb-20 display_none display-mb-block`}
+        style={
+          item.id === idData && toggle
+            ? {
+                display: 'block'
+              }
+            : item.id !== idData && toggle
+            ? { display: 'none' }
+            : {
+                display: 'block'
+              }
+        }
       >
-        {item.name}
+        <Link to={item.link} className={styles.link} style={{ fontSize: '35px' }}>
+          {item.name}
+        </Link>
+        {item.hasSubmenu && (
+          <div className={styles.submenu}>
+            <ul
+              style={{
+                background: 'rgba(255,255,255,.1)',
+                marginTop: '20px',
+                width: '90%',
+                marginLeft: 'auto',
+                marginRight: 'auto'
+              }}
+            >
+              {toggle &&
+                allLinks
+                  .find((item) => item.id === idData)
+                  .subMenus.map((item, index) => {
+                    return (
+                      <li
+                        onClick={() => {
+                          setToggle(!toggle);
+                          navigate(`${item.link}`);
+                        }}
+                      >
+                        <div className={`${styles.display_inline_animation_view}`}>
+                          <Link to={item.link}>{item.name}</Link>
+                          <AnimatedBox index={`${index}`}></AnimatedBox>
+                        </div>
+                      </li>
+                    );
+                  })}
+            </ul>
+          </div>
+        )}
       </li>
     );
   };
 
-  const setSubMenu = (item) => {
-    const { id, name, link } = item;
-
-    setFinded((previouseValue) => previouseValue.unshift({ id, name, link }));
-
-    finded.map((item) => {
-      return (
-        <li key={item.id} className={`${styles.animate_character} mb-mb-20 display_none display-mb-block`}>
-          <Link to={item.link}>{item.name}</Link>
-        </li>
-      );
-    });
-  };
-
-  const mainMenu = naviMainData.map((item, index) => {
-    return !toggle ? setMainMenu(item, index) : setSubMenu(item, index);
+  const mainMenu = allLinks.map((item) => {
+    return setMainMenu(item);
   });
 
   return (
@@ -94,7 +183,7 @@ const Slider = ({ classData, handleSliderClick, conditionView }) => {
         }}
       />
 
-      <ul className={`${styles.menu_centerer}`}>{mainMenu}</ul>
+      <ul className={`${styles.menu_centerer} display_none flex-mb-column display-mb-block`}>{mainMenu}</ul>
       <p className={`mobile-display-none text-upper text-white ${styles.slider_paragraph}`}>
         BİZNESİNİZİ TWC İLƏ YÜKSƏLDİN
       </p>

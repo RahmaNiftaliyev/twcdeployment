@@ -16,11 +16,12 @@
 
 ::-webkit-scrollbar-thumb {
   background-color: #171717;
-  border-radius: 202px;
+
   -webkit-border-radius: 202px;
   -moz-border-radius: 202px;
   -ms-border-radius: 202px;
-  -o-border-radius: 202px
+  -o-border-radius: 202px;
+    border-radius: 202px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -791,11 +792,12 @@ button {
   line-height: 20px;
   overflow-wrap: break-word;
   display: inline-block;
-  transition: margin .28s ease-in-out 0s;
+
   -webkit-transition: margin .28s ease-in-out 0s;
   -moz-transition: margin .28s ease-in-out 0s;
   -ms-transition: margin .28s ease-in-out 0s;
-  -o-transition: margin .28s ease-in-out 0s
+  -o-transition: margin .28s ease-in-out 0s;
+    transition: margin .28s ease-in-out 0s;
 }
 
 .input-group {
@@ -967,9 +969,11 @@ input.text-area-placeholder-changer::placeholder {
 
   .slider-mb {
     width: 100%;
-    padding: 50px 20px 55px 20px;
+    padding: 50px 0 55px;
     right: -100%;
-    overflow-x: hidden
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
   }
 
   .mb-list-item {
@@ -1097,5 +1101,12 @@ input.text-area-placeholder-changer::placeholder {
 
   .mb-mb-20 {
     margin-bottom: 20px
+  }
+  .mb-mb-10 {
+    margin-bottom: 10px
+  }
+
+  .mb-mb-5 {
+    margin-bottom: 5px;
   }
 }
