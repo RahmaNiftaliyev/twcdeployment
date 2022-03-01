@@ -73,7 +73,7 @@ section._ready {
   display: inline-block;
   margin-bottom: 5px
 }
-.content_text h4 {
+.join_title {
   font-size: 36px;
   line-height: 44px;
   color: #171717;
@@ -221,6 +221,7 @@ section.vacantion > h4 {
   line-height: 27px
 }
 @media screen and (max-width:600px) {
+
   .join_vacation {
     height: 350px
   }
@@ -260,6 +261,10 @@ section.vacantion > h4 {
   }
 }
 @media screen and (max-width:940px) {
+  .join_title{
+    font-size: 24px!important;
+    line-height: 26px!important;
+  } 
   .bg_container {
     height: 200px;
     padding-left:10px;
@@ -267,6 +272,12 @@ section.vacantion > h4 {
   }
   .career_main {
     padding: 170px 20px
+  }
+  .vacantion h4{
+    font-size: 30px!important;
+  }
+  .join_vacation h2{
+    font-size: 26px!important;
   }
   .bg_container h3,
   .bg_container h4 {
