@@ -1,17 +1,19 @@
 // @ts-nocheck
 import React, { useState } from 'react';
-import GalleryServices from './../gallery/GalleryServices';
-import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-import { selectAllLinks } from './../../navigation/navigationSlice';
-import { selectAllServices } from './../../components/services/servicesSlice';
-import styles from './hamburger.module.css';
-import icon from './assets/img/menu-x-icon.svg';
-import sliderTwc from './../../components/common/assets/svg/navigation-slider.svg';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import styled, { keyframes } from 'styled-components';
+import sliderTwc from './../../components/common/assets/svg/navigation-slider.svg';
+import { selectAllServices } from './../../components/services/servicesSlice';
+import { selectAllLinks } from './../../navigation/navigationSlice';
+import GalleryServices from './../gallery/GalleryServices';
+import icon from './assets/img/menu-x-icon.svg';
+import styles from './hamburger.module.css';
 
 const Slider = ({ classData, handleSliderClick, conditionView }) => {
+
+
+
   const lenganimation = keyframes` 
   
   
@@ -23,37 +25,37 @@ const Slider = ({ classData, handleSliderClick, conditionView }) => {
     16% {
       width: 100%;
       float: left;
-        opacity: 0.33;
+      opacity: 0.33;
     
     }
 
     32% {
         width: 100%;
         float: right;
-          opacity: 0.66;
+        opacity: 0.66;
     }
 
     48% {
       float: right;
       width: 1%;
-        opacity: 0.99;
+      opacity: 0.99;
     }
 
     64%{
       width: 100%;
       float: right;
-        opacity: 0.66;
+      opacity: 0.66;
     }
 
     80% {
       width: 100%;
       float: left;
-        opacity: 0.33;
+      opacity: 0.33;
     }
 
     100% {
       width: 1%;
-        opacity: 0;
+      opacity: 0;
     }
   
   `;
@@ -79,22 +81,10 @@ const Slider = ({ classData, handleSliderClick, conditionView }) => {
 
   const [toggle, setToggle] = useState(false);
   const [idData, setIdData] = useState('');
-  const [isTrue, setIsTrue] = useState(false);
+
   // !clicked navigation item
 
   const navigate = useNavigate();
-
-  const handleanimateStepByStep = (paramsItem) => {
-    const maxData = paramsItem.hasSubmenu ? paramsItem.submenu.length : 0;
-    let delayableValue;
-
-    for (let i = 0; i < maxData; i++) {
-      delayableValue = i * 4;
-      setTimeout(() => {
-        setIsTrue(true);
-      }, delayableValue);
-    }
-  };
 
   const setMainMenu = (item) => {
     return (
@@ -144,7 +134,7 @@ const Slider = ({ classData, handleSliderClick, conditionView }) => {
                       >
                         <div className={`${styles.display_inline_animation_view}`}>
                           <Link to={item.link}>{item.name}</Link>
-                          <AnimatedBox index={`${index}`}></AnimatedBox>
+                          <AnimatedBox  index={`${index}`}></AnimatedBox>
                         </div>
                       </li>
                     );
