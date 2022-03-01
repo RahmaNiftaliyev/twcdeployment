@@ -11,9 +11,6 @@ import icon from './assets/img/menu-x-icon.svg';
 import styles from './hamburger.module.css';
 
 const Slider = ({ classData, handleSliderClick, conditionView }) => {
-
-
-
   const lenganimation = keyframes` 
   
   
@@ -86,6 +83,11 @@ const Slider = ({ classData, handleSliderClick, conditionView }) => {
 
   const navigate = useNavigate();
 
+  const handleSubmenuRouting = (paramsUrl) => {
+    setToggle(!toggle);
+    navigate(paramsUrl);
+  };
+
   const setMainMenu = (item) => {
     return (
       <li
@@ -98,11 +100,11 @@ const Slider = ({ classData, handleSliderClick, conditionView }) => {
         style={
           item.id === idData && toggle
             ? {
-              display: 'block'
-            }
+                display: 'block'
+              }
             : item.id !== idData && toggle
-              ? { display: 'none' }
-              : {
+            ? { display: 'none' }
+            : {
                 display: 'block'
               }
         }
@@ -134,7 +136,14 @@ const Slider = ({ classData, handleSliderClick, conditionView }) => {
                         className={styles.sublist_item}
                       >
                         <div className={`${styles.display_inline_animation_view}`}>
-                          <Link className={styles.sublink_item} to={item.link}>{item.name}</Link>
+                          <span
+                            onClick={() => handleSubmenuRouting(item.link)}
+                            className={styles.sublink_item}
+                            to={item.link}
+                          >
+                            {item.name}
+                          </span>
+
                           <AnimatedBox index={`${index}`}></AnimatedBox>
                         </div>
                       </li>
