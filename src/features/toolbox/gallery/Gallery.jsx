@@ -50,7 +50,7 @@ const Gallery = () => {
 
   return (
     <div className={`${styles.main_container_team} `}>
-      <div class={`${styles.our_team__top}`}>
+      <div className={`${styles.our_team__top}`}>
         <p>Peşəkar komandamız</p>
         <h2>
           Ən son layihədə iştirak <br /> edən komanda üzvlərimiz
