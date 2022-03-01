@@ -104,20 +104,20 @@ const Slider = ({ classData, handleSliderClick, conditionView }) => {
           setToggle(!toggle);
           setIdData(item.id);
         }}
-        className={`${styles.animate_character} mb-mb-20 display_none display-mb-block`}
+        className={` mb-mb-20 display_none display-mb-block`}
         style={
           item.id === idData && toggle
             ? {
-                display: 'block'
-              }
+              display: 'block'
+            }
             : item.id !== idData && toggle
-            ? { display: 'none' }
-            : {
+              ? { display: 'none' }
+              : {
                 display: 'block'
               }
         }
       >
-        <Link to={item.link} className={styles.link} style={{ fontSize: '35px' }}>
+        <Link to={item.link} className={`${styles.animate_character} ${styles.link}`} style={{ fontSize: '35px' }}>
           {item.name}
         </Link>
         {item.hasSubmenu && (
@@ -141,9 +141,10 @@ const Slider = ({ classData, handleSliderClick, conditionView }) => {
                           setToggle(!toggle);
                           navigate(`${item.link}`);
                         }}
+                        className={styles.sublist_item}
                       >
                         <div className={`${styles.display_inline_animation_view}`}>
-                          <Link to={item.link}>{item.name}</Link>
+                          <Link className={styles.sublink_item} to={item.link}>{item.name}</Link>
                           <AnimatedBox index={`${index}`}></AnimatedBox>
                         </div>
                       </li>
