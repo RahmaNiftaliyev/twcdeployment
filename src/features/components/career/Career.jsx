@@ -68,7 +68,7 @@ const Career = () => {
         <div className={`${styles.content_text}`}>
           <div>
             <span className={`${styles.career_span}`}>Karyera</span>
-            <h4>
+            <h4 className={`${styles.join_title}`}>
               TWC-yə qoşulmağa <span className="line_home_divider"></span>
               hazırsan?
             </h4>

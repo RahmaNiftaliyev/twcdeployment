@@ -176,6 +176,10 @@ form > textarea {
 
 }
 @media screen and (max-width:1130px) {
+  .contact_title{
+    font-size: 24px!important;
+    line-height: 30px!important;
+  }
   .pic_form {
     flex-direction: column
   }

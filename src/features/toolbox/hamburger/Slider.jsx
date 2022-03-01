@@ -175,15 +175,13 @@ const Slider = ({ classData, handleSliderClick, conditionView }) => {
         src={sliderTwc}
         alt="think wise company slider navigation svg logo"
         width="1200px"
+        className={`${styles.slider_img} ${styles.slider_mb_img}`}
         style={{
-          transform: 'rotate(90deg)',
-          position: 'absolute',
-          left: '-275px',
-          top: '150px'
+         
         }}
       />
 
-      <ul className={`${styles.menu_centerer} display_none flex-mb-column display-mb-block`}>{mainMenu}</ul>
+      <ul className={`${styles.menu_centerer} display_none display-mb-block`}>{mainMenu}</ul>
       <p className={`mobile-display-none text-upper text-white ${styles.slider_paragraph}`}>
         BİZNESİNİZİ TWC İLƏ YÜKSƏLDİN
       </p>

@@ -133,15 +133,32 @@ img[alt='slider menu bg'] {
   color: #8b8b8b
 }
 
-@media screen and (max-width:767px) {
+.slider_img {
+  transform: rotate(90deg);
+  position: absolute;
+}
+
+@media (min-width: 1024px) and (max-width: 1920px) {
+  .slider_img {
+    left: -275px;
+    top: 150px;
+  }
+}
+
+@media screen and (max-width:1024px) {
   .menu_centerer {
     width: 100%;
-    margin: auto
+    margin: auto;
+    left: auto;
+    top: auto;
   }
 
   .display_inline_animation_view {
     display: inline-block
   }
 
+  .slider_mb_img {
+    margin: 0px auto;
+  }
 
 }

@@ -27,7 +27,7 @@ const Contact = () => {
           <AnimationOnScroll animateIn="animate__zoomInDown">
             <div>
               <span>ƏLAQƏ</span>
-              <h2>
+              <h2 className={`${styles.contact_title}`}>
                 Bizimlə əlaqə saxlayın <span className="line_home_divider"></span> 
                 və ya ofisimizə yaxınlaşın
               </h2>
@@ -53,7 +53,7 @@ const Contact = () => {
           <form onSubmit={handleSubmit} netlify>
             <AnimationOnScroll animateIn="animate__zoomInDown">
               <span>ƏLAQƏ</span>
-              <h2>
+              <h2 className={`${styles.contact_title}`}>
                 Müraciətinizi burada<span className="line_home_divider"></span> 
                 &nbsp;qeyd edə bilərsiniz
               </h2>

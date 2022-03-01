@@ -21,7 +21,7 @@
   -moz-border-radius: 202px;
   -ms-border-radius: 202px;
   -o-border-radius: 202px;
-    border-radius: 202px;
+  border-radius: 202px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -797,7 +797,7 @@ button {
   -moz-transition: margin .28s ease-in-out 0s;
   -ms-transition: margin .28s ease-in-out 0s;
   -o-transition: margin .28s ease-in-out 0s;
-    transition: margin .28s ease-in-out 0s;
+  transition: margin .28s ease-in-out 0s;
 }
 
 .input-group {
@@ -864,6 +864,32 @@ input.text-area-placeholder-changer::placeholder {
   margin-top: 100px;
 }
 
+
+@media screen and (max-width:1024px) {
+
+  .mobile-display-none {
+    display: none !important
+  }
+
+  .slider-mb {
+    width: 100%;
+    padding: 50px 0 55px;
+    right: -100%;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .display-mb-block {
+    display: block
+  }
+
+}
+
+
+
 @media screen and (max-width:767px) {
 
   .team-container {
@@ -913,9 +939,7 @@ input.text-area-placeholder-changer::placeholder {
     display: block
   }
 
-  .mobile-display-none {
-    display: none !important
-  }
+
 
   .sm-mb-4-padding {
     padding: 6px
@@ -967,14 +991,7 @@ input.text-area-placeholder-changer::placeholder {
     right: -100% !important
   }
 
-  .slider-mb {
-    width: 100%;
-    padding: 50px 0 55px;
-    right: -100%;
-    overflow-x: hidden;
-    display: flex;
-    flex-direction: column;
-  }
+
 
   .mb-list-item {
     text-align: center;
@@ -1040,12 +1057,12 @@ input.text-area-placeholder-changer::placeholder {
   }
 
   .size-font-mb-h2 {
-    font-size: 25px!important;
+    font-size: 25px !important;
     line-height: 40px !important
   }
 
   .size-font-mb-p {
-    font-size: 16px!important
+    font-size: 16px !important
   }
 
   .size-font-mb-span {
@@ -1095,13 +1112,12 @@ input.text-area-placeholder-changer::placeholder {
     margin-top: 40px !important
   }
 
-  .display-mb-block {
-    display: block
-  }
+
 
   .mb-mb-20 {
     margin-bottom: 20px
   }
+
   .mb-mb-10 {
     margin-bottom: 10px
   }
