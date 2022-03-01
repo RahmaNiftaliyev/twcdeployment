@@ -1,4 +1,5 @@
 // @ts-nocheck
+import { set } from 'immer/dist/internal';
 import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
@@ -11,9 +12,6 @@ import icon from './assets/img/menu-x-icon.svg';
 import styles from './hamburger.module.css';
 
 const Slider = ({ classData, handleSliderClick, conditionView }) => {
-
-
-
   const lenganimation = keyframes` 
   
   
@@ -86,6 +84,12 @@ const Slider = ({ classData, handleSliderClick, conditionView }) => {
 
   const navigate = useNavigate();
 
+  const handleSubmenuRouting = (paramsUrl) => {
+    setToggle(!toggle);
+    navigate(paramsUrl);
+    
+  };
+
   const setMainMenu = (item) => {
     return (
       <li
@@ -133,8 +137,8 @@ const Slider = ({ classData, handleSliderClick, conditionView }) => {
                         }}
                       >
                         <div className={`${styles.display_inline_animation_view}`}>
-                          <Link to={item.link}>{item.name}</Link>
-                          <AnimatedBox  index={`${index}`}></AnimatedBox>
+                          <span onClick={() => handleSubmenuRouting(item.link)}>{item.name}</span>
+                          <AnimatedBox index={`${index}`}></AnimatedBox>
                         </div>
                       </li>
                     );
