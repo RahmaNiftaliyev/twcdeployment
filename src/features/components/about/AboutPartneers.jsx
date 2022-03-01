@@ -19,7 +19,7 @@ const AboutPartneers = () => {
         textStructure={'Partnyorlarımız'}
         textStructureData={'Partners'}
       />
-      <section className={`${styles.partners_container} d-flex align-center justify-center`}>
+      <section className={`${styles.partners_container} d-flex align-center justify-center flex-wrap`}>
         <div className={`${styles.partners_firm_img_box} d-flex align-center justify-center`}>
           <img className={`${styles.partners_firm_img}`} src={abbLogo} alt="" />
         </div>
