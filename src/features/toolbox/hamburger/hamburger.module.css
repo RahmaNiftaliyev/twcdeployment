@@ -107,6 +107,11 @@ img[alt='slider menu bg'] {
 @media screen and (max-width:767px) {
   .menu_centerer {
     width: 100%;
-    margin: auto;
+    margin: auto
   }
+  .display_inline_animation_view {
+    display: inline-block
+  }
+
+
 }

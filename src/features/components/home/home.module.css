@@ -45,7 +45,6 @@
   margin-bottom: 1.75rem
 }
 .services_describtion > p {
-  text-align: justify;
   font-size: 21px;
   font-weight: 400;
   line-height: 30px
@@ -450,7 +449,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 2.6px solid #8b8b8b;
+  border: 1px solid #8b8b8b;
   background-color: #fff
 }
 .span_img_container > img {

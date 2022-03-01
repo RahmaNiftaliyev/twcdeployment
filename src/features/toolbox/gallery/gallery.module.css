@@ -140,6 +140,13 @@
 }
 
 
+.default_button_margin {
+    margin-left: 6px;
+    margin-top: 41px;
+
+}
+
+
 @media screen and (max-width:767px) {
 
 .our_team__top > p {
