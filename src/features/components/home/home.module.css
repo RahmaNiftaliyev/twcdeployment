@@ -55,9 +55,10 @@
 
 
 .services_describtion>p {
-  text-align: justify;
+  text-align: center;
+}
 
-.services_describtion > p {
+.services_describtion>p {
 
   font-size: 21px;
   font-weight: 400;
