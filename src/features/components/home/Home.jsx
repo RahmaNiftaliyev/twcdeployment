@@ -76,7 +76,7 @@ const Home = ({ homeProps }) => {
           </AnimationOnScroll>
           <p className="size-font-mb-p">
             Özəl, dövlət və sosial təşkilatlarla əməkdaşlıq edərək,
-            <span className={`${styles.line_home_divider}`}></span> biz qlobal təcrübəmizi və yerli anlayışlarımızı{' '}
+            <span className={`${styles.line_home_divider}`}></span> biz qlobal təcrübəmizi və yerli anlayışlarımızı
             <span className={`${styles.line_home_divider}`}></span> birləşdirərək real və davamlı dəyişiklik yaradırıq
           </p>
         </div>
@@ -151,7 +151,7 @@ const Home = ({ homeProps }) => {
             onClick={() => handleNavigation('/career')}
             className={`display-mb-flex justify-mb-end mt-mb-2 mb-padding-right-home ${styles.mt_40_1}`}
           >
-            <RoundedButton color="#17171766" className={`${styles.doing_business_button}`} />
+            <RoundedButton color="#17171766" className={`${styles.doing_business_button}`} positioned="40px" />
           </div>
         </div>
       </div>
@@ -184,9 +184,6 @@ const Home = ({ homeProps }) => {
                 çox ölkədə fəaliyyət göstərərkən 204 milyon istifadəçisi və 25 milyard ABŞ dolları gəliri olan ən böyük
                 subscription-əsaslı kontent izləmə oyunçusudur.
               </p>
-              <div className={`${styles.mt_40_1}`}>
-                <RoundedButton color={'#000'} />
-              </div>
             </div>
             <p>24 Avqust, 2021</p>
           </div>

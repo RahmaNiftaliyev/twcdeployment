@@ -1,6 +1,7 @@
 // @ts-nocheck
 import React from 'react';
 import ArticleHeaderDash from './ArticleHeaderDash';
+import Footer from './../../footer/Footer';
 import { useNavigate } from 'react-router-dom';
 import { SiInstagram } from 'react-icons/si';
 import { ImLinkedin2, ImFacebook } from 'react-icons/im';
@@ -217,6 +218,7 @@ const Articles = () => {
           </div>
         </section>
       </section>
+      <Footer/>
     </div>
   );
 };

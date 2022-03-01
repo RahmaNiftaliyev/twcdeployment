@@ -164,6 +164,9 @@
   }
 }
 @media screen and (max-width:767px) {
+  .header_title {
+    font-size: 32px;
+  }
   .header_image_container {
     width: 100%;
     padding: 0 20px;
