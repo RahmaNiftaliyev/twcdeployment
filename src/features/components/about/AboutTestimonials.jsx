@@ -29,8 +29,8 @@ const AboutTestimonials = () => {
         textStructure={'Müştəri layihələrimiz'}
         textStructureData={'Client projects'}
       />
-      <section className={`${styles.customers_container} d-flex direction-column align-center justify-center`}>
-        <div className={`${styles.customers_row} d-flex align-center justify-center`}>
+      <section className={`${styles.customers_container} d-flex direction-column align-center justify-center flex-wrap`}>
+        <div className={`${styles.customers_row} d-flex align-center justify-center flex-wrap`}>
           <div className={`${styles.customer_firm_img_box} d-flex align-center justify-center`}>
             <img className={`${styles.customer_firm_img}`} src={logo1} alt="" />
           </div>
@@ -44,7 +44,7 @@ const AboutTestimonials = () => {
             <img className={`${styles.customer_firm_img}`} src={logo4} alt="" />
           </div>
         </div>
-        <div className={`${styles.customers_row}  d-flex align-center justify-center`}>
+        <div className={`${styles.customers_row}  d-flex align-center justify-center flex-wrap`}>
           <div className={`${styles.customer_firm_img_box} d-flex align-center justify-center`}>
             <img className={`${styles.customer_firm_img}`} src={logo5} alt="" />
           </div>
@@ -58,7 +58,7 @@ const AboutTestimonials = () => {
             <img className={`${styles.customer_firm_img}`} src={logo8} alt="" />
           </div>
         </div>
-        <div className={`${styles.customers_row}  d-flex align-center justify-center`}>
+        <div className={`${styles.customers_row}  d-flex align-center justify-center flex-wrap`}>
           <div className={`${styles.customer_firm_img_box} d-flex align-center justify-center`}>
             <img className={`${styles.customer_firm_img}`} src={logo9} alt="" />
           </div>

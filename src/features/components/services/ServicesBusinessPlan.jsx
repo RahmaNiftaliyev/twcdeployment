@@ -16,9 +16,9 @@ import topicImage6 from './assets/img/biznesplanvetie/topic-6.png';
 const ServicesBusinessPlan = () => {
     return (
         <div>
-            <ServicesHeaderDash 
-                img={headerImage} 
-                isBlack={false} 
+            <ServicesHeaderDash
+                img={headerImage}
+                isBlack={false}
                 textStructure={'Biznes plan və Texniki-iqtisadi əsaslandırmalar'}
                 textStructureData={'Business plan, technical and economic justifications'}
             />
@@ -100,7 +100,7 @@ const ServicesBusinessPlan = () => {
                             Hazırladığımız biznes planlar özündə aşağıdakıları
                             ehtiva edir
                         </span>
-                        <div className={`d-flex flex-wrap justify-between businesPlan-images`}>
+                        <div className={`d-flex flex-wrap businesPlan-images`}>
                             <div className={`${styles.image_item_section}`}>
                                 <img
                                     className={`${styles.image_item}`}
