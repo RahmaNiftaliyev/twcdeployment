@@ -1,5 +1,4 @@
 // @ts-nocheck
-import { set } from 'immer/dist/internal';
 import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
@@ -87,7 +86,6 @@ const Slider = ({ classData, handleSliderClick, conditionView }) => {
   const handleSubmenuRouting = (paramsUrl) => {
     setToggle(!toggle);
     navigate(paramsUrl);
-    
   };
 
   const setMainMenu = (item) => {
@@ -98,7 +96,7 @@ const Slider = ({ classData, handleSliderClick, conditionView }) => {
           setToggle(!toggle);
           setIdData(item.id);
         }}
-        className={`${styles.animate_character} mb-mb-20 display_none display-mb-block`}
+        className={` mb-mb-20 display_none display-mb-block`}
         style={
           item.id === idData && toggle
             ? {
@@ -111,7 +109,7 @@ const Slider = ({ classData, handleSliderClick, conditionView }) => {
               }
         }
       >
-        <Link to={item.link} className={styles.link} style={{ fontSize: '35px' }}>
+        <Link to={item.link} className={`${styles.animate_character} ${styles.link}`} style={{ fontSize: '35px' }}>
           {item.name}
         </Link>
         {item.hasSubmenu && (
@@ -135,9 +133,17 @@ const Slider = ({ classData, handleSliderClick, conditionView }) => {
                           setToggle(!toggle);
                           navigate(`${item.link}`);
                         }}
+                        className={styles.sublist_item}
                       >
                         <div className={`${styles.display_inline_animation_view}`}>
-                          <span onClick={() => handleSubmenuRouting(item.link)}>{item.name}</span>
+                          <span
+                            onClick={() => handleSubmenuRouting(item.link)}
+                            className={styles.sublink_item}
+                            to={item.link}
+                          >
+                            {item.name}
+                          </span>
+
                           <AnimatedBox index={`${index}`}></AnimatedBox>
                         </div>
                       </li>
