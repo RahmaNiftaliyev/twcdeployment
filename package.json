@@ -43,7 +43,7 @@
         "react": "^17.0.2",
         "react-admin": "^3.19.10",
         "react-alice-carousel": "^2.5.1",
-        "react-animated-cursor": "^2.2.0",
+        "react-animated-cursor": "^2.4.0",
         "react-animation-on-scroll": "^5.0.0",
         "react-awesome-slider": "^4.1.0",
         "react-dom": "^17.0.2",
